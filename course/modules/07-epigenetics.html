@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>07 - Epigenetics | Genetics 101</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <header class="topbar">
+    <a class="topbar__brand" href="../index.html"><span class="dot"></span> Genetics 101</a>
+    <div class="topbar__spacer"></div>
+    <a class="topbar__link" href="../index.html">Modules</a>
+    <a class="topbar__link" href="../glossary.html">Glossary</a>
+    <button class="menu-btn" aria-label="Sections">&#9776;</button>
+  </header>
+
+  <main class="layout">
+    <div class="hero reveal">
+      <p class="hero__eyebrow">Part IV - Beyond the Sequence - Module 07</p>
+      <h1 class="hero__title">Epigenetics: Beyond the Sequence</h1>
+      <p class="hero__sub">Every cell in your body shares the same DNA, yet a neuron and a liver cell could not be more different. The explanation is epigenetics, the chemical annotations that decide which genes get read, and it reshaped how we think about nature, nurture, and even aging.</p>
+      <div class="hero__meta">
+        <span><b>Reading</b> ~14 min</span>
+        <span><b>You will learn</b> methylation &middot; histones &middot; imprinting &middot; X-inactivation &middot; the epigenetic clock</span>
+      </div>
+    </div>
+
+    <div class="module-grid">
+      <aside class="toc" id="toc"></aside>
+      <article class="article">
+
+        <p class="lead">If <span class="term" data-term="DNA">DNA</span> is the script, <span class="term" data-term="Epigenetics">epigenetics</span> is the director's notes - what to emphasize, what to skip, in this cell, right now. The letters of the script never change, but the same page can be played as comedy or tragedy depending on the annotations scribbled in the margins. Those annotations are chemical, they are inheritable across cell divisions, and they are the reason one genome can run an entire body.</p>
+
+        <h2 id="same-code">Same code, different cells</h2>
+        <p>Here is a puzzle that should bother you. A neuron firing in your brain and a cell lining your gut carry exactly the same <span class="term" data-term="Genome">genome</span> - the same three billion letters, the same roughly 20,000 genes. If the <span class="term" data-term="Genotype">genotype</span> is identical, why is the <span class="term" data-term="Phenotype">phenotype</span> of those two cells so wildly different? One conducts electricity; the other absorbs nutrients. Neither can do the other's job.</p>
+        <p>The answer is that having a gene is not the same as using it. Epigenetics is the set of stable, sometimes heritable changes in <em>gene activity</em> that do not alter the underlying DNA sequence at all. Think of it as a layer of bookmarks and sticky notes sitting on top of the code, telling each cell which passages to read aloud and which to keep shut. A liver cell switches on its liver genes and silences the neuron genes; a neuron does the reverse. Same library, different reading list.</p>
+
+        <div class="callout callout--key">
+          <div class="callout__label">&#9733; Key idea</div>
+          <p>Epigenetics is how one genome runs hundreds of cell types. The DNA sequence is fixed at conception, but the pattern of which genes are switched on or off is set, maintained, and sometimes rewritten throughout life - without changing a single letter.</p>
+        </div>
+
+        <p>This is also why epigenetics is not the same as a mutation. A mutation rewrites the script itself, changing an A to a G. An epigenetic change leaves every letter intact and only changes how loudly the script is read. That distinction will come up again in the quiz, because it is the single most common point of confusion in the whole field.</p>
+
+        <h2 id="the-marks">The marks: methylation and histones</h2>
+        <p>Epigenetic instructions are written in two main ways. The first is <span class="term" data-term="DNA methylation">DNA methylation</span>. A small chemical tag called a methyl group gets attached directly to the DNA, almost always at spots where a C sits next to a G - a so-called CpG site. When methyl groups cluster on the control region of a <span class="term" data-term="Gene">gene</span>, they usually dial that gene <em>down</em> or shut it off entirely. Methylation is the cell's way of putting a gene into long-term storage.</p>
+
+        <figure class="figure reveal">
+          <div class="figure__frame">
+            <div class="fig-title">Figure 7.2 - DNA methylation silences a gene</div>
+            <svg class="chart-svg" viewBox="0 0 720 250" role="img" aria-label="A methyl group tag sits on a CpG site and dials a gene down">
+              <!-- DNA backbone -->
+              <rect x="40" y="120" width="640" height="14" rx="7" fill="#eaecf7" stroke="#283593" stroke-width="2"/>
+              <text x="40" y="158" font-size="11.5" fill="#6b7384">DNA strand (control region of a gene)</text>
+              <!-- base ticks -->
+              <line x1="120" y1="120" x2="120" y2="134" stroke="#6b7384" stroke-width="2"/>
+              <line x1="160" y1="120" x2="160" y2="134" stroke="#6b7384" stroke-width="2"/>
+              <line x1="300" y1="120" x2="300" y2="134" stroke="#6b7384" stroke-width="2"/>
+              <line x1="340" y1="120" x2="340" y2="134" stroke="#6b7384" stroke-width="2"/>
+              <!-- CpG site highlighted -->
+              <rect x="285" y="116" width="70" height="22" rx="5" fill="#e2f1ed" stroke="#138a72" stroke-width="2"/>
+              <text x="298" y="132" font-size="13" font-weight="800" fill="#138a72">C</text>
+              <text x="332" y="132" font-size="13" font-weight="800" fill="#138a72">G</text>
+              <text x="320" y="170" text-anchor="middle" font-size="11.5" fill="#138a72">CpG site</text>
+              <!-- methyl tag sitting on the C -->
+              <line x1="300" y1="116" x2="300" y2="78" stroke="#6b7384" stroke-width="2"/>
+              <circle cx="300" cy="62" r="20" fill="#fbe9ef" stroke="#c2456b" stroke-width="2.5"/>
+              <text x="300" y="60" text-anchor="middle" font-size="11" font-weight="800" fill="#c2456b">CH&#8323;</text>
+              <text x="300" y="73" text-anchor="middle" font-size="8.5" fill="#c2456b">methyl</text>
+              <!-- gene box downstream -->
+              <rect x="430" y="100" width="200" height="54" rx="12" fill="#eaecf7" stroke="#283593" stroke-width="2"/>
+              <text x="530" y="124" text-anchor="middle" font-size="14" font-weight="800" fill="#283593">Gene</text>
+              <text x="530" y="142" text-anchor="middle" font-size="11" fill="#6b7384">turned down / off</text>
+              <!-- blocked transcription arrow -->
+              <line x1="360" y1="127" x2="424" y2="127" stroke="#c2456b" stroke-width="2.5" stroke-dasharray="6 5" opacity="0.8"/>
+              <text x="392" y="113" text-anchor="middle" font-size="11" font-weight="700" fill="#c2456b">blocked</text>
+              <!-- caption labels -->
+              <text x="360" y="215" text-anchor="middle" font-size="12" fill="#3d4554">A methyl tag on the CpG site keeps the machinery from reading the gene.</text>
+              <defs>
+                <marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#6b7384"/></marker>
+              </defs>
+            </svg>
+          </div>
+          <figcaption>A single methyl group, added at a CpG site in a gene's control region, can act like a "do not read" flag. Spread enough of them across a promoter and the gene falls quiet - no letter of <span class="term" data-term="DNA">DNA</span> has changed, but its output has.</figcaption>
+        </figure>
+
+        <p>The second mechanism works through packaging. Your two meters of DNA are wound around spool-shaped proteins called <span class="term" data-term="Histone">histones</span>, and the whole DNA-plus-protein assembly is called <span class="term" data-term="Chromatin">chromatin</span>. Cells decorate the histone spools with their own chemical tags. Some tags make the chromatin coil up tight, hiding genes so the machinery cannot reach them; others loosen the coil, opening the DNA for reading. So the same gene can be open and busy in one cell and locked away in another, purely because of how its packaging is tagged.</p>
+        <p>Methylation and histone marks usually work together. A tightly packed, heavily methylated stretch of chromatin is effectively switched off; an open, lightly methylated stretch is available for <span class="term" data-term="Transcription">transcription</span>. This is the molecular vocabulary behind every cell-type decision your body makes.</p>
+
+        <h2 id="in-action">Epigenetics in action: imprinting and X-inactivation</h2>
+        <p>If epigenetics sounds abstract, two natural phenomena make it concrete and undeniable. The first is genomic <span class="term" data-term="Imprinting">imprinting</span>. For most genes you use both copies, the one from your mother and the one from your father. But for a small set of genes, only one parent's copy is ever switched on; the other arrives pre-silenced by methylation, stamped according to which parent it came from. The DNA letters of both copies are identical - only the epigenetic mark differs. When imprinting goes wrong, the results are serious genetic conditions such as Prader-Willi and Angelman syndromes, which can arise from the very same region of chromosome 15 depending on whether the maternal or paternal copy is affected.</p>
+        <p>The second is <span class="term" data-term="X-inactivation">X-inactivation</span>. People with two X chromosomes would otherwise make a double dose of every X-linked gene, so early in development each cell silences one of its two X chromosomes almost entirely, coating it in epigenetic marks. Which X gets silenced is random and is then inherited by all that cell's descendants. The visible proof is sitting in your neighborhood: a calico cat's patchwork coat comes from different patches of skin having silenced different X chromosomes, each carrying a different coat-color gene. The pattern you see is an epigenetic map drawn in fur.</p>
+
+        <div class="callout callout--insight">
+          <div class="callout__label">&#9632; Why this is convincing</div>
+          <p>Imprinting and X-inactivation are the cleanest demonstrations that epigenetics is real and consequential. In both, two stretches of DNA with <em>identical sequence</em> behave completely differently - silent versus active - based solely on a layer of chemical marks. You cannot explain a calico cat with the genetic code alone.</p>
+        </div>
+
+        <h2 id="nature-nurture">Nature, nurture, and the epigenetic clock</h2>
+        <p>Because epigenetic marks sit on top of the genome rather than inside it, the environment can influence them. Diet, chronic stress, and smoking all leave measurable methylation signatures. The most famous human example is the Dutch Hunger Winter, a severe wartime famine in 1944 and 1945: people conceived during that period showed distinctive methylation patterns at growth-related genes decades later, and elevated rates of certain metabolic conditions. The environment, in other words, left a chemical fingerprint on the genome's volume controls.</p>
+        <p>One of the most striking applications is the <span class="term" data-term="Epigenetic clock">epigenetic clock</span>. In 2013 Steve Horvath showed that the methylation state of a few hundred well-chosen CpG sites can predict a person's age with remarkable accuracy. Feed in a tissue sample, read its methylation, and the clock returns a "biological age." Crucially, that number can diverge from your chronological age - people whose epigenetic age runs ahead of their birthday tend, on average, to face higher health risks.</p>
+
+        <figure class="figure reveal">
+          <div class="figure__frame">
+            <div class="fig-title">Figure 7.1 - The epigenetic clock</div>
+            <div id="fig-epiclock"></div>
+          </div>
+          <figcaption>Models built on DNA-methylation patterns can estimate a person's age strikingly well. Points above the dashed line are "biologically older" than their birthday; points below are "younger." Illustrative data in the style of the Horvath clock.</figcaption>
+        </figure>
+
+        <p>It is tempting to leap from all this to a dramatic conclusion: that the habits of your life rewrite your epigenome and then get passed down to your children. Be careful here, because the science is more restrained than the headlines.</p>
+
+        <div class="callout callout--note">
+          <div class="callout__label">&#9888; Read this carefully</div>
+          <p>Popular claims that lifestyle epigenetic changes are robustly inherited across human generations are overstated. Between generations, the vast majority of methylation marks are <em>erased and reset</em> - once in the germ cells and again in the early embryo. A handful of imprinted regions survive this wipe by design, and some animal studies hint at narrow exceptions, but there is no solid evidence that, say, your grandmother's diet reprograms your genes in a heritable way. Epigenetics shapes <em>you</em>; it rarely rewrites your descendants. Keep the <span class="term" data-term="Heritability">heritability</span> claims modest.</p>
+        </div>
+
+        <h2 id="why-it-matters">Why it matters commercially</h2>
+        <p>Epigenetics is not only beautiful biology; it is a fast-growing diagnostics business, and the bridge is methylation. Tumors carry distinctive methylation patterns - genes that should be quiet get switched on, guardian genes get silenced - and those patterns differ enough between tissues that the methylation signature of cell-free DNA in the blood can hint at <em>where</em> a cancer started, not just that one exists. Because methylation changes appear early and are tissue-specific, they are an unusually rich signal for catching cancer before symptoms.</p>
+
+        <div class="stats reveal">
+          <div class="stat"><div class="stat__num">~28M</div><div class="stat__label">methylation sites surveyed by leading MCED assays</div></div>
+          <div class="stat"><div class="stat__num">50+</div><div class="stat__label">cancer types one blood test aims to detect</div></div>
+          <div class="stat"><div class="stat__num">2013</div><div class="stat__label">Horvath's epigenetic clock published</div></div>
+          <div class="stat"><div class="stat__num">~99%</div><div class="stat__label">of methylation marks reset between generations</div></div>
+        </div>
+
+        <p>This is exactly the foundation under <span class="term" data-term="MCED">multi-cancer early detection</span>, or MCED. Tests such as Grail's Galleri read methylation across cell-free DNA from a single blood draw, looking for the <span class="term" data-term="Somatic">somatic</span> methylation fingerprints that tumors shed. Whether these tests prove cost-effective at population scale is still being settled in large trials, but the scientific premise rests squarely on the epigenetics in this module. We pick up that commercial thread directly in the diagnostics modules that follow.</p>
+
+        <div class="compare">
+          <div class="compare__col compare__col--a">
+            <h4>A genetic mutation</h4>
+            <p style="font-family:var(--sans);font-size:var(--fs-sm);color:var(--ink-soft)">Changes the DNA letters themselves (an A becomes a G). Permanent in the sequence, detectable by reading the code. This is what hereditary-risk and tumor-sequencing tests look for.</p>
+          </div>
+          <div class="compare__col compare__col--b">
+            <h4>An epigenetic change</h4>
+            <p style="font-family:var(--sans);font-size:var(--fs-sm);color:var(--ink-soft)">Leaves every letter intact and changes how loudly a gene is read, via methylation or histone marks. Reversible, tissue-specific, and the basis of methylation-based MCED tests.</p>
+          </div>
+        </div>
+
+        <div class="callout callout--market">
+          <div class="callout__label">&#9650; The market angle</div>
+          <p>Methylation turns a subtle biological idea into a screening product. Because tumor methylation is both early and tissue-revealing, it underpins the entire MCED category - a market that companies like Grail have raised billions to chase. The bet is that reading the epigenome from a tube of blood can find cancer sooner than waiting for symptoms. The biology is sound; the open question is clinical and economic value at scale.</p>
+        </div>
+
+        <div class="takeaways reveal">
+          <h3>&#10003; Key takeaways</h3>
+          <ul>
+            <li>Epigenetics is stable, sometimes heritable change in gene <em>activity</em> that does not alter the DNA sequence - it is how one genome runs hundreds of cell types.</li>
+            <li>The two main marks are <b>DNA methylation</b> (methyl tags at CpG sites, usually silencing genes) and <b>histone modifications</b> (tags that open or close chromatin).</li>
+            <li>Imprinting and X-inactivation (the calico cat) prove epigenetics is real: identical DNA behaving differently because of chemical marks.</li>
+            <li>The environment can leave methylation marks, and the epigenetic clock reads them to estimate biological age - but most marks are reset between generations, so inherited lifestyle epigenetics is overstated.</li>
+            <li>Tumor methylation is distinctive and tissue-revealing, which is the foundation of methylation-based MCED blood tests such as Galleri.</li>
+          </ul>
+        </div>
+
+        <div class="quiz">
+          <div class="quiz__head"><span class="pill">Check</span> Knowledge check</div>
+          <p class="quiz__intro">Three quick questions. Pick an answer to see the explanation.</p>
+
+          <div class="q" data-answer="2">
+            <p class="q__stem">1. What best distinguishes an epigenetic change from a DNA mutation?</p>
+            <div class="q__opts">
+              <button class="opt">An epigenetic change only happens in cancer cells</button>
+              <button class="opt">A mutation is always inherited; an epigenetic change never is</button>
+              <button class="opt">An epigenetic change alters how a gene is read without changing the DNA letters; a mutation changes the letters themselves</button>
+              <button class="opt">They are two names for the same thing</button>
+            </div>
+            <div class="q__explain">A mutation rewrites the sequence (an A becomes a G). An epigenetic change leaves every letter intact and only changes gene activity, through marks like methylation or histone modification.</div>
+          </div>
+
+          <div class="q" data-answer="1">
+            <p class="q__stem">2. What does adding DNA methylation to a gene's control region usually do?</p>
+            <div class="q__opts">
+              <button class="opt">Boosts the gene, making it more active</button>
+              <button class="opt">Turns the gene down or silences it</button>
+              <button class="opt">Deletes the gene from the chromosome</button>
+              <button class="opt">Copies the gene to a new location</button>
+            </div>
+            <div class="q__explain">Methyl groups clustered at CpG sites in a control region typically act like a "do not read" flag, dialing the gene down or shutting it off. No DNA letters are changed - only the gene's output.</div>
+          </div>
+
+          <div class="q" data-answer="0">
+            <p class="q__stem">3. What does the epigenetic clock measure?</p>
+            <div class="q__opts">
+              <button class="opt">A person's biological age, estimated from DNA-methylation patterns</button>
+              <button class="opt">The number of mutations in a tumor's genome</button>
+              <button class="opt">How fast cells divide in culture</button>
+              <button class="opt">The length of the whole genome in base pairs</button>
+            </div>
+            <div class="q__explain">The Horvath clock reads methylation at a few hundred CpG sites to predict biological age, which can run ahead of or behind chronological age. It measures epigenetic state, not the DNA sequence itself.</div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+    <nav class="module-foot">
+      <a class="pn pn--prev" href="06-bubble.html"><small>&larr; Previous</small><b>Hype, Reality, and the Genomics Bubble</b></a>
+      <a class="pn pn--next" href="08-applied-genomics.html"><small>Next &rarr;</small><b>Applied Genomics</b></a>
+    </nav>
+  </main>
+
+  <p class="footer-note">Genetics 101 &middot; Module 07 &middot; <a href="../index.html">All modules</a> &middot; <a href="../glossary.html">Glossary</a></p>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/charts.js"></script>
+  <script src="../assets/js/glossary.js"></script>
+  <script src="../assets/js/quiz.js"></script>
+  <script src="../assets/js/nav.js"></script>
+  <script>
+  GChart.scatter("fig-epiclock", {
+    points: GData.epiClock.map(function(p){ return {x:p.x, y:p.y, color:"#138a72", r:8}; }),
+    xMin:18, xMax:88, yMin:18, yMax:88, diagonal:true, diagonalLabel:"perfect match",
+    xLabel:"Chronological age (years)", yLabel:"Predicted (epigenetic) age", height:420
+  });
+  </script>
+</body>
+</html>

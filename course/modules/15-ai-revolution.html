@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>15 - The AI Revolution | Genetics 101</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <header class="topbar">
+    <a class="topbar__brand" href="../index.html"><span class="dot"></span> Genetics 101</a>
+    <div class="topbar__spacer"></div>
+    <a class="topbar__link" href="../index.html">Modules</a>
+    <a class="topbar__link" href="../glossary.html">Glossary</a>
+    <button class="menu-btn" aria-label="Sections">&#9776;</button>
+  </header>
+
+  <main class="layout">
+    <div class="hero reveal">
+      <p class="hero__eyebrow">Part VI - The AI Frontier - Module 15</p>
+      <h1 class="hero__title">The AI Revolution: AlphaFold and Beyond</h1>
+      <p class="hero__sub">We close where the field is heading. The same transformer architecture behind large language models is now learning the languages of proteins and DNA. AlphaFold solved a fifty-year grand challenge, a Nobel Prize followed, and a wave of new companies is betting that AI can design medicine itself.</p>
+      <div class="hero__meta">
+        <span><b>Reading</b> ~16 min</span>
+        <span><b>You will learn</b> the protein-folding problem &middot; AlphaFold &middot; biological language models &middot; the new AI-bio companies</span>
+      </div>
+    </div>
+
+    <div class="module-grid">
+      <aside class="toc" id="toc"></aside>
+      <article class="article">
+
+        <p class="lead">For fourteen modules this course has been a story about learning to <em>read</em>. We learned what <span class="term" data-term="DNA">DNA</span> is, how the Human Genome Project spelled out the first <span class="term" data-term="Genome">genome</span>, and how <span class="term" data-term="Sequencing">sequencing</span> got so cheap that reading a person's code became a routine blood test. This final module is about something different: how artificial intelligence is helping us <em>interpret</em> the code we can now read so easily, and even <em>design</em> new biology that never existed. It may be the biggest shift in genetics since sequencing crossed the thousand-dollar line.</p>
+
+        <h2 id="folding">The protein-folding problem</h2>
+        <p>Recall the central dogma. A <span class="term" data-term="Gene">gene</span> is transcribed and translated into a <span class="term" data-term="Protein folding">protein</span>, which begins life as a one-dimensional chain of amino acids. But a protein does nothing useful as a floppy string. Its function - catalyzing a reaction, carrying oxygen, recognizing a virus - comes entirely from the precise three-dimensional shape into which that chain folds, usually in a fraction of a second. The sequence is the recipe; the fold is the working machine.</p>
+        <p>Here is the catch that defined a field for half a century. The chemical forces that drive folding are known, yet the number of possible shapes a chain can take is astronomically large. Predicting the final fold from sequence alone - "the folding problem" - resisted the world's best minds for roughly fifty years. We could read the recipe but not see the dish.</p>
+        <p>The fallback was to measure structures experimentally, with X-ray crystallography or cryo-electron microscopy. These methods are extraordinary but slow and costly: a single structure could take a graduate student months or years and tens of thousands of dollars. To track whether computation could do better, the community ran a sporting contest every two years - <b>CASP</b>, the Critical Assessment of protein Structure Prediction. Organizers withheld newly solved structures, teams submitted blind predictions, and a score called GDT_TS graded how close each prediction came to the real shape. For years, progress on the hardest targets was painfully incremental.</p>
+
+        <figure class="figure reveal">
+          <div class="figure__frame">
+            <div class="fig-title">Figure 15.2 - From sequence to folded protein</div>
+            <svg class="chart-svg" viewBox="0 0 720 230" role="img" aria-label="A one-dimensional amino-acid sequence folds into a three-dimensional protein shape">
+              <!-- sequence row label -->
+              <text x="30" y="48" font-size="12.5" font-weight="700" fill="#6b7384">1-D amino-acid sequence</text>
+              <!-- chain of residues -->
+              <line x1="44" y1="92" x2="300" y2="92" stroke="#6b7384" stroke-width="2"/>
+              <g font-size="12" font-weight="800" text-anchor="middle">
+                <circle cx="44"  cy="92" r="15" fill="#eaecf7" stroke="#283593" stroke-width="2"/><text x="44"  y="97" fill="#283593">M</text>
+                <circle cx="88"  cy="92" r="15" fill="#eaecf7" stroke="#283593" stroke-width="2"/><text x="88"  y="97" fill="#283593">K</text>
+                <circle cx="132" cy="92" r="15" fill="#eaecf7" stroke="#283593" stroke-width="2"/><text x="132" y="97" fill="#283593">V</text>
+                <circle cx="176" cy="92" r="15" fill="#e2f1ed" stroke="#138a72" stroke-width="2"/><text x="176" y="97" fill="#138a72">L</text>
+                <circle cx="220" cy="92" r="15" fill="#e2f1ed" stroke="#138a72" stroke-width="2"/><text x="220" y="97" fill="#138a72">G</text>
+                <circle cx="264" cy="92" r="15" fill="#fbe9ef" stroke="#c2456b" stroke-width="2"/><text x="264" y="97" fill="#c2456b">D</text>
+                <circle cx="300" cy="92" r="11" fill="#f0f1f6" stroke="#6b7384" stroke-width="1.5" stroke-dasharray="3 3"/><text x="300" y="96" fill="#6b7384" font-size="11">&hellip;</text>
+              </g>
+              <text x="172" y="138" text-anchor="middle" font-size="11" fill="#6b7384">a chain of residues, one letter each</text>
+              <!-- big arrow -->
+              <line x1="338" y1="92" x2="430" y2="92" stroke="#283593" stroke-width="3.5" marker-end="url(#af)"/>
+              <text x="384" y="78" text-anchor="middle" font-size="12.5" font-weight="700" fill="#283593">folds</text>
+              <!-- folded protein label -->
+              <text x="470" y="48" font-size="12.5" font-weight="700" fill="#6b7384">3-D folded protein</text>
+              <!-- stylized ribbon / blob -->
+              <path d="M470,118 C462,78 512,60 548,86 C586,62 642,82 636,120 C672,132 666,186 624,182 C612,210 556,206 548,178 C512,202 466,184 478,150 C452,150 452,124 470,118 Z"
+                    fill="#e2f1ed" stroke="#138a72" stroke-width="2.5"/>
+              <!-- ribbon strokes to suggest secondary structure -->
+              <path d="M500,150 C516,118 552,118 566,148 C582,178 614,176 622,148" fill="none" stroke="#283593" stroke-width="3" stroke-linecap="round"/>
+              <path d="M512,176 C540,166 580,170 600,176" fill="none" stroke="#c2456b" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="548" cy="92" r="6" fill="#c2456b"/>
+              <text x="556" y="218" text-anchor="middle" font-size="11" fill="#6b7384">shape determines function</text>
+              <defs>
+                <marker id="af" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#283593"/></marker>
+              </defs>
+            </svg>
+          </div>
+          <figcaption>The same gene encodes a flat string of amino acids (left). Driven by chemistry, that string collapses into one specific three-dimensional shape (right). Predicting the shape on the right from the letters on the left was the grand challenge that stood unsolved for roughly fifty years.</figcaption>
+        </figure>
+
+        <h2 id="alphafold">AlphaFold's breakthrough</h2>
+        <p>In 2018, DeepMind entered CASP13 with a system called <span class="term" data-term="AlphaFold">AlphaFold</span> and won, a clear signal that deep learning had arrived in structural biology. Two years later it returned with AlphaFold2 and did something the field had not expected for a generation: at CASP14 in 2020 it reached <b>near-experimental accuracy</b>, posting a median GDT score around 92 on the hardest targets - close enough that, for many proteins, the prediction was about as good as solving the structure in a lab. The organizers declared the folding problem essentially solved.</p>
+
+        <figure class="figure reveal">
+          <div class="figure__frame">
+            <div class="fig-title">Figure 15.1 - Protein-structure prediction accuracy at CASP</div>
+            <div id="fig-casp"></div>
+          </div>
+          <figcaption>Median accuracy (GDT_TS, higher is better) of the best predictor at the CASP contest on the hardest targets. Progress was incremental for years, then AlphaFold (2018) and especially AlphaFold2 (2020) reached near-experimental accuracy. Values approximate.</figcaption>
+        </figure>
+
+        <p>What followed mattered as much as the result. In 2021 DeepMind open-sourced AlphaFold2 and, with the European Bioinformatics Institute, launched the AlphaFold Protein Structure Database - free predicted structures that grew to cover more than 200 million proteins, essentially the known <span class="term" data-term="Proteome">proteome</span> of life. Almost overnight, a structure that once cost a lab months became a free lookup. In 2024, AlphaFold3 extended the system beyond single proteins to <em>complexes</em>: how a protein binds to DNA, to RNA, and to the small-molecule drugs that medicine cares about most.</p>
+
+        <div class="stats reveal">
+          <div class="stat"><div class="stat__num">~50 yr</div><div class="stat__label">the folding problem stood open</div></div>
+          <div class="stat"><div class="stat__num">~92</div><div class="stat__label">AlphaFold2 median GDT at CASP14 (2020)</div></div>
+          <div class="stat"><div class="stat__num">200M+</div><div class="stat__label">structures in the open AlphaFold database</div></div>
+          <div class="stat"><div class="stat__num">2024</div><div class="stat__label">Nobel Prize in Chemistry</div></div>
+        </div>
+
+        <p>The recognition came fast. The 2024 Nobel Prize in Chemistry was split between <b>Demis Hassabis and John Jumper</b> of DeepMind, for AlphaFold, and <b>David Baker</b> of the University of Washington, for computational protein design - building entirely new proteins rather than just predicting natural ones. A single year of awards captured both halves of the new field: predicting biology, and designing it.</p>
+
+        <div class="callout callout--key">
+          <div class="callout__label">&#9733; Key idea</div>
+          <p>AlphaFold did not just win a contest. It turned a months-long laboratory measurement into a near-instant, free prediction, and it did so for nearly every known protein. When a hard scientific bottleneck collapses this completely, the consequences ripple for decades - through drug discovery, enzyme engineering, and the way we interpret what a <span class="term" data-term="Variant">variant</span> in a gene actually does.</p>
+        </div>
+
+        <h2 id="language">Transformers learn the language of life</h2>
+        <p>Why did this happen now, and why in this way? The engine is the <span class="term" data-term="Transformer">transformer</span>, the neural-network architecture behind the large language models that learned to write and converse. A transformer is built to find patterns in sequences - which words tend to follow which, which distant tokens depend on each other. Biology, it turns out, is written almost entirely in sequences: DNA is a string over four letters, a protein is a string over twenty amino acids. If a model can learn the grammar of English from billions of sentences, it can learn the grammar of proteins from hundreds of millions of natural sequences.</p>
+        <p>The analogy is worth taking literally. In a sentence, the word "bank" means different things near "river" than near "money," and a good language model learns that from context. In a protein, an amino acid's role depends on the residues around it and the ones it will sit next to once folded. Evolution has, in effect, written billions of valid "sentences" - real proteins that work - and discarded the broken ones. A protein language model reads that corpus and absorbs the rules without ever being told them.</p>
+        <p>Two families have emerged. <b>Protein language models</b> - Meta's ESM series and its ESMFold structure predictor, and EvolutionaryScale's ESM3 - learn the language of amino acids well enough to predict structure, to score whether a mutation is likely harmful, and even to generate brand-new protein sequences. <b>Genomic language models</b> - Evo and the Nucleotide Transformer among them - do the same for DNA itself, learning patterns across whole genomes. And generative design tools such as <b>RFdiffusion</b>, from the Baker lab, run the process in reverse: tell them the shape or function you want, and they design a novel protein to fit, one nature never made.</p>
+
+        <div class="callout callout--insight">
+          <div class="callout__label">&#9632; The unlock</div>
+          <p>The deep reason AI hit biology so hard is that the field's core objects are sequences, and transformers are sequence machines. The same architecture that predicts the next word can predict the next amino acid, the effect of a DNA <span class="term" data-term="Variant">variant</span>, or a folded shape. One toolkit, suddenly pointed at the languages of life.</p>
+        </div>
+
+        <h2 id="companies">The new company landscape</h2>
+        <p>Wherever a hard problem collapses, capital follows. A wave of startups has formed to commercialize AI-for-biology, ranging from "AI-first" drug companies to open-model labs to generative-design shops. The lineages are striking - many trace directly back to DeepMind or to David Baker's lab in Seattle.</p>
+
+        <table class="dtable">
+          <thead>
+            <tr><th>Company</th><th>Founder / lineage</th><th>The bet</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><b>Isomorphic Labs</b></td><td>Demis Hassabis; DeepMind spin-off (2021)</td><td>AI-first drug discovery built on AlphaFold, with pharma partnerships including Eli Lilly and Novartis.</td></tr>
+            <tr><td><b>Chai Discovery</b></td><td>Founded 2024</td><td>Released Chai-1, an open structure-prediction model for biomolecular complexes.</td></tr>
+            <tr><td><b>EvolutionaryScale</b></td><td>The ex-Meta ESM team</td><td>The ESM3 protein language model - generating and reasoning over proteins.</td></tr>
+            <tr><td><b>Xaira Therapeutics</b></td><td>David Baker-lineage; launched 2024 with very large funding</td><td>Generative design as the foundation of a new kind of drug company.</td></tr>
+            <tr><td><b>Generate Biomedicines</b></td><td>Flagship-backed</td><td>Generative protein design across therapeutic modalities.</td></tr>
+            <tr><td><b>Profluent</b></td><td>AI / protein-language pedigree</td><td>AI-designed gene editors - the "OpenCRISPR" project, applying language models to <span class="term" data-term="CRISPR">CRISPR</span>.</td></tr>
+            <tr><td><b>Recursion, insitro</b></td><td>Data-driven incumbents</td><td>Large proprietary biology datasets feeding machine-learning drug pipelines.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout--market">
+          <div class="callout__label">&#9650; What is being bet</div>
+          <p>Strip away the labels and these companies are all wagering on one proposition: that AI can compress the most expensive and uncertain steps of making medicine. A typical drug takes well over a decade and costs into the billions, with most candidates failing. If models can design better molecules and predict failures earlier, even a modest improvement in success rate is worth enormous sums, which is why Xaira launched with one of the largest funding rounds biotech has seen and why big pharma is paying for Isomorphic's predictions before a single drug has reached the market.</p>
+        </div>
+
+        <h2 id="meaning">What it means for genetics and diagnostics</h2>
+        <p>Step back to the clinic, where this course began. Three concrete shifts are already underway. First, <b>discovery gets faster</b>: with structures and binding predictions on tap, the earliest stages of finding a drug compress from years toward months. Second, AI is starting to <b>resolve the variants that stump genetics</b>. Every diagnostic lab drowns in the <span class="term" data-term="VUS">VUS</span> - the variant of uncertain significance, a DNA change whose effect on health is simply unknown. DeepMind's AlphaMissense used these models to score essentially every possible missense change in the human proteome, offering evidence on millions of variants that clinicians previously had to leave blank. Third, AI doesn't only interpret biology, it <b>designs</b> it: novel proteins, engineered enzymes, even custom gene editors, and the targeting logic that helps a <span class="term" data-term="Companion diagnostic">companion diagnostic</span> match a patient to the right therapy.</p>
+        <p>A note of discipline belongs here, because hype is the field's occupational hazard. <b>A prediction is not biology.</b> A model can be confidently, fluently wrong - it will hand you a structure or a variant call with no flag that it is uncertain. AlphaFold predicts a static shape, not the dance of a protein in a living cell; a language model can propose a sequence that fails the moment it meets a real organism. Lab validation has not become optional; it has become the thing that separates a useful model from a beautiful mistake. The teams winning are the ones that close the loop between prediction and experiment fastest.</p>
+        <p>And so we arrive at the end of the arc this course has traced. We learned to <b>read</b> the genome with the Human Genome Project. We learned to <b>write</b> it with <span class="term" data-term="CRISPR">CRISPR</span> and gene therapy. Now, with AI, we are beginning to <b>design</b> it - to imagine a protein that should exist and bring it into being. The four-letter code that took fifty years to fold is becoming a language we can both understand and compose. If the last century of genetics was about discovering nature's text, the next will be about learning to write new sentences in it - carefully, and with the humility that biology always demands.</p>
+
+        <div class="takeaways reveal">
+          <h3>&#10003; Key takeaways</h3>
+          <ul>
+            <li>A protein's function comes from its 3-D fold; predicting that fold from sequence was an unsolved grand challenge for about fifty years, measured at the CASP contest.</li>
+            <li>AlphaFold (2018) and AlphaFold2 (2020) reached near-experimental accuracy; DeepMind open-sourced it and released 200M+ structures, and a 2024 Nobel followed for Hassabis, Jumper, and Baker.</li>
+            <li>The transformer architecture behind large language models learns the "grammar" of proteins and DNA, enabling structure prediction, variant scoring, and generative design of new sequences.</li>
+            <li>A wave of AI-bio companies - Isomorphic Labs, EvolutionaryScale, Xaira, Profluent and others - is betting AI can compress drug discovery and even design medicine.</li>
+            <li>AI helps score the VUS that stump clinical genetics, but prediction is not biology: models can be confidently wrong, so lab validation still matters.</li>
+          </ul>
+        </div>
+
+        <div class="quiz">
+          <div class="quiz__head"><span class="pill">Check</span> Knowledge check</div>
+          <p class="quiz__intro">Three quick questions. Pick an answer to see the explanation.</p>
+
+          <div class="q" data-answer="2">
+            <p class="q__stem">1. What did AlphaFold predict, and why was it considered such a hard problem?</p>
+            <div class="q__opts">
+              <button class="opt">The DNA sequence of a gene, because reading DNA was impossible before AI</button>
+              <button class="opt">Which drugs will get FDA approval, because trials are expensive</button>
+              <button class="opt">A protein's 3-D folded shape from its amino-acid sequence, a challenge unsolved for about fifty years</button>
+              <button class="opt">A person's risk of inherited disease, because variants are hard to count</button>
+            </div>
+            <div class="q__explain">AlphaFold predicts the three-dimensional structure a protein folds into from its one-dimensional amino-acid sequence. The number of possible shapes is astronomically large, which is why the folding problem stayed open for roughly fifty years until AlphaFold2 reached near-experimental accuracy at CASP14 in 2020.</div>
+          </div>
+
+          <div class="q" data-answer="1">
+            <p class="q__stem">2. What does a protein or DNA "language model" do?</p>
+            <div class="q__opts">
+              <button class="opt">It translates scientific papers between human languages</button>
+              <button class="opt">It learns the patterns, or grammar, of biological sequences to predict structure and effects and to generate new sequences</button>
+              <button class="opt">It physically synthesizes DNA in a wet lab</button>
+              <button class="opt">It replaces all laboratory experiments with certainty</button>
+            </div>
+            <div class="q__explain">Because DNA and proteins are sequences, the transformer architecture from large language models can learn their statistical grammar from hundreds of millions of natural examples. That lets models predict structure, score whether a variant is harmful, and even generate novel sequences - though predictions still require lab validation.</div>
+          </div>
+
+          <div class="q" data-answer="0">
+            <p class="q__stem">3. What is Isomorphic Labs?</p>
+            <div class="q__opts">
+              <button class="opt">A DeepMind spin-off (2021) doing AI-first drug discovery, with pharma partnerships including Eli Lilly and Novartis</button>
+              <button class="opt">The contest where protein-structure predictions are scored</button>
+              <button class="opt">An open-source database of 200 million protein structures</button>
+              <button class="opt">A government program that sequenced the first human genome</button>
+            </div>
+            <div class="q__explain">Isomorphic Labs is a DeepMind spin-off founded in 2021 and led by Demis Hassabis. It applies AlphaFold-derived AI to drug discovery and has struck partnerships with major pharma companies including Eli Lilly and Novartis. CASP is the contest, and the AlphaFold database holds the structures.</div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+    <nav class="module-foot">
+      <a class="pn pn--prev" href="14-natera.html"><small>&larr; Previous</small><b>Case Study: Natera</b></a>
+      <a class="pn pn--next" href="../index.html"><small>Finish &rarr;</small><b>Back to the contents</b></a>
+    </nav>
+  </main>
+
+  <p class="footer-note">Genetics 101 &middot; Module 15 &middot; <a href="../index.html">All modules</a> &middot; <a href="../glossary.html">Glossary</a></p>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/charts.js"></script>
+  <script src="../assets/js/glossary.js"></script>
+  <script src="../assets/js/quiz.js"></script>
+  <script src="../assets/js/nav.js"></script>
+  <script>
+  GChart.bars("fig-casp", {
+    categories: GData.casp.years,
+    series:[{name:"Median accuracy (GDT_TS)", data: GData.casp.gdt, colors: GData.casp.highlight.map(function(h){return h?"#138a72":"#9aa3c0";})}],
+    yMax:100, valueLabels:true, height:380
+  });
+  </script>
+</body>
+</html>

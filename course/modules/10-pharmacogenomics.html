@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>10 - Pharmacogenomics &amp; Precision Medicine | Genetics 101</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <header class="topbar">
+    <a class="topbar__brand" href="../index.html"><span class="dot"></span> Genetics 101</a>
+    <div class="topbar__spacer"></div>
+    <a class="topbar__link" href="../index.html">Modules</a>
+    <a class="topbar__link" href="../glossary.html">Glossary</a>
+    <button class="menu-btn" aria-label="Sections">&#9776;</button>
+  </header>
+
+  <main class="layout">
+    <div class="hero reveal">
+      <p class="hero__eyebrow">Part IV - Beyond the Sequence - Module 10</p>
+      <h1 class="hero__title">Pharmacogenomics &amp; Precision Medicine</h1>
+      <p class="hero__sub">The same drug at the same dose can save one patient and harm another, and often the difference is written in their genes. Pharmacogenomics, companion diagnostics, and targeted therapy turned "one size fits all" medicine into something far more tailored.</p>
+      <div class="hero__meta">
+        <span><b>Reading</b> ~13 min</span>
+        <span><b>You will learn</b> drug-gene interactions &middot; companion diagnostics &middot; targeted therapy</span>
+      </div>
+    </div>
+
+    <div class="module-grid">
+      <aside class="toc" id="toc"></aside>
+      <article class="article">
+
+        <p class="lead">For most of medical history, a prescription was a population average applied to a single human being. The dose printed on the bottle was the one that worked, on balance, across the bodies in a clinical trial - not the one calibrated to you. Most of the time the average is close enough. But "close enough" hides a long tail of patients for whom the standard dose does nothing, or quietly poisons them. Genomics is the tool that is finally making the prescription personal, and this module walks through the three ideas that did it: drug-gene interactions, <span class="term" data-term="Companion diagnostic">companion diagnostics</span>, and targeted therapy.</p>
+
+        <h2 id="one-dose">Why one dose does not fit all</h2>
+        <p>When you swallow a pill, your body has to process it - absorb it, switch it on or off, and clear it. A great deal of that chemistry runs through a single family of liver enzymes called the <b>cytochrome P450</b> enzymes. These are the body's drug-processing workhorses, and the <span class="term" data-term="Gene">genes</span> that encode them are among the most variable in the human <span class="term" data-term="Genome">genome</span>.</p>
+        <p>A small change in one of those genes - a single <span class="term" data-term="Variant">variant</span> - can speed an enzyme up or slow it down. The result is that people fall into rough groups: <b>poor metabolizers</b>, who process a drug slowly and let it build up, and <b>ultra-rapid metabolizers</b>, who clear or convert it so fast that the standard dose behaves like a different drug entirely. Your <span class="term" data-term="Genotype">genotype</span> here directly shapes a clinical <span class="term" data-term="Phenotype">phenotype</span>: how much active medicine actually reaches your bloodstream. This is the heart of <span class="term" data-term="Pharmacogenomics">pharmacogenomics</span> - matching the drug and the dose to the genes.</p>
+
+        <table class="dtable">
+          <thead>
+            <tr><th>Drug</th><th>Gene</th><th>Why it matters</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Clopidogrel</b> (Plavix)</td>
+              <td>CYP2C19</td>
+              <td>Poor metabolizers activate less of the drug, so they get less protection against clots.</td>
+            </tr>
+            <tr>
+              <td><b>Warfarin</b></td>
+              <td>CYP2C9 and VKORC1</td>
+              <td>Genotype helps guide the starting dose of a drug with a famously narrow safety margin.</td>
+            </tr>
+            <tr>
+              <td><b>Codeine</b></td>
+              <td>CYP2D6</td>
+              <td>Ultra-rapid metabolizers convert too much codeine into morphine, which can be a serious safety risk.</td>
+            </tr>
+            <tr>
+              <td><b>Abacavir</b></td>
+              <td>HLA-B*57:01</td>
+              <td>Carriers risk a severe hypersensitivity reaction, so testing is required before the drug is given.</td>
+            </tr>
+            <tr>
+              <td><b>Thiopurines</b> (azathioprine / 6-MP)</td>
+              <td>TPMT (and NUDT15)</td>
+              <td>Low enzyme activity means the drug builds up to dangerous, toxic levels at a normal dose.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>One detail ties this table together: every one of these tests reads <span class="term" data-term="Germline">germline</span> DNA. These are inherited variants, present in every cell, that you carry for life. That has a powerful consequence - you only need to be genotyped once, and the result informs prescribing decisions for decades. A pharmacogenomic profile is closer to a permanent fact about you than to a snapshot of a passing illness.</p>
+
+        <div class="callout callout--note">
+          <div class="callout__label">&#9888; Fast or slow, both are problems</div>
+          <p>It is tempting to assume "slow metabolizer" simply means a weaker effect. It depends on the drug. For codeine, ultra-<em>rapid</em> metabolism is the danger, because the body over-produces morphine. For thiopurines, <em>poor</em> metabolism is the danger, because the drug accumulates. Pharmacogenomics is not about more or less, it is about matching the dose to the body that has to handle it.</p>
+        </div>
+
+        <h2 id="companion-dx">Companion diagnostics</h2>
+        <p>Pharmacogenomics asks how your body handles a drug. A <span class="term" data-term="Companion diagnostic">companion diagnostic</span> flips the question and asks whether a drug is even right for your disease in the first place. It is a test formally tied to a specific therapy: you must have a particular biomarker to be eligible for the drug. No biomarker, no prescription. The test and the medicine are approved, and used, as a pair.</p>
+        <p>The clearest examples come from oncology, where the biomarker is usually something about the tumor itself:</p>
+        <ul>
+          <li><b>HER2 amplification</b> selects breast-cancer patients for Herceptin (trastuzumab). The drug targets HER2, so it only helps tumors that over-express it.</li>
+          <li><b>EGFR or ALK alterations</b> select lung-cancer patients for the matching targeted inhibitors.</li>
+          <li><b>BRAF V600E</b>, a specific point mutation, selects melanoma patients for BRAF-directed therapies.</li>
+        </ul>
+        <p>Notice the crucial shift from the last section. Pharmacogenomic tests read inherited, germline DNA. Companion diagnostics in cancer read <span class="term" data-term="Somatic">somatic</span> biology - the mutations a tumor acquired during a person's life, which exist in the cancer cells and nowhere else. The test is profiling the disease, not the patient's heredity.</p>
+
+        <div class="callout callout--key">
+          <div class="callout__label">&#9733; Key idea</div>
+          <p>A companion diagnostic turns a drug from "available to everyone" into "available to the right people." It pairs a test with a therapy so tightly that the biomarker becomes the gatekeeper - the drug is approved <em>for the patients the test identifies</em>, and for no one else.</p>
+        </div>
+
+        <h2 id="targeted-therapy">Targeted therapy and the precision-oncology model</h2>
+        <p>To see why companion diagnostics matter so much, contrast two eras of cancer treatment. Conventional chemotherapy is a blunt instrument: it attacks all rapidly dividing cells. That does hit the tumor, but it also hits hair follicles, the gut lining, and bone marrow, which is why the side effects are so brutal. The drug has no way to tell a cancer cell from a healthy one that simply happens to be dividing.</p>
+        <p>Targeted therapy is the opposite philosophy. Instead of attacking division in general, it aims at a specific molecular driver - the broken protein or pathway that a particular tumor depends on to survive. If the tumor has that driver, the drug can be devastatingly effective while leaving healthy tissue largely alone.</p>
+
+        <div class="compare">
+          <div class="compare__col compare__col--a">
+            <h4>Conventional chemotherapy</h4>
+            <p style="font-family:var(--sans);font-size:var(--fs-sm);color:var(--ink-soft)">Broad and toxic. Hits all dividing cells, cancerous or not. Effective but indiscriminate, with heavy collateral damage to healthy tissue. No biomarker needed - and no precision either.</p>
+          </div>
+          <div class="compare__col compare__col--b">
+            <h4>Targeted therapy</h4>
+            <p style="font-family:var(--sans);font-size:var(--fs-sm);color:var(--ink-soft)">Aimed at a specific molecular driver in the tumor. Spares most healthy cells, so it is often far better tolerated. Works only when the matching biomarker is present, which is why a companion diagnostic comes first.</p>
+          </div>
+        </div>
+
+        <p>The paradigm case is <b>imatinib</b> (Gleevec) for chronic myeloid leukemia. CML is driven by a single, well-defined molecular accident: two chromosomes swap pieces and fuse two genes into one, producing a constantly active <b>BCR-ABL</b> protein that tells the cell to keep dividing. Imatinib was engineered to plug into and shut off exactly that fusion protein. The effect was transformative - a cancer that had been a death sentence became, for many patients, a manageable chronic condition controlled by a daily pill. Gleevec proved the whole thesis: find the precise molecular driver, design a drug to block it, and give it only to the patients who carry it.</p>
+        <p>That logic depends on profiling the tumor first, and increasingly the profiling can be done from a tube of blood. When a tumor sheds fragments of <span class="term" data-term="ctDNA">circulating tumor DNA</span> into the bloodstream, a <span class="term" data-term="Liquid biopsy">liquid biopsy</span> can detect the driver mutations without cutting into the patient at all - then match them to the right targeted therapy.</p>
+
+        <div class="stats reveal">
+          <div class="stat"><div class="stat__num">2001</div><div class="stat__label">Gleevec FDA approval, a turning point for targeted therapy</div></div>
+          <div class="stat"><div class="stat__num">~90%</div><div class="stat__label">five-year survival in chronic-phase CML on modern therapy</div></div>
+          <div class="stat"><div class="stat__num">1:1</div><div class="stat__label">a companion diagnostic pairs one test to one drug</div></div>
+          <div class="stat"><div class="stat__num">germline</div><div class="stat__label">vs somatic - the split that separates the two test types</div></div>
+        </div>
+
+        <h2 id="promise-limits">Promise and limits</h2>
+        <p>Precision medicine is one of the clearest wins of applied genomics, but it is not magic, and three limits keep it honest. First, tumors evolve. A cancer knocked back by a targeted drug can acquire a new mutation that routes around the block, and the disease returns resistant - which is why oncologists increasingly cycle through drugs or combine them. Second, not every cancer has a clean, druggable target; many are driven by tangled combinations no single inhibitor can address. Third, the tests and the drugs are expensive, which raises hard questions of access and reimbursement.</p>
+        <p>Even with those caveats, the direction of travel is unmistakable. A treatable <span class="term" data-term="Allele">allele</span> or a specific tumor mutation can now decide which drug a patient receives and at what dose - a degree of personalization that would have looked like science fiction a generation ago. It also created the commercial scaffolding for the modern diagnostics industry: if a drug needs a test, someone has to sell, run, and reimburse that test. We pick up that thread - the companies and the economics - in the diagnostics modules ahead (Modules 13-14).</p>
+
+        <div class="callout callout--insight">
+          <div class="callout__label">&#9632; The bigger picture</div>
+          <p>Targeted therapy quietly rewired the business of medicine. Once a drug is only useful in biomarker-positive patients, the diagnostic stops being an afterthought and becomes a gatekeeper to a multi-billion-dollar therapy. That coupling - test plus drug, paid for together - is the foundation the precision-oncology economy is built on, and it is why diagnostics companies sit so close to the center of modern genomics.</p>
+        </div>
+
+        <div class="takeaways reveal">
+          <h3>&#10003; Key takeaways</h3>
+          <ul>
+            <li>Many drugs are processed by liver cytochrome P450 enzymes; inherited variants make people poor or ultra-rapid metabolizers, changing how much active drug they actually get.</li>
+            <li>Pharmacogenomic tests read <b>germline</b> DNA - inherited, in every cell, genotyped once for life (clopidogrel, warfarin, codeine, abacavir, thiopurines).</li>
+            <li>A <b>companion diagnostic</b> ties a test to a specific drug: you need the biomarker to be eligible. In cancer these read <b>somatic</b> tumor biology (HER2, EGFR/ALK, BRAF V600E).</li>
+            <li>Targeted therapy aims at a tumor's molecular driver instead of all dividing cells; <b>imatinib (Gleevec)</b> against the BCR-ABL fusion in CML is the paradigm case.</li>
+            <li>Limits remain - resistance, undruggable tumors, and cost - but precision medicine is a clear win and the backbone of the modern diagnostics industry.</li>
+          </ul>
+        </div>
+
+        <div class="quiz">
+          <div class="quiz__head"><span class="pill">Check</span> Knowledge check</div>
+          <p class="quiz__intro">Three quick questions. Pick an answer to see the explanation.</p>
+
+          <div class="q" data-answer="2">
+            <p class="q__stem">1. A patient is a "poor metabolizer" of a drug because of a CYP variant. What does this generally mean?</p>
+            <div class="q__opts">
+              <button class="opt">The drug is always more effective in this patient</button>
+              <button class="opt">The patient cannot take any medication safely</button>
+              <button class="opt">Their enzyme processes the drug slowly, which can change how much active drug they end up with</button>
+              <button class="opt">The variant was acquired by the tumor and is not inherited</button>
+            </div>
+            <div class="q__explain">Metabolizer status reflects how fast an inherited enzyme processes a drug. Poor metabolizers process it slowly; depending on the drug that can mean too little activation or a toxic build-up. It is a germline trait, not a tumor change, and "slow" is not automatically "stronger" - it depends on the specific drug.</div>
+          </div>
+
+          <div class="q" data-answer="1">
+            <p class="q__stem">2. What does a companion diagnostic do?</p>
+            <div class="q__opts">
+              <button class="opt">It sequences a patient's entire genome before any prescription</button>
+              <button class="opt">It tests for a specific biomarker that a patient must have to be eligible for a particular drug</button>
+              <button class="opt">It replaces the drug entirely with a genetic therapy</button>
+              <button class="opt">It measures only inherited variants and never tumor mutations</button>
+            </div>
+            <div class="q__explain">A companion diagnostic is tied to one specific therapy: the biomarker is the gatekeeper, so the drug is approved for the patients the test identifies and no one else. In oncology these tests typically read somatic tumor biology, such as HER2 amplification or BRAF V600E.</div>
+          </div>
+
+          <div class="q" data-answer="0">
+            <p class="q__stem">3. Why is imatinib (Gleevec) considered the paradigm of targeted therapy?</p>
+            <div class="q__opts">
+              <button class="opt">It blocks a specific molecular driver, the BCR-ABL fusion protein, turning a fatal leukemia into a manageable condition</button>
+              <button class="opt">It is a conventional chemotherapy that kills all dividing cells</button>
+              <button class="opt">It is an inherited variant that protects against cancer</button>
+              <button class="opt">It works equally well in every cancer regardless of biomarker</button>
+            </div>
+            <div class="q__explain">Gleevec was designed to shut off the BCR-ABL fusion protein that drives chronic myeloid leukemia. By hitting that one molecular driver rather than all dividing cells, it transformed a once-fatal cancer into a manageable chronic disease - proving the targeted-therapy thesis.</div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+    <nav class="module-foot">
+      <a class="pn pn--prev" href="09-crispr.html"><small>&larr; Previous</small><b>CRISPR and the Age of Gene Editing</b></a>
+      <a class="pn pn--next" href="11-consumer.html"><small>Next &rarr;</small><b>Consumer &amp; Ancestry Genomics</b></a>
+    </nav>
+  </main>
+
+  <p class="footer-note">Genetics 101 &middot; Module 10 &middot; <a href="../index.html">All modules</a> &middot; <a href="../glossary.html">Glossary</a></p>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/charts.js"></script>
+  <script src="../assets/js/glossary.js"></script>
+  <script src="../assets/js/quiz.js"></script>
+  <script src="../assets/js/nav.js"></script>
+</body>
+</html>

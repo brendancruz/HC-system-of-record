@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>13 - Genomics in the Clinic | Genetics 101</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <header class="topbar">
+    <a class="topbar__brand" href="../index.html"><span class="dot"></span> Genetics 101</a>
+    <div class="topbar__spacer"></div>
+    <a class="topbar__link" href="../index.html">Modules</a>
+    <a class="topbar__link" href="../glossary.html">Glossary</a>
+    <button class="menu-btn" aria-label="Sections">&#9776;</button>
+  </header>
+
+  <main class="layout">
+    <div class="hero reveal">
+      <p class="hero__eyebrow">Part V - Genomics in Society &amp; the Clinic - Module 13</p>
+      <h1 class="hero__title">Genomics in the Clinic</h1>
+      <p class="hero__sub">This is where the science becomes an industry. Liquid biopsy, circulating tumor DNA, residual-disease monitoring, and multi-cancer early detection are turning a tube of blood into a window on disease, and into one of the fastest-growing markets in medicine.</p>
+      <div class="hero__meta">
+        <span><b>Reading</b> ~14 min</span>
+        <span><b>You will learn</b> liquid biopsy &middot; ctDNA &middot; MRD &middot; MCED &middot; the competitive map</span>
+      </div>
+    </div>
+
+    <div class="module-grid">
+      <aside class="toc" id="toc"></aside>
+      <article class="article">
+
+        <p class="lead">Three threads from earlier modules converge here into real products and a real market. The cost of <span class="term" data-term="Sequencing">sequencing</span> collapsed, so reading <span class="term" data-term="DNA">DNA</span> at scale became cheap. The distinction between inherited <span class="term" data-term="Germline">germline</span> DNA and acquired <span class="term" data-term="Somatic">somatic</span> DNA told us what we were reading and why it mattered. And the biology of cell-free DNA - fragments of <span class="term" data-term="Genome">genome</span> floating in the blood - gave us something to read without ever cutting tissue. Put those together and you get a blood test that can find, profile, and follow cancer. That is the business of modern molecular diagnostics, and it is the subject of this module.</p>
+
+        <h2 id="tube-of-blood">The tube of blood</h2>
+        <p>Your cells are not sealed boxes. As they live, divide, and die, they constantly shed short fragments of DNA into the bloodstream. Collectively this is <span class="term" data-term="cfDNA">cell-free DNA</span>, or cfDNA - billions of fragments circulating at any moment, mostly from ordinary turnover of healthy tissue. A tumor does the same thing. The portion of cfDNA that comes from cancer cells, carrying the tumor's somatic <span class="term" data-term="Variant">variants</span>, is called <span class="term" data-term="ctDNA">circulating tumor DNA</span>, or ctDNA.</p>
+        <p>A <span class="term" data-term="Liquid biopsy">liquid biopsy</span> is simply the analysis of this material from a routine blood draw. Instead of a surgeon cutting out a piece of tumor for a traditional tissue biopsy - invasive, slow, and sometimes impossible to reach - a phlebotomist fills a tube, and a lab sequences the DNA inside it. The appeal is obvious: it is safe, it can be repeated as often as you like, and it samples DNA shed from across the whole body rather than one needle's worth of one site.</p>
+
+        <figure class="figure reveal">
+          <div class="figure__frame">
+            <div class="fig-title">Figure 13.1 - What a liquid biopsy reads</div>
+            <svg class="chart-svg" viewBox="0 0 720 250" role="img" aria-label="A blood tube feeds a bloodstream containing normal germline cell-free DNA and tumor-derived ctDNA, which is sequenced into a readout">
+              <!-- blood tube -->
+              <rect x="24" y="78" width="58" height="118" rx="14" fill="#fbe9ef" stroke="#c2456b" stroke-width="2"/>
+              <rect x="24" y="78" width="58" height="34" rx="14" fill="#c2456b" opacity="0.18"/>
+              <rect x="33" y="64" width="40" height="18" rx="6" fill="#eaecf7" stroke="#283593" stroke-width="2"/>
+              <text x="53" y="216" text-anchor="middle" font-size="12" fill="#3d4554">blood draw</text>
+              <!-- arrow 1 -->
+              <line x1="92" y1="135" x2="158" y2="135" stroke="#6b7384" stroke-width="2.5" marker-end="url(#ah13)"/>
+              <!-- bloodstream panel -->
+              <rect x="166" y="62" width="318" height="146" rx="14" fill="#f4f6fb" stroke="#6b7384" stroke-width="1.5"/>
+              <text x="325" y="84" text-anchor="middle" font-size="13" font-weight="800" fill="#3d4554">cell-free DNA in the bloodstream</text>
+              <!-- germline (indigo) fragments: abundant -->
+              <rect x="186" y="104" width="34" height="9" rx="4.5" fill="#283593"/>
+              <rect x="232" y="120" width="30" height="9" rx="4.5" fill="#283593"/>
+              <rect x="276" y="100" width="36" height="9" rx="4.5" fill="#283593"/>
+              <rect x="328" y="124" width="32" height="9" rx="4.5" fill="#283593"/>
+              <rect x="200" y="150" width="34" height="9" rx="4.5" fill="#283593"/>
+              <rect x="262" y="160" width="30" height="9" rx="4.5" fill="#283593"/>
+              <rect x="372" y="106" width="34" height="9" rx="4.5" fill="#283593"/>
+              <rect x="420" y="122" width="30" height="9" rx="4.5" fill="#283593"/>
+              <rect x="356" y="156" width="34" height="9" rx="4.5" fill="#283593"/>
+              <rect x="416" y="168" width="30" height="9" rx="4.5" fill="#283593"/>
+              <!-- ctDNA (rose) fragments: rare -->
+              <rect x="300" y="142" width="30" height="9" rx="4.5" fill="#c2456b"/>
+              <rect x="398" y="142" width="28" height="9" rx="4.5" fill="#c2456b"/>
+              <!-- legend -->
+              <rect x="186" y="184" width="14" height="9" rx="4.5" fill="#283593"/>
+              <text x="206" y="192" font-size="11" fill="#3d4554">germline cfDNA (abundant)</text>
+              <rect x="372" y="184" width="14" height="9" rx="4.5" fill="#c2456b"/>
+              <text x="392" y="192" font-size="11" fill="#3d4554">ctDNA (rare, somatic)</text>
+              <!-- arrow 2 -->
+              <line x1="492" y1="135" x2="558" y2="135" stroke="#6b7384" stroke-width="2.5" marker-end="url(#ah13)"/>
+              <!-- sequencer / readout -->
+              <rect x="566" y="86" width="130" height="98" rx="12" fill="#e2f1ed" stroke="#138a72" stroke-width="2"/>
+              <text x="631" y="112" text-anchor="middle" font-size="13" font-weight="800" fill="#138a72">sequencer</text>
+              <line x1="584" y1="128" x2="678" y2="128" stroke="#138a72" stroke-width="2"/>
+              <line x1="584" y1="142" x2="660" y2="142" stroke="#138a72" stroke-width="2"/>
+              <line x1="584" y1="156" x2="678" y2="156" stroke="#138a72" stroke-width="2"/>
+              <text x="631" y="178" text-anchor="middle" font-size="11" fill="#3d4554">variant readout</text>
+              <defs>
+                <marker id="ah13" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#6b7384"/></marker>
+              </defs>
+            </svg>
+          </div>
+          <figcaption>A single tube of blood carries cfDNA shed from across the body. Most of it is normal <b>germline</b> DNA (indigo); a tiny fraction is tumor-derived <b>ctDNA</b> (rose) carrying somatic variants. The lab's job is to find the needles in that haystack and read them.</figcaption>
+        </figure>
+
+        <p>The catch is in that last sentence. In a patient with cancer, ctDNA can be a vanishingly small share of total cfDNA - sometimes well under 1 percent, and lower still when the disease is early or nearly gone. The signal you care about is buried in an ocean of normal DNA. That is why sensitivity is everything in this field, and why deep <span class="term" data-term="Coverage">coverage</span> - reading each position many times over - and clever error-suppression chemistry separate the credible tests from the marketing. The whole game is detecting rare somatic fragments without being fooled by noise.</p>
+
+        <h2 id="four-jobs">Four jobs a liquid biopsy does</h2>
+        <p>"Liquid biopsy" is one technique pointed at four very different clinical problems. Keeping them straight is the key to reading the industry, because each job has its own customers, evidence bar, and economics.</p>
+
+        <table class="dtable">
+          <thead>
+            <tr><th>Job</th><th>Question it answers</th><th>DNA read</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><b>Therapy selection</b></td><td>Which targeted drug fits this tumor's mutations? Genotype the cancer from blood and match it to a drug, the <span class="term" data-term="Companion diagnostic">companion diagnostic</span> logic from Module 10.</td><td>Somatic</td></tr>
+            <tr><td><b>Early detection</b></td><td>Is there any cancer signal in an apparently healthy person? <span class="term" data-term="MCED">Multi-cancer early detection</span> (MCED) tests such as Grail's Galleri screen asymptomatic people.</td><td>Somatic</td></tr>
+            <tr><td><b>Residual disease (MRD)</b></td><td>Is cancer still present after treatment, and is it coming back? Detect <span class="term" data-term="MRD">molecular residual disease</span> often before a scan can.</td><td>Somatic</td></tr>
+            <tr><td><b>Prenatal</b></td><td>Does this pregnancy carry a chromosomal condition? <span class="term" data-term="NIPT">NIPT</span> reads fetal cell-free DNA in the mother's blood.</td><td>Germline</td></tr>
+          </tbody>
+        </table>
+
+        <p>Notice that three of the four read somatic DNA - the acquired mutations of a tumor - while the fourth, prenatal testing, reads germline DNA. Non-invasive prenatal testing was, in fact, the first cell-free DNA test to reach enormous scale: it uses exactly the same principle, detecting fragments of fetal DNA circulating in maternal blood, but the DNA it reads is inherited rather than cancerous. One biology, two worlds of medicine.</p>
+
+        <div class="callout callout--key">
+          <div class="callout__label">&#9733; Key idea</div>
+          <p>A liquid biopsy is not a single product but a platform. The same core skill - pulling tiny amounts of the right DNA out of a tube of blood and reading it without being fooled by noise - is pointed at cancer treatment, cancer screening, cancer monitoring, and pregnancy. Master that skill and you can build several businesses from one technology.</p>
+        </div>
+
+        <div class="callout callout--note">
+          <div class="callout__label">&#9888; Same blood, different bar</div>
+          <p>These four jobs are not equally hard. Genotyping a known tumor for therapy selection is comparatively easy - there is plenty of ctDNA in advanced disease. Screening a healthy person, where any cancer present is tiny and you must avoid false alarms across millions of tests, is the hardest analytical and regulatory challenge in the field. Do not assume a company strong at one job is automatically credible at another.</p>
+        </div>
+
+        <h2 id="mrd">MRD: the most important growth category</h2>
+        <p>Of the four jobs, molecular residual disease is the one investors and clinicians watch most closely, and it is worth understanding why. A therapy-selection test is usually a one-time event: you genotype the tumor, pick a drug, and move on. MRD is different. After surgery or chemotherapy, you test the patient, and then you test again, and again - monitoring over months and years to catch a recurrence the moment ctDNA reappears, often well before anything shows up on imaging. That turns a single test into a recurring, longitudinal relationship with strong clinical value, which is exactly the kind of franchise that compounds.</p>
+        <p>There are two broad ways to build an MRD test, and the difference matters. A <b>tumor-informed</b> approach first sequences the patient's own tumor, identifies the specific somatic variants it carries, and then builds a custom panel that hunts for precisely those variants in later blood draws. Because it knows exactly what to look for, it can be extraordinarily sensitive. Natera's Signatera is the leading example. A <b>tumor-naive</b> approach skips the tumor-sequencing step and instead scans the blood for a fixed, predefined set of cancer signals - faster to deploy and not dependent on a tissue sample, but generally working harder to reach the same sensitivity.</p>
+
+        <div class="callout callout--market">
+          <div class="callout__label">&#9632; What actually drives the business</div>
+          <p>The science decides whether an MRD test works; payor <b>coverage</b> and clinical-guideline inclusion decide whether it makes money. A test that insurers reimburse and that practice guidelines tell oncologists to order becomes standard of care and scales; a brilliant test that neither covers nor recommends stays a science project. This is why diagnostics companies pour resources into reimbursement and guideline evidence, and why the recurring nature of MRD - many billable tests per patient over years - makes it the crown jewel of the category.</p>
+        </div>
+
+        <h2 id="competitive-map">The competitive map</h2>
+        <p>The companies competing for this market split along the four jobs above, and their valuations reveal what the market is paying for. The table below uses real figures as of mid-2026. Multiples are price-to-sales, a rough proxy for how richly each name is valued against its revenue.</p>
+
+        <div class="stats reveal">
+          <div class="stat"><div class="stat__num">~$30B</div><div class="stat__label">Natera market cap (largest in the group)</div></div>
+          <div class="stat"><div class="stat__num">$2.31B</div><div class="stat__label">Natera FY2025 revenue, up ~36%</div></div>
+          <div class="stat"><div class="stat__num">~18x</div><div class="stat__label">Guardant price-to-sales (highest multiple)</div></div>
+          <div class="stat"><div class="stat__num">~$21B</div><div class="stat__label">Abbott's buyout of Exact Sciences</div></div>
+        </div>
+
+        <table class="dtable">
+          <thead>
+            <tr><th>Company</th><th>Focus</th><th>Note</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><b>Natera</b> (NTRA)</td><td>Signatera tumor-informed MRD plus women's health (NIPT, carrier screening)</td><td>Largest name in the group at ~$30B market cap; FY2025 revenue ~$2.31B, up ~36%. Rich at ~13x sales, but the premium is growth-justified. The Module 14 case study.</td></tr>
+            <tr><td><b>Guardant Health</b> (GH)</td><td>Therapy selection plus Shield blood-based colorectal screening</td><td>Highest multiple in the group (~18x sales) on a ~$0.97B, 30%+ growing base. The market is paying a "screening TAM premium" for Shield optionality.</td></tr>
+            <tr><td><b>Tempus AI</b> (TEM)</td><td>Data plus diagnostics; an "Insights" data business alongside testing</td><td>Fastest grower (+83%) but only ~6.6x sales; growth is Ambry-acquisition-inflated (~30% organic). The data business is the potential re-rate.</td></tr>
+            <tr><td><b>Exact Sciences</b> (EXAS)</td><td>Cologuard stool-based colorectal screening</td><td>A profitable, scaled screening franchise. Acquired by Abbott for ~$21B (~$105/share), closed 2026-03-23 - the take-out benchmark at ~6x sales.</td></tr>
+            <tr><td><b>GeneDx</b> (WGS)</td><td>Exome and genome sequencing for rare disease</td><td>Turnaround re-rate; exome/genome revenue up ~53-55% with ~74% adjusted margins. Cheaper than the leaders at ~4x sales.</td></tr>
+            <tr><td><b>Grail</b></td><td>Galleri multi-cancer early detection (MCED)</td><td>The flagship MCED screening test; the category that anchors the "screening TAM" thesis, with billions raised to chase it.</td></tr>
+            <tr><td><b>Roche / Foundation Medicine</b></td><td>Comprehensive tumor genomic profiling for therapy selection</td><td>The incumbent strategic in tissue and blood tumor profiling, sitting inside a global pharma and diagnostics giant.</td></tr>
+          </tbody>
+        </table>
+
+        <p>Read the pattern in the multiples. The screening-focused names - Guardant with Shield, and the whole MCED idea behind Grail - carry the richest valuations because investors are paying for an enormous future market of testing healthy people, not just today's revenue. The scaled, profitable screening franchise, Exact Sciences, cleared at a far more sober ~6x sales when a strategic actually bought it. And Natera sits in between: expensive, but on the strength of real, fast, MRD-driven growth rather than pure optionality.</p>
+
+        <div class="callout callout--note">
+          <div class="callout__label">&#9888; Not investment advice</div>
+          <p>These figures are a snapshot for teaching how the market is structured, not a recommendation. Multiples move daily, accounting choices differ across companies, and price-to-sales ignores debt and cash. Treat the numbers as a map of who does what, not as a stock tip.</p>
+        </div>
+
+        <h2 id="value-frontier">Where the value is going</h2>
+        <p>Step back and the direction of travel is clear. The easy, early money in this industry came from therapy selection and prenatal testing - useful, established, but largely one-time tests with capped volume per patient. The frontier, and the value, is moving toward the two hardest jobs: <b>MRD</b>, which converts cancer care into years of recurring monitoring, and <b>screening</b>, which dangles the largest market of all - testing healthy people before symptoms appear. Both are where sensitivity, evidence, and reimbursement matter most, and both are where the durable franchises will be built.</p>
+
+        <div class="callout callout--insight">
+          <div class="callout__label">&#9632; Why this sets up the next module</div>
+          <p>If MRD is the crown jewel and tumor-informed testing is the most sensitive way to pursue it, then the company that owns the leading tumor-informed MRD test - while also running a large germline women's-health franchise off the same cell-free DNA expertise - is the natural case study for how the whole germline-plus-somatic, science-plus-reimbursement playbook comes together. That company is Natera, and it is where we go next.</p>
+        </div>
+
+        <div class="takeaways reveal">
+          <h3>&#10003; Key takeaways</h3>
+          <ul>
+            <li><b>cfDNA</b> is all the DNA fragments shed into the blood; <b>ctDNA</b> is the small, tumor-derived, somatic fraction of it. A liquid biopsy reads this from a simple blood draw.</li>
+            <li>ctDNA can be far less than 1% of total cfDNA, so high sensitivity and deep sequencing coverage are what make a test credible.</li>
+            <li>One technique, four jobs: therapy selection, MCED screening, MRD monitoring (all somatic), and NIPT prenatal testing (germline).</li>
+            <li><b>MRD</b> detects cancer left after treatment and catches recurrence early, often before imaging - and because it is repeated over years, it is the highest-value, most recurring category.</li>
+            <li><b>Tumor-informed</b> MRD builds a custom panel from the patient's sequenced tumor (e.g. Signatera); <b>tumor-naive</b> scans a fixed panel. Payor coverage and guideline inclusion are the real commercial drivers.</li>
+          </ul>
+        </div>
+
+        <div class="quiz">
+          <div class="quiz__head"><span class="pill">Check</span> Knowledge check</div>
+          <p class="quiz__intro">Three quick questions. Pick an answer to see the explanation.</p>
+
+          <div class="q" data-answer="2">
+            <p class="q__stem">1. What is the relationship between cfDNA and ctDNA?</p>
+            <div class="q__opts">
+              <button class="opt">They are two names for the same thing</button>
+              <button class="opt">cfDNA is the tumor fraction of ctDNA</button>
+              <button class="opt">ctDNA is the tumor-derived fraction of total cell-free DNA</button>
+              <button class="opt">cfDNA is inherited and ctDNA is always larger in amount</button>
+            </div>
+            <div class="q__explain">cfDNA is all the cell-free DNA in the blood, most of it normal germline DNA. ctDNA is the small subset that comes from tumor cells and carries somatic variants. The tumor fraction can be well under 1% of the total, which is why sensitivity and deep coverage matter.</div>
+          </div>
+
+          <div class="q" data-answer="1">
+            <p class="q__stem">2. What does a molecular residual disease (MRD) test detect, and why is the category so commercially valuable?</p>
+            <div class="q__opts">
+              <button class="opt">Inherited cancer risk before birth; valuable because it is a one-time test</button>
+              <button class="opt">Cancer left after treatment, often before imaging; valuable because it is repeated over years as recurring monitoring</button>
+              <button class="opt">Which targeted drug to prescribe; valuable because each patient is tested once</button>
+              <button class="opt">A pregnancy's chromosomal status; valuable because of high volume</button>
+            </div>
+            <div class="q__explain">MRD detects residual or recurring cancer from ctDNA, frequently before a scan can see it. Because the patient is monitored repeatedly over months and years, MRD turns one test into a longitudinal, recurring franchise - which is why it is the crown jewel of the field.</div>
+          </div>
+
+          <div class="q" data-answer="0">
+            <p class="q__stem">3. How does a tumor-informed MRD test (such as Signatera) differ from a tumor-naive one?</p>
+            <div class="q__opts">
+              <button class="opt">It first sequences the patient's own tumor and builds a custom panel for those specific variants</button>
+              <button class="opt">It reads only germline DNA inherited from the parents</button>
+              <button class="opt">It avoids sequencing entirely and uses imaging instead</button>
+              <button class="opt">It screens healthy people for many cancers at once</button>
+            </div>
+            <div class="q__explain">A tumor-informed approach sequences the patient's tumor, finds its specific somatic variants, and then hunts for exactly those in later blood draws - which makes it highly sensitive. A tumor-naive approach instead scans a fixed, predefined panel without needing the patient's tumor first.</div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+    <nav class="module-foot">
+      <a class="pn pn--prev" href="12-ethics.html"><small>&larr; Previous</small><b>Ethics, Society &amp; the Shadow of Eugenics</b></a>
+      <a class="pn pn--next" href="14-natera.html"><small>Next &rarr;</small><b>Case Study: Natera</b></a>
+    </nav>
+  </main>
+
+  <p class="footer-note">Genetics 101 &middot; Module 13 &middot; <a href="../index.html">All modules</a> &middot; <a href="../glossary.html">Glossary</a></p>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/charts.js"></script>
+  <script src="../assets/js/glossary.js"></script>
+  <script src="../assets/js/quiz.js"></script>
+  <script src="../assets/js/nav.js"></script>
+</body>
+</html>

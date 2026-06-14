@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>03 - Lexicon | Genetics 101</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <header class="topbar">
+    <a class="topbar__brand" href="../index.html"><span class="dot"></span> Genetics 101</a>
+    <div class="topbar__spacer"></div>
+    <a class="topbar__link" href="../index.html">Modules</a>
+    <a class="topbar__link" href="../glossary.html">Glossary</a>
+    <button class="menu-btn" aria-label="Sections">&#9776;</button>
+  </header>
+
+  <main class="layout">
+    <div class="hero reveal">
+      <p class="hero__eyebrow">Part I - Foundations - Module 03</p>
+      <h1 class="hero__title">Speaking Genomics: The Lexicon</h1>
+      <p class="hero__sub">A fluency module. The vocabulary of modern genetics, grouped so the words finally click, from the kinds of variants to the way we describe inheritance to the alphabet soup of clinical testing.</p>
+      <div class="hero__meta">
+        <span><b>Reading</b> ~15 min</span>
+        <span><b>You will learn</b> variant types &middot; inheritance vocabulary &middot; clinical-testing acronyms</span>
+      </div>
+    </div>
+
+    <div class="module-grid">
+      <aside class="toc" id="toc"></aside>
+      <article class="article">
+
+        <p class="lead">Every field hides behind its own words, and genetics hides behind more than most. Jargon is both a barrier and a shortcut: the same acronym that makes a paper unreadable to a newcomer lets two specialists agree in three syllables. The goal here is to flip the words from barrier to shortcut. Once the core vocabulary clicks, the whole field reads faster - press releases, clinical reports, and earnings calls all suddenly parse. Treat this as a reference you return to, not a chapter you read once. The tables are the heart of it; the prose between them is the glue that keeps the words grouped in memory.</p>
+
+        <h2 id="units">The units of the code</h2>
+        <p>Start at the bottom. Genetics is built from a small number of units that nest inside one another like Russian dolls: a chemical letter sits at a position on a chromosome, positions sit inside genes, and genes sit inside the genome. Getting these straight is the price of admission, because almost every later term is defined in relation to one of them.</p>
+
+        <table class="dtable">
+          <thead><tr><th>Term</th><th>In plain language</th></tr></thead>
+          <tbody>
+            <tr><td><span class="term" data-term="Genome">Genome</span></td><td>The complete set of an organism's DNA - all genes plus the sequence between them. The human genome is about 3.1 billion base pairs.</td></tr>
+            <tr><td><span class="term" data-term="Gene">Gene</span></td><td>A stretch of DNA that codes for a product, usually a protein. Humans have roughly 20,000 protein-coding genes.</td></tr>
+            <tr><td><span class="term" data-term="Exome">Exome</span></td><td>The roughly 1-2% of the genome that actually codes for proteins (all the exons added together).</td></tr>
+            <tr><td><span class="term" data-term="Exon">Exon</span></td><td>The protein-coding segment of a gene that stays in the final messenger RNA after the non-coding introns are spliced out.</td></tr>
+            <tr><td><span class="term" data-term="Base pair">Base pair</span></td><td>Two complementary bases - A with T, C with G - bonded across the two DNA strands. Genome length is counted in base pairs.</td></tr>
+            <tr><td><span class="term" data-term="Nucleotide">Nucleotide</span></td><td>The building block of DNA or RNA: one base plus a sugar and a phosphate group.</td></tr>
+            <tr><td><span class="term" data-term="Codon">Codon</span></td><td>A triplet of bases that specifies a single amino acid, or a stop signal. The three-letter word the protein machinery reads.</td></tr>
+            <tr><td><span class="term" data-term="Chromosome">Chromosome</span></td><td>A long, packaged molecule of DNA. Humans have 23 pairs, 46 in total, including the sex chromosomes X and Y.</td></tr>
+            <tr><td><span class="term" data-term="Locus">Locus</span></td><td>A fixed position on a chromosome where a particular gene or marker lives. Plural: loci.</td></tr>
+            <tr><td><span class="term" data-term="Allele">Allele</span></td><td>One of the alternative versions found at a locus. You inherit one allele from each parent.</td></tr>
+          </tbody>
+        </table>
+
+        <p>Notice how locus and allele work together: a locus is the <em>address</em>, and the allele is the specific <em>version</em> living at that address. Hold that pairing - it is the bedrock of every inheritance term later in the module.</p>
+
+        <h2 id="variation">The kinds of variation</h2>
+        <p>No two human genomes are identical. Every place yours differs from the standard reference is a difference, and those differences come in sizes - from a single swapped letter to whole chunks of a chromosome rearranged. The vocabulary here is mostly a ruler: each term names a different scale of change. Get the scale right and you can read almost any variant report.</p>
+
+        <table class="dtable">
+          <thead><tr><th>Term</th><th>In plain language</th></tr></thead>
+          <tbody>
+            <tr><td><span class="term" data-term="Variant">Variant</span></td><td>Any difference from the reference genome. The neutral, modern umbrella term that has largely replaced "mutation".</td></tr>
+            <tr><td><span class="term" data-term="Mutation">Mutation</span></td><td>An older word for a change in the DNA sequence. It can be harmless, harmful, or beneficial; "variant" is now preferred to drop the alarming overtone.</td></tr>
+            <tr><td><span class="term" data-term="SNP">SNP</span></td><td>Single-nucleotide polymorphism: a single-letter difference that is common in the population. The most abundant kind of variation.</td></tr>
+            <tr><td><span class="term" data-term="Indel">Indel</span></td><td>A small insertion or deletion of a few DNA bases.</td></tr>
+            <tr><td><span class="term" data-term="CNV">CNV</span></td><td>Copy-number variant: a stretch of DNA duplicated or deleted, so the number of copies differs between people.</td></tr>
+            <tr><td><span class="term" data-term="Structural variant">Structural variant</span></td><td>A large-scale rearrangement - deletion, duplication, inversion, or translocation - spanning many bases.</td></tr>
+            <tr><td><span class="term" data-term="VUS">VUS</span></td><td>Variant of uncertain significance: a difference whose effect on health is not yet known. One of the central headaches of clinical genetics.</td></tr>
+          </tbody>
+        </table>
+
+        <p>Read that table top to bottom and you have walked up the size ladder: a SNP changes one letter, an indel adds or removes a handful, a CNV duplicates or deletes a stretch, and a structural variant reshuffles whole regions. The last row is different in kind - a VUS is not a size but the absence of a verdict. A variant can be tiny and still be a VUS if nobody yet knows what it does, which is why the term sits at the awkward border between the science and the clinic.</p>
+
+        <div class="callout callout--note">
+          <div class="callout__label">&#9888; Variant or mutation?</div>
+          <p>You will see both words for the same thing. The field has shifted toward <b>variant</b> because <b>mutation</b> carries a frightening, science-fiction connotation that is usually unwarranted - most variants are harmless. When a report says "variant," it is making a deliberately neutral statement: this differs from the reference, full stop. Whether it matters is a separate question, and often the VUS question.</p>
+        </div>
+
+        <p>One axis cuts across all of these sizes and matters more than any of them: where the variant lives. A <span class="term" data-term="Germline">germline</span> variant is inherited and present in every cell, including the eggs or sperm you might pass on, so it runs in families. A <span class="term" data-term="Somatic">somatic</span> variant is acquired during life in one tissue and is not inherited - the defining example being the changes that drive a tumor. This is the single distinction Module 02 asked you to remember above all others, and it reappears constantly below: germline variants power reproductive and hereditary testing, while somatic variants power cancer testing.</p>
+
+        <h2 id="inheritance">How we describe inheritance</h2>
+        <p>Once you can name a variant, the next vocabulary describes how variants travel through families and translate into traits. This is genetics in its oldest sense, the part that predates DNA itself and goes back to Mendel counting pea plants. The terms split into two flavors: those that describe what you carry, and those that describe how strongly it shows.</p>
+
+        <table class="dtable">
+          <thead><tr><th>Term</th><th>In plain language</th></tr></thead>
+          <tbody>
+            <tr><td><span class="term" data-term="Genotype">Genotype</span></td><td>The specific set of alleles an individual carries, at one position or across the whole genome.</td></tr>
+            <tr><td><span class="term" data-term="Phenotype">Phenotype</span></td><td>The observable result of genotype plus environment: height, eye color, blood type, disease status.</td></tr>
+            <tr><td><span class="term" data-term="Homozygous">Homozygous</span></td><td>Carrying two identical alleles at a position, one from each parent.</td></tr>
+            <tr><td><span class="term" data-term="Heterozygous">Heterozygous</span></td><td>Carrying two different alleles at a position.</td></tr>
+            <tr><td><span class="term" data-term="Haplotype">Haplotype</span></td><td>A set of variants that sit together on the same chromosome and tend to be inherited as one block.</td></tr>
+            <tr><td><span class="term" data-term="Ploidy">Ploidy</span></td><td>The number of chromosome sets in a cell. Humans are diploid (two sets); eggs and sperm are haploid (one).</td></tr>
+            <tr><td><span class="term" data-term="Mendelian">Mendelian</span></td><td>A trait driven mostly by a single gene, following the clean inheritance patterns Gregor Mendel described.</td></tr>
+            <tr><td><span class="term" data-term="Polygenic">Polygenic</span></td><td>A trait shaped by many genes, each adding a small effect, usually together with environment.</td></tr>
+            <tr><td><span class="term" data-term="Penetrance">Penetrance</span></td><td>The probability that people carrying a given variant actually show the associated trait or disease.</td></tr>
+            <tr><td><span class="term" data-term="Expressivity">Expressivity</span></td><td>How strongly the trait shows up among the people in whom it does appear.</td></tr>
+            <tr><td><span class="term" data-term="Heritability">Heritability</span></td><td>The share of a trait's variation across a population that is explained by genetic differences. Often estimated from twin studies.</td></tr>
+          </tbody>
+        </table>
+
+        <p>Two pairs are worth keeping side by side, because they are the ones most often confused. Homozygous versus heterozygous is about <em>what you carry</em> at a position - the same two alleles or different ones. Penetrance versus expressivity is about <em>how a variant shows</em> - penetrance asks whether the trait appears, expressivity asks how loudly. And Mendelian versus polygenic is the big-picture split: a few conditions follow one gene cleanly, while most common traits are a soft consensus of thousands of variants. That is exactly why a single polygenic risk score is needed to summarize them, a tool you will meet in the complex-trait modules.</p>
+
+        <div class="callout callout--insight">
+          <div class="callout__label">&#9632; Why heritability gets misread</div>
+          <p>Heritability is a population statistic, not a personal one. A trait being "80% heritable" does <em>not</em> mean 80% of your height came from your genes and 20% from your dinner. It means that, across a population, 80% of the <em>variation</em> between people tracks with genetic differences. The distinction matters the moment anyone tries to read an individual's fate off a heritability figure - they cannot, and the word does not claim they can.</p>
+        </div>
+
+        <h2 id="clinical">The clinical alphabet</h2>
+        <p>The last cluster is the one you will actually meet most often in the wild, because it is the vocabulary of the testing industry. These are the acronyms that fill diagnostics press releases, oncology conference abstracts, and biotech earnings calls. They sound impenetrable until you realize they mostly answer one of two questions: <em>how</em> the DNA was read, or <em>what</em> it was read for.</p>
+
+        <table class="dtable">
+          <thead><tr><th>Term</th><th>In plain language</th></tr></thead>
+          <tbody>
+            <tr><td><span class="term" data-term="NGS">NGS</span></td><td>Next-generation sequencing: massively parallel methods that read millions of DNA fragments at once, the leap that collapsed cost.</td></tr>
+            <tr><td><span class="term" data-term="WGS">WGS</span></td><td>Whole-genome sequencing: reading essentially all 3.1 billion base pairs, coding and non-coding alike.</td></tr>
+            <tr><td><span class="term" data-term="WES">WES</span></td><td>Whole-exome sequencing: reading only the protein-coding exome. Cheaper than whole-genome and where most known disease variants sit.</td></tr>
+            <tr><td><span class="term" data-term="Coverage">Coverage</span></td><td>How many times, on average, each base is read. Higher depth means more confident variant calls.</td></tr>
+            <tr><td><span class="term" data-term="Reference genome">Reference genome</span></td><td>A standardized consensus human genome that new sequences are compared against to find variants.</td></tr>
+            <tr><td><span class="term" data-term="cfDNA">cfDNA</span></td><td>Cell-free DNA: fragments shed from cells into the bloodstream, the raw material of a liquid biopsy.</td></tr>
+            <tr><td><span class="term" data-term="ctDNA">ctDNA</span></td><td>Circulating tumor DNA: the slice of cell-free DNA that comes from cancer cells, carrying tumor-specific somatic variants.</td></tr>
+            <tr><td><span class="term" data-term="Liquid biopsy">Liquid biopsy</span></td><td>A blood test that analyzes cell-free DNA or other analytes to detect or monitor disease without cutting tissue.</td></tr>
+            <tr><td><span class="term" data-term="MRD">MRD</span></td><td>Molecular (or minimal) residual disease: tiny amounts of cancer left after treatment, detectable via ctDNA before a scan can see it.</td></tr>
+            <tr><td><span class="term" data-term="NIPT">NIPT</span></td><td>Non-invasive prenatal testing: a blood test that screens fetal cell-free DNA for chromosomal conditions during pregnancy.</td></tr>
+            <tr><td><span class="term" data-term="Carrier screening">Carrier screening</span></td><td>Testing prospective parents for recessive disease variants they could pass on together to a child.</td></tr>
+            <tr><td><span class="term" data-term="MCED">MCED</span></td><td>Multi-cancer early detection: a single blood test that screens for signals of many cancers at once, often via DNA methylation.</td></tr>
+            <tr><td><span class="term" data-term="Companion diagnostic">Companion diagnostic</span></td><td>A test that identifies the patients whose biology makes them likely to benefit from a specific targeted drug.</td></tr>
+          </tbody>
+        </table>
+
+        <p>These terms recur constantly in industry coverage, and they are not independent - they chain together. A sequencing method (NGS) at a given depth (coverage), compared to a reference genome, reads cell-free DNA pulled from a tube of blood; depending on what you are hunting for, that same basic recipe becomes an NIPT, a liquid biopsy for ctDNA, an MRD assay, or an MCED screen. Learn the chain once and every new product name slots into place.</p>
+
+        <div class="callout callout--key">
+          <div class="callout__label">&#9733; Read like a native</div>
+          <p>Here is a real-sounding sentence: <em>"Our tumor-informed ctDNA assay uses NGS at high coverage to track MRD in the months after surgery."</em> You can now decode every word. The test reads <span class="term" data-term="ctDNA">circulating tumor DNA</span> - the somatic-variant-carrying fraction of <span class="term" data-term="cfDNA">cell-free DNA</span> in the blood. "Tumor-informed" means they first sequenced the tumor to learn which variants to chase. <span class="term" data-term="NGS">Next-generation sequencing</span> reads millions of fragments at once, and "high coverage" means each base is read many times so even a faint signal is trustworthy. They are tracking <span class="term" data-term="MRD">molecular residual disease</span>: a whisper of cancer too small for any scan, caught early enough to act. One sentence, the whole module.</p>
+        </div>
+
+        <div class="takeaways reveal">
+          <h3>&#10003; Key takeaways</h3>
+          <ul>
+            <li>The units nest: a base pair sits in a locus, alleles are the versions at that locus, loci sit in genes, genes sit in the genome, and the exome is the ~1-2% that codes for protein.</li>
+            <li>Variation is a size ladder: a SNP swaps one letter, an indel adds or removes a few, a CNV duplicates or deletes a stretch, and a structural variant rearranges whole regions. A VUS is a verdict, not a size.</li>
+            <li>The deepest cut is germline (inherited, in every cell, heritable) versus somatic (acquired in one tissue, not inherited) - it sorts reproductive testing from cancer testing.</li>
+            <li>Inheritance vocabulary splits into what you carry (genotype, homozygous, heterozygous) and how strongly it shows (penetrance, expressivity); most common traits are polygenic, not Mendelian.</li>
+            <li>The clinical alphabet mostly answers two questions - how the DNA was read (NGS, WGS, WES, coverage) or what it was read for (NIPT, liquid biopsy, MRD, MCED, companion diagnostic).</li>
+          </ul>
+        </div>
+
+        <div class="quiz">
+          <div class="quiz__head"><span class="pill">Check</span> Knowledge check</div>
+          <p class="quiz__intro">Three quick questions. Pick an answer to see the explanation.</p>
+
+          <div class="q" data-answer="2">
+            <p class="q__stem">1. A single-letter swap in the DNA that is common across the population is called a what, and how does it differ from an indel and a CNV?</p>
+            <div class="q__opts">
+              <button class="opt">A CNV; an indel deletes one base and a SNP duplicates a region</button>
+              <button class="opt">A structural variant; indels and CNVs are both single-letter changes</button>
+              <button class="opt">A SNP; an indel inserts or deletes a few bases, while a CNV duplicates or deletes a larger stretch</button>
+              <button class="opt">An indel; a SNP rearranges whole chromosomes and a CNV swaps one letter</button>
+            </div>
+            <div class="q__explain">It is a SNP, a single-nucleotide polymorphism. The three differ by scale: a SNP changes one letter, an indel inserts or deletes a small handful of bases, and a CNV duplicates or deletes a longer stretch so the copy number differs between people.</div>
+          </div>
+
+          <div class="q" data-answer="1">
+            <p class="q__stem">2. A patient's tumor carries variants that are absent from the rest of their body and cannot be passed to children. These variants are best described as:</p>
+            <div class="q__opts">
+              <button class="opt">Germline, because they are in the DNA</button>
+              <button class="opt">Somatic, because they were acquired in one tissue and are not inherited</button>
+              <button class="opt">Polygenic, because tumors involve many genes</button>
+              <button class="opt">Mendelian, because they follow a single-gene pattern</button>
+            </div>
+            <div class="q__explain">These are somatic variants: acquired during life in a specific tissue, not present in the germline, and not heritable. The germline-versus-somatic split is why oncology testing reads somatic DNA while reproductive testing reads germline DNA.</div>
+          </div>
+
+          <div class="q" data-answer="0">
+            <p class="q__stem">3. What does whole-exome sequencing (WES) read that whole-genome sequencing (WGS) does not stop at?</p>
+            <div class="q__opts">
+              <button class="opt">WES reads only the ~1-2% protein-coding exome, while WGS reads essentially all 3.1 billion base pairs including the non-coding regions</button>
+              <button class="opt">WES reads the whole genome and WGS reads only the exome</button>
+              <button class="opt">WES reads RNA while WGS reads DNA</button>
+              <button class="opt">They read exactly the same regions but WES uses higher coverage</button>
+            </div>
+            <div class="q__explain">WES is limited to the exome - the roughly 1-2% of the genome that codes for protein - which makes it cheaper and easier to interpret. WGS reads essentially everything, including the regulatory and structural sequence in the other 98% that WES skips.</div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+    <nav class="module-foot">
+      <a class="pn pn--prev" href="02-foundations.html"><small>&larr; Previous</small><b>The Molecule, the Message, and the Machine</b></a>
+      <a class="pn pn--next" href="04-sequencing.html"><small>Next &rarr;</small><b>Reading the Code</b></a>
+    </nav>
+  </main>
+
+  <p class="footer-note">Genetics 101 &middot; Module 03 &middot; <a href="../index.html">All modules</a> &middot; <a href="../glossary.html">Glossary</a></p>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/charts.js"></script>
+  <script src="../assets/js/glossary.js"></script>
+  <script src="../assets/js/quiz.js"></script>
+  <script src="../assets/js/nav.js"></script>
+</body>
+</html>

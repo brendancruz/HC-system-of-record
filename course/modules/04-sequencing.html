@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>04 - Reading the Code | Genetics 101</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <header class="topbar">
+    <a class="topbar__brand" href="../index.html"><span class="dot"></span> Genetics 101</a>
+    <div class="topbar__spacer"></div>
+    <a class="topbar__link" href="../index.html">Modules</a>
+    <a class="topbar__link" href="../glossary.html">Glossary</a>
+    <button class="menu-btn" aria-label="Sections">&#9776;</button>
+  </header>
+
+  <main class="layout">
+    <div class="hero reveal">
+      <p class="hero__eyebrow">Part II - Reading &amp; Mapping the Genome - Module 04</p>
+      <h1 class="hero__title">Reading the Code</h1>
+      <p class="hero__sub">How we actually read DNA, from Sanger's careful one-fragment-at-a-time chemistry to massively parallel next-generation sequencing and long reads, and the astonishing cost collapse that outran Moore's Law.</p>
+      <div class="hero__meta">
+        <span><b>Reading</b> ~14 min</span>
+        <span><b>You will learn</b> Sanger &middot; NGS &middot; long-read &middot; the cost curve &middot; WGS vs WES vs panels</span>
+      </div>
+    </div>
+
+    <div class="module-grid">
+      <aside class="toc" id="toc"></aside>
+      <article class="article">
+
+        <p class="lead">To read DNA is to determine the order of its letters, the exact run of bases along a strand. That is the whole job: turn a physical molecule into a string of A, C, G, and T you can store, search, and compare. What has changed beyond recognition over forty years is not the goal but the <em>how</em>, and that story of method is the story of why genomics went from a once-in-history moonshot to a routine clinical test. The price of reading a genome fell so far, so fast, that whole new businesses and medicines became possible. This module follows that arc.</p>
+
+        <h2 id="sanger">Sanger sequencing: the first read</h2>
+        <p>The first practical way to read DNA came from Frederick Sanger in 1977, and the method still carries his name. <span class="term" data-term="Sanger sequencing">Sanger sequencing</span> is a chemistry trick. You copy a single-stranded DNA fragment many times, but you spike the reaction with special "terminator" letters that stop the copy dead whenever one is added. The result is a ladder of fragments of every possible length, each ending in a known base. Sort them by size, read off the final letter of each rung, and you have recovered the original order one <span class="term" data-term="Nucleotide">nucleotide</span> at a time.</p>
+        <p>Sanger sequencing is extraordinarily accurate and reads a few hundred to roughly a thousand bases in a single run. Those two qualities, high fidelity and modest length, defined an era. It is the method that powered the Human Genome Project, where banks of machines and an army of technicians read the human <span class="term" data-term="Genome">genome</span> fragment by laborious fragment across more than a decade. It was careful, slow, and expensive, and there was nothing better.</p>
+
+        <div class="callout callout--note">
+          <div class="callout__label">&#9888; Still in service</div>
+          <p>Sanger did not disappear when faster methods arrived. Because it is cheap per sample for tiny jobs and exceptionally accurate, it remains the gold standard for confirming a single suspected variant, reading one small gene, or checking that an edited cell line carries exactly the change you intended. New technology rarely kills the old outright, it reassigns it to the jobs it still does best.</p>
+        </div>
+
+        <h2 id="ngs">Next-generation sequencing: a million fragments at once</h2>
+        <p>The leap that changed everything was abandoning the one-fragment-at-a-time logic entirely. <span class="term" data-term="NGS">Next-generation sequencing</span>, or NGS, is <b>massively parallel</b>: instead of reading one fragment carefully, it reads millions of short fragments simultaneously, on a single chip, in one run. The dominant chemistry is sequencing-by-synthesis, commercialized by Solexa and then by Illumina, which has set the pace of the field for most of two decades.</p>
+        <p>Picture an Illumina flow cell, a glass slide whose surface is studded with hundreds of millions of tiny clusters. Each cluster holds many copies of one DNA fragment. The machine adds one fluorescent letter to every cluster at a time, photographs the whole surface to see which color lit up where, then repeats. Cycle by cycle, image by image, the sequencer reads all those clusters in parallel. The output is an enormous pile of short stretches of sequence, each called a <span class="term" data-term="Read">read</span>.</p>
+
+        <div class="stats reveal">
+          <div class="stat"><div class="stat__num">~150</div><div class="stat__label">bases in a typical short read</div></div>
+          <div class="stat"><div class="stat__num">~30x</div><div class="stat__label">coverage for a standard human genome</div></div>
+          <div class="stat"><div class="stat__num">billions</div><div class="stat__label">of reads in a single run</div></div>
+          <div class="stat"><div class="stat__num">~1 day</div><div class="stat__label">to sequence a genome end to end</div></div>
+        </div>
+
+        <p>Short reads on their own are confetti. Two ideas turn them into a genome. The first is <span class="term" data-term="Coverage">coverage</span>, also called depth: because every base is read not once but many times over, the machine can vote across overlapping reads and call each letter with confidence, averaging out the occasional misread. Thirty-fold coverage, meaning each base is seen about thirty times, is a common target for a clinical-grade human genome. The second idea is alignment. Each short read is matched back to a <span class="term" data-term="Reference genome">reference genome</span>, a standardized consensus human sequence, like fitting thousands of small tiles into a known mosaic. Where your reads disagree with the reference, you have found a variant.</p>
+
+        <div class="callout callout--key">
+          <div class="callout__label">&#9733; Key idea</div>
+          <p>NGS did not read DNA better than Sanger, it read DNA in parallel. Reading millions of fragments at once, then using deep coverage and alignment to a reference to reconstruct the whole, is what collapsed the cost and turned <span class="term" data-term="Sequencing">sequencing</span> from a project into a product.</p>
+        </div>
+
+        <h2 id="long-reads">Long reads: PacBio and Oxford Nanopore</h2>
+        <p>Short reads are cheap and accurate, but their brevity is a real handicap. The genome is full of long, repetitive stretches where the same motif recurs thousands of times. A 150-base read that lands inside such a region looks identical no matter where it came from, so it cannot be placed unambiguously, like trying to locate a single tile in a field of identical tiles. These repetitive zones are exactly where large rearrangements hide.</p>
+        <p>Long-read sequencing answers this by reading far longer continuous stretches, from thousands of bases up into the millions. Pacific Biosciences (PacBio) and Oxford Nanopore are the two leaders. Nanopore's approach is strikingly direct: it threads a single DNA strand through a microscopic protein pore and reads the tiny changes in electrical current as each base passes through, no copying, no cameras. Its MinION device is small enough to fit in a pocket and plug into a laptop, which has carried sequencing into rainforests and outbreak zones.</p>
+        <p>The payoff is spanning the hard regions. A read long enough to bridge an entire repeat can be anchored on both flanks, which lets it resolve the repetitive sequence and detect a <span class="term" data-term="Structural variant">structural variant</span>, a large-scale deletion, duplication, inversion, or rearrangement, that short reads routinely miss. Long reads are what finally made a truly complete, gapless human genome possible, the telomere-to-telomere assembly we turn to in Module 5.</p>
+
+        <div class="compare">
+          <div class="compare__col compare__col--a">
+            <h4>Short reads (Illumina)</h4>
+            <p style="font-family:var(--sans);font-size:var(--fs-sm);color:var(--ink-soft)">~150 bases, very low error, very low cost per base. The workhorse for variant calling, exomes, and population studies. Stumbles in long repeats and large structural variants.</p>
+          </div>
+          <div class="compare__col compare__col--b">
+            <h4>Long reads (PacBio, Nanopore)</h4>
+            <p style="font-family:var(--sans);font-size:var(--fs-sm);color:var(--ink-soft)">Thousands to millions of bases. Spans repeats, resolves structural variants, and enables complete assemblies. Historically pricier with higher raw error, both improving fast.</p>
+          </div>
+        </div>
+
+        <h2 id="cost-collapse">The cost collapse</h2>
+        <p>Nothing in this module matters as much as one chart. When the Human Genome Project finished, reading a single human genome cost on the order of <b>$100M</b>. By the late 2000s, NGS had broken that wide open. The famous milestone, the long-promised "$1,000 genome," arrived when Illumina announced its HiSeq X system in January 2014. Today a genome can be read for a few hundred dollars, and the price is still drifting down.</p>
+
+        <figure class="figure reveal">
+          <div class="figure__frame">
+            <div class="fig-title">Figure 4.1 - The cost to sequence one human genome</div>
+            <div id="fig-seqcost"></div>
+          </div>
+          <figcaption>Plotted on a logarithmic scale. The dashed line shows the pace of Moore's Law for comparison. Around 2008, next-generation sequencing broke away and cost fell far faster than computing ever did. Figures are approximate, from the NHGRI sequencing-cost program.</figcaption>
+        </figure>
+
+        <p>Look at where the two lines diverge. Moore's Law, the famous doubling of computing power every couple of years, is itself one of the great deflationary forces in technology, and on this log chart it is a steady downhill slope. Sequencing tracked it until roughly 2008, then fell off a cliff. For several years the cost of reading a genome dropped faster than the cost of computing the data, an almost unheard-of pace. That is the single most important economic fact in modern genomics.</p>
+
+        <div class="callout callout--insight">
+          <div class="callout__label">&#9632; Why this matters commercially</div>
+          <p>Deflation creates markets. When a genome cost millions, it was a research luxury. At a few hundred dollars it becomes a thing you can run on whole populations, fold into routine clinical care, and repeat over time on the same patient. That last property is what made the <span class="term" data-term="Liquid biopsy">liquid biopsy</span> viable: sequencing tiny amounts of <span class="term" data-term="cfDNA">cell-free DNA</span> from a tube of blood, cheaply enough to do it again and again. The cost curve is the hidden engine under population genomics, prenatal screening, and oncology monitoring alike.</p>
+        </div>
+
+        <h2 id="wgs-wes-panel">Whole genome, exome, or panel?</h2>
+        <p>Cheaper sequencing did not make the choice of <em>what</em> to read go away, it sharpened it. You rarely need every base for every question, and reading less can mean clearer answers and lower cost. There are three common scopes, and the right one depends entirely on the clinical question.</p>
+
+        <table class="dtable">
+          <thead>
+            <tr><th>Approach</th><th>What it reads</th><th>Relative cost</th><th>Typical use</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Whole-genome (<span class="term" data-term="WGS">WGS</span>)</b></td>
+              <td>Essentially all 3.1 billion base pairs, coding and non-coding</td>
+              <td class="num">Highest</td>
+              <td>Research, rare-disease diagnosis, finding structural and regulatory variants</td>
+            </tr>
+            <tr>
+              <td><b>Whole-exome (<span class="term" data-term="WES">WES</span>)</b></td>
+              <td>Only the ~1-2% protein-coding <span class="term" data-term="Exome">exome</span></td>
+              <td class="num">Middle</td>
+              <td>Clinical workhorse: most known disease variants, easier to interpret</td>
+            </tr>
+            <tr>
+              <td><b>Targeted panel</b></td>
+              <td>A curated handful to a few hundred genes of interest</td>
+              <td class="num">Lowest</td>
+              <td>Routine oncology, hereditary-cancer tests, liquid biopsy</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>The logic is a funnel. Whole-genome sequencing sees everything but generates the most data and the heaviest interpretation burden, since most of what it finds is of uncertain meaning. The <span class="term" data-term="Exome">exome</span> is cheaper and concentrates on the coding regions where disease-causing changes are easiest to interpret, which is why it became the everyday tool of clinical genetics. A targeted panel is cheapest of all and reads only a chosen set of genes, which is exactly what you want when the question is narrow, such as profiling the handful of actionable genes in a tumor or screening the tiny tumor-derived fraction of <span class="term" data-term="cfDNA">cfDNA</span> in routine oncology and liquid-biopsy work. More reading is not always better, the best test reads precisely what the question requires and no more.</p>
+
+        <div class="callout callout--market">
+          <div class="callout__label">&#9632; Follow the volume</div>
+          <p>The cheapest scope is the one that runs most often. Targeted panels and blood-based tests like <span class="term" data-term="NIPT">NIPT</span> are inexpensive enough to perform millions of times a year, so even at low per-test prices they anchor the largest clinical businesses. Whole-genome sequencing wins on completeness, but in the market, volume usually beats breadth.</p>
+        </div>
+
+        <div class="takeaways reveal">
+          <h3>&#10003; Key takeaways</h3>
+          <ul>
+            <li><b>Sanger sequencing</b> (1977) reads one short fragment at a time with high accuracy; it powered the Human Genome Project and still confirms single variants today.</li>
+            <li><b>NGS</b> changed the game by reading millions of fragments in parallel, then using deep <span class="term" data-term="Coverage">coverage</span> and alignment to a <span class="term" data-term="Reference genome">reference genome</span> to reconstruct the whole.</li>
+            <li><b>Long reads</b> (PacBio, Oxford Nanopore) span repetitive regions to catch <span class="term" data-term="Structural variant">structural variants</span> short reads miss, and enabled the first complete genome.</li>
+            <li>Sequencing cost fell from ~$100M in 2001 past the "$1,000 genome" (2014) to a few hundred dollars, faster than Moore's Law, unlocking population and clinical genomics.</li>
+            <li><b>WGS</b> reads everything, <b>WES</b> reads the coding exome more cheaply, and <b>panels</b> read a chosen few genes most cheaply, dominating routine oncology and liquid biopsy.</li>
+          </ul>
+        </div>
+
+        <div class="quiz">
+          <div class="quiz__head"><span class="pill">Check</span> Knowledge check</div>
+          <p class="quiz__intro">Three quick questions. Pick an answer to see the explanation.</p>
+
+          <div class="q" data-answer="2">
+            <p class="q__stem">1. What most fundamentally distinguishes next-generation sequencing from Sanger sequencing?</p>
+            <div class="q__opts">
+              <button class="opt">NGS reads each base far more accurately than Sanger ever could</button>
+              <button class="opt">NGS reads much longer continuous fragments than Sanger</button>
+              <button class="opt">NGS reads millions of fragments in parallel rather than one at a time</button>
+              <button class="opt">NGS does not need to compare reads to a reference genome</button>
+            </div>
+            <div class="q__explain">The breakthrough was massive parallelism. Sanger reads one fragment at a time with high accuracy, while NGS reads millions of short fragments simultaneously. That parallelism, not better per-base chemistry, is what collapsed the cost.</div>
+          </div>
+
+          <div class="q" data-answer="1">
+            <p class="q__stem">2. In sequencing, what does "coverage" (or depth) mean?</p>
+            <div class="q__opts">
+              <button class="opt">The fraction of the genome that codes for proteins</button>
+              <button class="opt">How many times, on average, each base is read</button>
+              <button class="opt">The total length of a single read in bases</button>
+              <button class="opt">How well reads align to the reference genome</button>
+            </div>
+            <div class="q__explain">Coverage, or depth, is the average number of times each base is read. Reading every base many times lets the machine vote across overlapping reads and call each letter with confidence; ~30x is a common target for a clinical human genome.</div>
+          </div>
+
+          <div class="q" data-answer="0">
+            <p class="q__stem">3. Why is the sequencing cost curve such an important fact in genomics?</p>
+            <div class="q__opts">
+              <button class="opt">Because the deflation opened up population sequencing, clinical testing, and liquid biopsy</button>
+              <button class="opt">Because it proves Moore's Law also governs biology</button>
+              <button class="opt">Because rising costs forced labs to switch back to Sanger</button>
+              <button class="opt">Because it made whole-genome sequencing the only test anyone needs</button>
+            </div>
+            <div class="q__explain">Cost falling from ~$100M to a few hundred dollars, faster than Moore's Law, turned sequencing from a research luxury into something cheap enough to run on whole populations, fold into routine care, and repeat on the same patient, which is what made liquid biopsy and population genomics viable.</div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+    <nav class="module-foot">
+      <a class="pn pn--prev" href="03-lexicon.html"><small>&larr; Previous</small><b>Speaking Genomics: The Lexicon</b></a>
+      <a class="pn pn--next" href="05-hgp.html"><small>Next &rarr;</small><b>The Human Genome Project</b></a>
+    </nav>
+  </main>
+
+  <p class="footer-note">Genetics 101 &middot; Module 04 &middot; <a href="../index.html">All modules</a> &middot; <a href="../glossary.html">Glossary</a></p>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/charts.js"></script>
+  <script src="../assets/js/glossary.js"></script>
+  <script src="../assets/js/quiz.js"></script>
+  <script src="../assets/js/nav.js"></script>
+  <script>
+  (function(){
+    var d = GData.seqCost;
+    function zip(a){ return d.years.map(function(y,i){ return {x:y, y:a[i]}; }); }
+    GChart.line("fig-seqcost", {
+      series:[
+        {name:"Actual cost per genome", color:"#283593", data: zip(d.actual)},
+        {name:"Moore's Law pace", color:"#9aa3c0", dashed:true, data: zip(d.moore)}
+      ],
+      yScale:"log", yMin:100, yMax:100000000, yFormat:"money",
+      xMin:2001, xMax:2023, xTicks:[2001,2004,2008,2012,2016,2020,2023],
+      xFormat:function(v){return v;}, yLabel:"Cost per genome (log scale)", height:420
+    });
+  })();
+  </script>
+</body>
+</html>

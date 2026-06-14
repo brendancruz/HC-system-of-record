@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>08 - Applied Genomics | Genetics 101</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <header class="topbar">
+    <a class="topbar__brand" href="../index.html"><span class="dot"></span> Genetics 101</a>
+    <div class="topbar__spacer"></div>
+    <a class="topbar__link" href="../index.html">Modules</a>
+    <a class="topbar__link" href="../glossary.html">Glossary</a>
+    <button class="menu-btn" aria-label="Sections">&#9776;</button>
+  </header>
+
+  <main class="layout">
+    <div class="hero reveal">
+      <p class="hero__eyebrow">Part IV - Beyond the Sequence - Module 08</p>
+      <h1 class="hero__title">Applied Genomics</h1>
+      <p class="hero__sub">Once you can read genomes cheaply, what do you actually do with them? This module covers how we connect variants to traits with GWAS, how thousands of tiny effects become a single risk score, and the practical menu of genetic tests in use today.</p>
+      <div class="hero__meta">
+        <span><b>Reading</b> ~14 min</span>
+        <span><b>You will learn</b> GWAS &middot; polygenic risk scores &middot; the test menu</span>
+      </div>
+    </div>
+
+    <div class="module-grid">
+      <aside class="toc" id="toc"></aside>
+      <article class="article">
+
+        <p class="lead">Reading a <span class="term" data-term="Genome">genome</span> is now cheap. That is necessary, but it is not the point. A file of three billion letters is worthless until someone can turn it into knowledge - and then into a decision. This module is about that translation layer: the methods that link DNA letters to traits, the scores that compress thousands of those links into one number, and the practical catalogue of tests that put all of it to work in a clinic.</p>
+
+        <h2 id="gwas">GWAS: finding signal by counting</h2>
+        <p>How do you find which letters matter for a trait when there are millions of places the genome can differ? You count. A <span class="term" data-term="GWAS">genome-wide association study</span> (GWAS) takes a large group of people who have a trait - the cases - and a comparable group who do not - the controls - and scans across millions of common spots in their DNA, asking a simple question at each one: is a particular letter more common in the cases than in the controls?</p>
+        <p>The spots being scanned are mostly <span class="term" data-term="SNP">single-nucleotide polymorphisms</span> (SNPs), positions where a single DNA letter commonly varies from person to person. A SNP is the most abundant kind of <span class="term" data-term="Variant">variant</span> in the genome, and because SNPs are inherited in linked blocks, testing a few million of them effectively samples the whole sequence. When a SNP turns up reliably more often in cases, the study has found an <em>association</em>.</p>
+
+        <div class="callout callout--note">
+          <div class="callout__label">&#9888; Association is not causation</div>
+          <p>A GWAS hit is a statistical signal, not a verdict. The flagged SNP may not cause anything itself; it may simply sit near the real culprit and travel with it through the generations. And for common traits, the effect of any single variant is usually tiny - a fraction of a percent of risk. GWAS finds where to look, not what is happening.</p>
+        </div>
+
+        <p>The classic way to display the results is a <b>Manhattan plot</b>: every SNP is a dot, lined up by its position along the chromosomes, with height showing how strong the statistical signal is. Most dots hug the bottom as noise, but a few towers of significance rise up like a city skyline - hence the name. Each tower marks a region of the genome worth investigating. A single well-powered study can surface dozens or hundreds of these peaks for one trait.</p>
+
+        <div class="stats reveal">
+          <div class="stat"><div class="stat__num">~10M</div><div class="stat__label">common SNPs typically tested</div></div>
+          <div class="stat"><div class="stat__num">5&times;10<sup>-8</sup></div><div class="stat__label">genome-wide significance threshold</div></div>
+          <div class="stat"><div class="stat__num">100s</div><div class="stat__label">of hits for a well-studied trait</div></div>
+          <div class="stat"><div class="stat__num">&gt;90%</div><div class="stat__label">of early GWAS data from European ancestry</div></div>
+        </div>
+
+        <h2 id="prs">Polygenic risk scores</h2>
+        <p>A GWAS tells you that hundreds of variants each nudge a trait a little. A <span class="term" data-term="Polygenic risk score">polygenic risk score</span> (PRS) asks the natural follow-up: what if you add them all up? For a <span class="term" data-term="Polygenic">polygenic</span> trait - one shaped by many genes rather than a single one - a PRS multiplies each risk variant a person carries by the effect size that the GWAS measured, then sums the lot into one number. That number estimates how predisposed someone is, relative to everyone else, for conditions such as coronary artery disease or breast cancer.</p>
+        <p>Because the score blends thousands of small contributions, the population spreads out into a smooth bell curve. Most people land near the middle with average risk; a few sit far out in the tails. Those in the top few percent can carry risk comparable to a single high-impact mutation, even though no individual variant of theirs looks alarming.</p>
+
+        <figure class="figure reveal">
+          <div class="figure__frame">
+            <div class="fig-title">Figure 8.1 - A polygenic risk score distribution</div>
+            <svg class="chart-svg" viewBox="0 0 720 300" role="img" aria-label="A bell curve of polygenic risk scores, with most people in the middle and a shaded high-risk tail on the right">
+              <!-- baseline -->
+              <line x1="60" y1="240" x2="680" y2="240" stroke="#6b7384" stroke-width="1.5"/>
+              <!-- shaded high-risk tail (right) -->
+              <path d="M588,240 C612,238 636,228 660,205 C636,205 612,217 600,232 L600,240 Z
+                       M588,240 C600,232 612,217 624,191 C612,191 600,201 588,240 Z" fill="none"/>
+              <path d="M584,240 C600,233 618,217 636,189 C654,153 666,123 678,105 L678,240 Z" fill="#fbe9ef" stroke="none"/>
+              <!-- the curve -->
+              <path d="M60,238 C150,236 200,232 250,210 C300,188 330,120 370,98 C410,120 440,188 490,210 C540,232 590,236 680,239"
+                    fill="none" stroke="#283593" stroke-width="3"/>
+              <!-- mean line -->
+              <line x1="370" y1="98" x2="370" y2="240" stroke="#138a72" stroke-width="2" stroke-dasharray="5 4"/>
+              <text x="370" y="262" text-anchor="middle" font-size="12.5" font-weight="700" fill="#138a72">average risk</text>
+              <!-- high-risk pointer -->
+              <text x="636" y="138" text-anchor="middle" font-size="12.5" font-weight="800" fill="#c2456b">high-risk tail</text>
+              <text x="636" y="156" text-anchor="middle" font-size="11.5" fill="#c2456b">top few %</text>
+              <!-- axis labels -->
+              <text x="120" y="262" text-anchor="middle" font-size="12" fill="#3d4554">lower score</text>
+              <text x="620" y="262" text-anchor="middle" font-size="12" fill="#3d4554">higher score</text>
+            </svg>
+          </div>
+          <figcaption>Summing thousands of small variant effects produces a bell-shaped spread across a population. Most people sit near the <b>average</b> (green line); a small <span style="color:#c2456b;font-weight:700">high-risk tail</span> carries enough accumulated variants to matter clinically. The score places you relative to others - it does not pronounce a fate.</figcaption>
+        </figure>
+
+        <p>The power of a PRS is also its limit. It is <em>probabilistic, not deterministic</em>. A high score raises the odds; it does not seal them, because <span class="term" data-term="Penetrance">penetrance</span> - the chance that a genetic predisposition actually shows up as the trait - is well below certainty for these common conditions. Plenty of people with high scores never develop the disease, and plenty with low scores do. A PRS shifts a probability; it never reads off a diagnosis.</p>
+
+        <div class="callout callout--note">
+          <div class="callout__label">&#9888; The equity problem</div>
+          <p>PRS carries a serious fairness flaw. The vast majority of the GWAS data underpinning today's scores came from people of European ancestry. Because the linked blocks of SNPs differ across populations, a score trained on one group predicts poorly for others - it can be roughly half as accurate for people of African ancestry. Deployed naively, polygenic scores risk widening health disparities rather than narrowing them, which is why broadening the diversity of study cohorts is one of the field's most pressing tasks.</p>
+        </div>
+
+        <h2 id="test-menu">The test menu</h2>
+        <p>Most applied genomics in everyday medicine is not a research PRS - it is a defined clinical test ordered for a specific reason. The single most useful lens for organizing the menu is one you already know: does the test read <span class="term" data-term="Germline">germline</span> DNA (inherited, in every cell, heritable) or <span class="term" data-term="Somatic">somatic</span> DNA (acquired in one tissue, not inherited)? Reproductive and hereditary tests read germline; cancer tests read somatic. Here is the working catalogue.</p>
+
+        <table class="dtable">
+          <thead>
+            <tr><th>Test</th><th>What it reads</th><th>Germline or somatic</th><th>Typical use</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Diagnostic single-gene / panel</td><td>One gene or a defined gene set</td><td>Germline</td><td>Diagnose a suspected inherited condition</td></tr>
+            <tr><td><span class="term" data-term="Carrier screening">Carrier screening</span></td><td>Recessive-disease genes</td><td>Germline</td><td>Reproductive planning for prospective parents</td></tr>
+            <tr><td>Prenatal <span class="term" data-term="NIPT">NIPT</span></td><td>Cell-free fetal DNA in maternal blood</td><td>Germline</td><td>Screen a pregnancy for chromosomal conditions</td></tr>
+            <tr><td>Newborn screening</td><td>Targeted metabolic and genetic markers</td><td>Germline</td><td>Catch treatable conditions at birth</td></tr>
+            <tr><td>Pharmacogenomic</td><td>Drug-metabolism genes</td><td>Germline</td><td>Predict drug response and dosing (see Module 10)</td></tr>
+            <tr><td>Hereditary cancer (e.g. BRCA)</td><td>Cancer-predisposition genes</td><td>Germline</td><td>Assess inherited cancer risk</td></tr>
+            <tr><td>Tumor profiling</td><td>DNA from tumor tissue</td><td>Somatic</td><td>Pick a targeted therapy for a diagnosed cancer</td></tr>
+            <tr><td><span class="term" data-term="Liquid biopsy">Liquid biopsy</span> / <span class="term" data-term="ctDNA">ctDNA</span> &amp; <span class="term" data-term="MRD">MRD</span></td><td>Tumor DNA shed into the blood</td><td>Somatic</td><td>Detect and monitor cancer from a blood draw</td></tr>
+          </tbody>
+        </table>
+
+        <p>Read the third column top to bottom and the field's structure appears. Everything about families, inheritance, and reproduction reads germline DNA - the code you were born with, present identically in every cell. Everything about an existing cancer reads somatic DNA - the changes a tumor acquired on its own. A prenatal <span class="term" data-term="NIPT">NIPT</span> screens fetal germline DNA floating in the mother's blood; a <span class="term" data-term="Liquid biopsy">liquid biopsy</span> reads the tumor's somatic <span class="term" data-term="ctDNA">circulating tumor DNA</span> from the same kind of tube. Same blood draw, opposite biology.</p>
+
+        <div class="compare">
+          <div class="compare__col compare__col--a">
+            <h4>Germline tests</h4>
+            <p style="font-family:var(--sans);font-size:var(--fs-sm);color:var(--ink-soft)">Carrier screening, NIPT, newborn screening, pharmacogenomics, hereditary cancer. They read inherited DNA to answer "what did I inherit, and what might I pass on?"</p>
+          </div>
+          <div class="compare__col compare__col--b">
+            <h4>Somatic tests</h4>
+            <p style="font-family:var(--sans);font-size:var(--fs-sm);color:var(--ink-soft)">Tumor profiling, liquid biopsy, <span class="term" data-term="MRD">MRD</span> monitoring. They read acquired DNA to answer "what went wrong in this tissue, and how do we treat it now?"</p>
+          </div>
+        </div>
+
+        <h2 id="data-to-decision">From data to decision</h2>
+        <p>Here is the uncomfortable truth of applied genomics: the sequencing is the easy part now. The hard part is interpretation. When a test reads a person's genes, it routinely turns up changes nobody has seen clearly before - is this letter swap harmless, harmful, or simply unstudied? When the evidence cannot say, the change is reported as a <span class="term" data-term="VUS">variant of uncertain significance</span> (VUS), and these are common. A single panel can return one or more, and a VUS is, by design, an answer that is not an answer.</p>
+        <p>A VUS is genuinely awkward to act on. It is not a green light, because the variant might be pathogenic; it is not a red light, because it might be benign. Most guidance is to treat a VUS as if it were benign until evidence accrues, while families wait, sometimes for years, as databases fill in. Reclassification happens in both directions as the science matures.</p>
+
+        <div class="callout callout--insight">
+          <div class="callout__label">&#9632; Interpretation is the frontier</div>
+          <p>The bottleneck in genomics has moved from generating the letters to understanding them. The value now lives in interpretation: large variant databases, functional experiments, and increasingly machine-learning models that predict whether an unseen variant is likely to break a protein. Better interpretation - including the AI approaches we cover in Module 15 - is what will shrink the VUS pile and turn more raw sequence into a confident clinical decision.</p>
+        </div>
+
+        <p>Step back and the arc of this module is one sentence: cheap sequencing created an ocean of <span class="term" data-term="Genotype">genotype</span> data, and the work of the next decade is converting it reliably into <span class="term" data-term="Phenotype">phenotype</span> - traits, risks, and decisions you can trust. GWAS finds the signal, polygenic scores compress it, the test menu deploys it, and interpretation is the gate everything must pass through. The letters are no longer the obstacle. Their meaning is.</p>
+
+        <div class="takeaways reveal">
+          <h3>&#10003; Key takeaways</h3>
+          <ul>
+            <li>A GWAS compares the genomes of cases versus controls across millions of SNPs to find variants associated with a trait - associations are statistical, often not causal, and individually tiny.</li>
+            <li>A polygenic risk score sums many small variant effects into one number; it is probabilistic, not deterministic, and limited penetrance means a high score raises odds rather than fixing fate.</li>
+            <li>Because most GWAS data came from European-ancestry cohorts, polygenic scores predict worse for other populations - a real equity problem.</li>
+            <li>The test menu splits cleanly by germline (carrier screening, NIPT, newborn, pharmacogenomics, hereditary cancer) versus somatic (tumor profiling, liquid biopsy, MRD).</li>
+            <li>Interpretation, not sequencing, is now the bottleneck - the VUS problem is the clearest symptom, and better interpretation (including AI) is the frontier.</li>
+          </ul>
+        </div>
+
+        <div class="quiz">
+          <div class="quiz__head"><span class="pill">Check</span> Knowledge check</div>
+          <p class="quiz__intro">Three quick questions. Pick an answer to see the explanation.</p>
+
+          <div class="q" data-answer="2">
+            <p class="q__stem">1. What does a genome-wide association study (GWAS) fundamentally compare?</p>
+            <div class="q__opts">
+              <button class="opt">A single patient's tumor DNA against their healthy tissue</button>
+              <button class="opt">One person's genome against a reference genome</button>
+              <button class="opt">The genomes of people with a trait (cases) against those without (controls), across many SNPs</button>
+              <button class="opt">RNA levels in two cell types under different conditions</button>
+            </div>
+            <div class="q__explain">A GWAS scans millions of SNPs in cases versus controls, looking for variants that appear more often in people who have the trait. The result is a statistical association, not necessarily a cause.</div>
+          </div>
+
+          <div class="q" data-answer="1">
+            <p class="q__stem">2. Why are today's polygenic risk scores often less accurate for people of non-European ancestry?</p>
+            <div class="q__opts">
+              <button class="opt">Non-European genomes contain fewer SNPs overall</button>
+              <button class="opt">Most of the underlying GWAS data came from people of European ancestry, and linked SNP patterns differ across populations</button>
+              <button class="opt">Polygenic scores can only be calculated for one ancestry at a time by law</button>
+              <button class="opt">Other populations have lower genetic risk for common diseases</button>
+            </div>
+            <div class="q__explain">The scores are trained mostly on European-ancestry cohorts. Because the blocks of linked SNPs differ between populations, a score learned in one group transfers poorly to others, which can widen health disparities.</div>
+          </div>
+
+          <div class="q" data-answer="0">
+            <p class="q__stem">3. Which test reads somatic rather than germline DNA?</p>
+            <div class="q__opts">
+              <button class="opt">A liquid biopsy detecting circulating tumor DNA (ctDNA)</button>
+              <button class="opt">Carrier screening for cystic fibrosis</button>
+              <button class="opt">A prenatal NIPT for chromosomal conditions</button>
+              <button class="opt">A BRCA hereditary-cancer test</button>
+            </div>
+            <div class="q__explain">A liquid biopsy reads ctDNA - DNA shed by a tumor, an acquired somatic change in one tissue. Carrier screening, NIPT, and BRCA testing all read inherited germline DNA.</div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+    <nav class="module-foot">
+      <a class="pn pn--prev" href="07-epigenetics.html"><small>&larr; Previous</small><b>Epigenetics: Beyond the Sequence</b></a>
+      <a class="pn pn--next" href="09-crispr.html"><small>Next &rarr;</small><b>CRISPR and the Age of Gene Editing</b></a>
+    </nav>
+  </main>
+
+  <p class="footer-note">Genetics 101 &middot; Module 08 &middot; <a href="../index.html">All modules</a> &middot; <a href="../glossary.html">Glossary</a></p>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/charts.js"></script>
+  <script src="../assets/js/glossary.js"></script>
+  <script src="../assets/js/quiz.js"></script>
+  <script src="../assets/js/nav.js"></script>
+</body>
+</html>

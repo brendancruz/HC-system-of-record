@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>11 - Consumer & Ancestry Genomics | Genetics 101</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <header class="topbar">
+    <a class="topbar__brand" href="../index.html"><span class="dot"></span> Genetics 101</a>
+    <div class="topbar__spacer"></div>
+    <a class="topbar__link" href="../index.html">Modules</a>
+    <a class="topbar__link" href="../glossary.html">Glossary</a>
+    <button class="menu-btn" aria-label="Sections">&#9776;</button>
+  </header>
+
+  <main class="layout">
+    <div class="hero reveal">
+      <p class="hero__eyebrow">Part V - Genomics in Society & the Clinic - Module 11</p>
+      <h1 class="hero__title">Consumer & Ancestry Genomics</h1>
+      <p class="hero__sub">For about $100 and a tube of spit, millions of people bought a look at their own DNA. The direct-to-consumer boom democratized the genome, created a privacy minefield, helped crack cold cases, and then largely collapsed as a business.</p>
+      <div class="hero__meta">
+        <span><b>Reading</b> ~13 min</span>
+        <span><b>You will learn</b> the spit-kit model &middot; its business unraveling &middot; privacy &middot; forensic genealogy</span>
+      </div>
+    </div>
+
+    <div class="module-grid">
+      <aside class="toc" id="toc"></aside>
+      <article class="article">
+
+        <p class="lead">In 2003 it took an international consortium thirteen years and about $3B to read one human <span class="term" data-term="Genome">genome</span> for the first time. Fifteen years later, a curious person could spit into a tube, mail it off, and get a report about their own <span class="term" data-term="DNA">DNA</span> for less than the cost of a nice dinner. That collapse in price is one of the great democratizations in the history of science - and, as this module shows, also a cautionary tale about business models, privacy, and the strange ways your genome can betray you even when you never hand it over.</p>
+
+        <h2 id="boom">The spit-kit boom</h2>
+        <p>The direct-to-consumer, or DTC, genetics market was built by two companies above all: <b>23andMe</b>, founded in 2006 by Anne Wojcicki, and <b>Ancestry</b>, which bolted DNA testing onto an existing genealogy empire. The pitch was irresistible. Send saliva, learn where your ancestors came from, find relatives you never knew about, and - at least for a while - get a read on your health risks. By the early 2020s these companies had together genotyped tens of millions of people, assembling some of the largest private genetic databases on Earth.</p>
+        <p>The technical detail that makes the whole industry make sense is this: these kits almost never <span class="term" data-term="Sequencing">sequence</span> your genome. They use <b>genotyping arrays</b>, often called SNP chips. An array reads a curated panel of several hundred thousand to a million pre-selected positions where humans are known to differ - each one a <span class="term" data-term="SNP">single-nucleotide polymorphism</span>. It does not read the other three billion letters. That is why the kits are cheap, and it is also why they are far better at ancestry than at clinical-grade health calls.</p>
+
+        <div class="stats reveal">
+          <div class="stat"><div class="stat__num">~$3B</div><div class="stat__label">cost of the first human genome (2003)</div></div>
+          <div class="stat"><div class="stat__num">~$100</div><div class="stat__label">price of a consumer spit kit</div></div>
+          <div class="stat"><div class="stat__num">~700k+</div><div class="stat__label">SNP positions a typical array reads</div></div>
+          <div class="stat"><div class="stat__num">tens of M</div><div class="stat__label">people in the largest DTC databases</div></div>
+        </div>
+
+        <p>Ancestry inference plays to an array's strength. Your pattern across hundreds of thousands of common <span class="term" data-term="Variant">variants</span> can be compared to reference populations to estimate where your lineage traces, and shared stretches of DNA reliably flag relatives. Health is harder. An array samples specific known risk positions rather than reading a gene end to end, so it can confirm a particular variant is present but can easily miss others in the same gene. That gap drove a regulatory collision. In 2013 the U.S. Food and Drug Administration ordered 23andMe to stop marketing its health interpretations, warning that inaccurate results could lead people to act - or fail to act - on bad information. The company spent years rebuilding trust with regulators and later won authorization to report a defined set of specific risk variants, such as certain BRCA founder mutations, with heavy caveats.</p>
+
+        <h2 id="business">The business problem</h2>
+        <p>The deeper story of consumer genomics is not scientific; it is commercial. A spit kit is a one-time purchase. Once you have learned your ancestry and met your cousins, there is little reason to buy another. The total addressable market is large but finite, and once the early enthusiasts have tested, growth stalls. Companies that live on hardware-style one-time sales eventually run out of new customers, and DTC genetics ran into exactly that wall as the market saturated in the early 2020s.</p>
+        <p>Two pivots followed. The first was to turn the database itself into the product. With consent, aggregated and de-identified genetic data is enormously valuable for drug discovery, because researchers can hunt for variants linked to disease across millions of people. 23andMe struck a high-profile data partnership with the pharmaceutical company GSK to mine its database for drug targets. The second pivot was toward <b>subscriptions</b> - recurring reports, wellness features, and refreshed health interpretations meant to convert a one-time buyer into an ongoing relationship. Neither fully solved the problem.</p>
+
+        <div class="callout callout--market">
+          <div class="callout__label">&#9632; Follow the business model</div>
+          <p>23andMe went public via a SPAC in 2021 at a multi-billion-dollar valuation, then its share value collapsed as growth stalled and the data and drug-discovery businesses failed to fill the gap. A major data breach in 2023 exposed information on millions of users, denting trust at the worst possible moment. In 2025 the company filed for Chapter 11 bankruptcy, which put its vast genetic database on the table as a saleable asset. That raised a question almost no early customer had considered: when a genomics company is sold or liquidated, who controls your DNA?</p>
+        </div>
+
+        <p>The bankruptcy crystallized a discomfort that had been latent all along. People had handed their most permanent personal data to a private company in exchange for a fun ancestry report, on the implicit assumption that the company - and its promises - would last forever. Companies do not last forever. The genome does.</p>
+
+        <h2 id="forensic">Forensic genealogy</h2>
+        <p>While the business model wobbled, consumer DNA databases quietly transformed criminal investigation. In 2018, investigators in California announced they had identified the <b>Golden State Killer</b>, a serial offender uncaptured for over four decades. They did it not by matching a suspect's DNA to a police database, but by uploading a crime-scene DNA profile to <b>GEDmatch</b>, an open consumer genealogy site where hobbyists pool their results. The upload found no exact match - it found <em>distant relatives</em>. From those partial cousin matches, genealogists built family trees and triangulated down to a single living person who fit the timeline and geography.</p>
+        <p>This technique, now called <b>investigative genetic genealogy</b>, has since helped solve hundreds of cold cases and identify unknown remains. It is a genuine public good in many of those cases. But it carries a twist that ordinary forensics never did: <b>you can be identified through relatives who tested, even if you never did.</b> Because <span class="term" data-term="Germline">germline</span> DNA is shared across families, a cousin's decision to spit in a tube can expose you, your siblings, and your children. Researchers have estimated that the majority of people of European descent in the United States are already reachable through a third-cousin-or-closer match in existing consumer databases - no consent of yours required.</p>
+
+        <h2 id="privacy">Privacy and what your DNA reveals</h2>
+        <p>Genetic data is unlike almost any other category of personal information, and three properties make it uniquely sensitive. It is <b>immutable</b>: you cannot change your DNA after a breach the way you can reset a password or cancel a card. It is <b>identifying</b>: your <span class="term" data-term="Genotype">genotype</span> is effectively a fingerprint that points to you and only you. And it is <b>shared</b>: it implicates your biological relatives, who never agreed to anything. A leaked genome is not just your secret to lose.</p>
+        <p>It can also reveal more than the buyer bargained for. The same data that estimates ancestry can carry hints about disease predisposition, true biological parentage, and - through a <span class="term" data-term="Polygenic risk score">polygenic risk score</span> built from many common variants - probabilistic risk for complex traits. <span class="term" data-term="Heritability">Heritability</span> sets a ceiling on how much of any trait genetics can ever explain, and for most common conditions that ceiling leaves enormous room for environment and chance, so these scores are nudges, not verdicts. But a nudge in the wrong hands - an insurer, an employer, a hostile party - can still do harm.</p>
+
+        <div class="callout callout--note">
+          <div class="callout__label">&#9888; What GINA does and does not cover</div>
+          <p>The U.S. Genetic Information Nondiscrimination Act of 2008 - covered in the next module - bars <b>health insurers</b> and <b>employers</b> from using your genetic information against you. But it has large gaps: it does <b>not</b> cover <b>life insurance, disability insurance, or long-term-care insurance</b>. A predictive result that is legally off-limits to your employer may be entirely fair game when you apply for a life policy. Read the privacy terms before you spit, because consent given to a healthy startup may outlive the startup.</p>
+        </div>
+
+        <p>Putting the arc on a single timeline makes the pattern legible: a fast climb, a regulatory check, an unexpected forensic use, a financial peak, a breach, and a fall.</p>
+
+        <table class="dtable">
+          <thead>
+            <tr><th>Year</th><th>Milestone</th><th>Why it mattered</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="num">2006</td><td>23andMe founded</td><td>DTC genetics begins; saliva replaces blood draws and clinics</td></tr>
+            <tr><td class="num">2013</td><td>FDA halts 23andMe health claims</td><td>Array results are not clinical-grade; regulators step in</td></tr>
+            <tr><td class="num">2018</td><td>Golden State Killer identified</td><td>Forensic genealogy via relatives' uploaded DNA goes mainstream</td></tr>
+            <tr><td class="num">2021</td><td>23andMe goes public via SPAC</td><td>Multi-billion-dollar valuation at the market's peak</td></tr>
+            <tr><td class="num">2023</td><td>Major data breach</td><td>Information on millions of users exposed; trust erodes</td></tr>
+            <tr><td class="num">2025</td><td>Chapter 11 bankruptcy</td><td>Genetic database listed as a saleable asset; who owns your DNA?</td></tr>
+          </tbody>
+        </table>
+
+        <div class="takeaways reveal">
+          <h3>&#10003; Key takeaways</h3>
+          <ul>
+            <li>Consumer kits use genotyping arrays (SNP chips reading a curated set of common variants), not whole-genome sequencing - which is why they are cheap, good at ancestry, and weaker at clinical-grade health calls.</li>
+            <li>The DTC business model struggled because a spit kit is a one-time purchase; companies pivoted to drug-discovery data deals (the GSK partnership) and subscriptions, with limited success.</li>
+            <li>23andMe's arc - 2021 SPAC, value collapse, 2023 breach, 2025 bankruptcy - put a private genetic database up for sale and raised the question of who controls your DNA when the company changes hands.</li>
+            <li>Investigative genetic genealogy (Golden State Killer, 2018) can identify people through tested relatives, so you can be exposed even if you never submitted a sample.</li>
+            <li>Genetic data is immutable, identifying, and shared with relatives; GINA shields against health-insurer and employer use but not life, disability, or long-term-care insurance.</li>
+          </ul>
+        </div>
+
+        <div class="quiz">
+          <div class="quiz__head"><span class="pill">Check</span> Knowledge check</div>
+          <p class="quiz__intro">Three quick questions. Pick an answer to see the explanation.</p>
+
+          <div class="q" data-answer="2">
+            <p class="q__stem">1. What technology do most consumer DNA kits actually use to read your DNA?</p>
+            <div class="q__opts">
+              <button class="opt">Whole-genome sequencing of all 3.1 billion base pairs</button>
+              <button class="opt">Whole-exome sequencing of every protein-coding gene</button>
+              <button class="opt">A genotyping array that reads a curated set of common SNP positions</button>
+              <button class="opt">A blood draw analyzed by Sanger sequencing</button>
+            </div>
+            <div class="q__explain">DTC kits use genotyping arrays (SNP chips) that read a pre-selected panel of common variant positions, not the whole genome. That is why they are cheap and strong at ancestry but weaker at clinical-grade health calls, since they sample known positions rather than reading genes end to end.</div>
+          </div>
+
+          <div class="q" data-answer="1">
+            <p class="q__stem">2. Why did the direct-to-consumer genetics business model prove so difficult?</p>
+            <div class="q__opts">
+              <button class="opt">Sequencing costs kept rising, so kits became unaffordable</button>
+              <button class="opt">A spit kit is a one-time purchase, so the market saturates and repeat revenue is scarce</button>
+              <button class="opt">Regulators banned ancestry reporting outright</button>
+              <button class="opt">Customers were required to buy a new kit every year</button>
+            </div>
+            <div class="q__explain">A kit is bought once. Once early enthusiasts have tested, growth stalls and recurring revenue is hard to find. Companies pivoted to monetizing the aggregated database for drug discovery (the GSK deal) and to subscriptions, but neither fully solved the one-time-purchase problem.</div>
+          </div>
+
+          <div class="q" data-answer="3">
+            <p class="q__stem">3. How can investigative genetic genealogy identify someone who never took a DNA test?</p>
+            <div class="q__opts">
+              <button class="opt">It does not; only people who personally tested can ever be identified</button>
+              <button class="opt">Police secretly sequence everyone's DNA at birth</button>
+              <button class="opt">Arrays can reconstruct an untested person's genome from their name</button>
+              <button class="opt">Germline DNA is shared with relatives, so distant cousins' uploaded results let investigators triangulate to an untested person</button>
+            </div>
+            <div class="q__explain">Because germline DNA is shared across families, a crime-scene profile uploaded to a consumer genealogy database can match distant relatives who did test. Genealogists then build family trees and triangulate to a single person - even one who never submitted a sample, as in the 2018 Golden State Killer case.</div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+    <nav class="module-foot">
+      <a class="pn pn--prev" href="10-pharmacogenomics.html"><small>&larr; Previous</small><b>Pharmacogenomics & Precision Medicine</b></a>
+      <a class="pn pn--next" href="12-ethics.html"><small>Next &rarr;</small><b>Ethics, Society & the Shadow of Eugenics</b></a>
+    </nav>
+  </main>
+
+  <p class="footer-note">Genetics 101 &middot; Module 11 &middot; <a href="../index.html">All modules</a> &middot; <a href="../glossary.html">Glossary</a></p>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/charts.js"></script>
+  <script src="../assets/js/glossary.js"></script>
+  <script src="../assets/js/quiz.js"></script>
+  <script src="../assets/js/nav.js"></script>
+</body>
+</html>

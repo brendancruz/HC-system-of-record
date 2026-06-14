@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>14 - Case Study: Natera | Genetics 101</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <header class="topbar">
+    <a class="topbar__brand" href="../index.html"><span class="dot"></span> Genetics 101</a>
+    <div class="topbar__spacer"></div>
+    <a class="topbar__link" href="../index.html">Modules</a>
+    <a class="topbar__link" href="../glossary.html">Glossary</a>
+    <button class="menu-btn" aria-label="Sections">&#9776;</button>
+  </header>
+
+  <main class="layout">
+    <div class="hero reveal">
+      <p class="hero__eyebrow">Part V - Genomics in Society &amp; the Clinic - Module 14</p>
+      <h1 class="hero__title">Case Study: Natera</h1>
+      <p class="hero__sub">Natera is the whole course compressed into one company. Take the germline-versus-somatic distinction, master the art of pulling tiny amounts of cell-free DNA out of a tube of blood, and build it into multi-billion-dollar franchises across reproductive health, oncology, and transplant.</p>
+      <div class="hero__meta">
+        <span><b>Reading</b> ~15 min</span>
+        <span><b>You will learn</b> how Natera turned cell-free DNA into three franchises &middot; the numbers &middot; the thesis</span>
+      </div>
+    </div>
+
+    <div class="module-grid">
+      <aside class="toc" id="toc"></aside>
+      <article class="article">
+
+        <p class="lead">Here is the good news for anyone who made it this far: you already understand Natera. If you grasp the difference between <span class="term" data-term="Germline">germline</span> and <span class="term" data-term="Somatic">somatic</span> DNA, and you understand that cells constantly shed fragments of their <span class="term" data-term="DNA">DNA</span> into the bloodstream, then you understand the company's entire strategy. Natera is a master class in taking one molecular skill and applying it to three different markets. This module is the payoff: we take the biology from the earlier modules and watch it turn into a business.</p>
+
+        <h2 id="franchises">One core competency, three franchises</h2>
+        <p>Strip away the product names and Natera does exactly one thing well: it detects and analyzes tiny amounts of <span class="term" data-term="cfDNA">cell-free DNA</span> in a tube of blood. Cell-free DNA is the loose fragments that cells release as they turn over - a faint molecular signal in a sea of background. Reading that signal reliably, at scale, and at a price payors will reimburse is genuinely hard. Natera's edge is that it does this better than almost anyone, and then it points the same skill at three different biological questions.</p>
+
+        <figure class="figure reveal">
+          <div class="figure__frame">
+            <div class="fig-title">Figure 14.2 - Three franchises, one core competency</div>
+            <div id="fig-natera-split"></div>
+          </div>
+          <figcaption>Natera applies one skill - cell-free DNA analysis - across reproductive health, oncology, and transplant. Proportions are approximate and illustrative of the structure, not reported segment revenue.</figcaption>
+        </figure>
+
+        <p><b>Women's health</b> came first and pays the bills. Panorama is a <span class="term" data-term="NIPT">non-invasive prenatal test</span> that screens fetal cell-free DNA - which circulates in the mother's blood during pregnancy - for chromosomal conditions. Horizon is a <span class="term" data-term="Carrier screening">carrier screen</span> that tells prospective parents which recessive variants they could pass on. Both read inherited, germline DNA. This is the original, cash-generative base of the company, and it answers the question, "what did we inherit, and what might we pass on?"</p>
+
+        <p><b>Oncology</b> is the growth engine. Signatera is a tumor-informed <span class="term" data-term="ctDNA">circulating-tumor-DNA</span> test for <span class="term" data-term="MRD">molecular residual disease</span> - it looks for fragments of a cancer's DNA left in the blood after treatment. Cancer is the defining example of somatic change: a tumor accumulates acquired mutations that are not in the rest of the body. So Signatera reads somatic DNA, the mirror image of the women's health franchise. Same molecule, opposite biology.</p>
+
+        <p><b>Organ health</b> rounds out the trio. Prospera monitors transplant recipients for early signs of rejection by measuring donor-derived cell-free DNA. When a transplanted organ is under attack, its cells die faster and shed more of their DNA into the recipient's blood, so a rising donor signal is an early warning. It is the same <span class="term" data-term="Liquid biopsy">liquid biopsy</span> trick aimed at a third question entirely.</p>
+
+        <div class="callout callout--note">
+          <div class="callout__label">&#9888; The unifying idea</div>
+          <p>Do not memorize three separate products. Memorize one capability - reading cell-free DNA from blood - and three questions it can answer: what did I inherit (germline, women's health), what went wrong in this tissue (somatic, oncology), and is this transplanted organ in trouble (donor-derived, organ health). The franchises differ; the laboratory skill does not.</p>
+        </div>
+
+        <h2 id="signatera">Signatera: the growth engine</h2>
+        <p>If you only remember one product, make it Signatera, because it sits on top of the most valuable category in diagnostics. What makes it special is that it is <em>tumor-informed</em>, and that phrase is worth unpacking carefully.</p>
+
+        <p>A generic liquid biopsy looks for a fixed list of known cancer mutations in everyone. Signatera does the opposite. First it sequences the patient's own tumor tissue to find the specific set of mutations that <em>this</em> cancer carries. Then it designs a personalized panel - typically targeting 16 of that patient's unique variants - and tracks only those in the blood over time. Because the test knows exactly what to look for, it can pick out an astonishingly faint signal: a handful of tumor fragments among millions of normal ones.</p>
+
+        <p>The payoff is sensitivity and timing. A rising Signatera signal can flag residual or recurring cancer months before it shows up on a scan - cancer that is molecularly present but radiologically invisible. That early read can change decisions: who needs more chemotherapy after surgery, who can safely be spared it, and who is quietly relapsing while imaging still looks clean. The drivers of the business are clinical adoption by oncologists and expanding <span class="term" data-term="Sequencing">sequencing</span>-backed payor coverage across more tumor types, and on both fronts the momentum has been strong - clinical MRD volumes grew through 2025, with clinical MRD units up roughly 56% year over year in the third quarter of 2025.</p>
+
+        <div class="callout callout--key">
+          <div class="callout__label">&#9733; Key idea</div>
+          <p>Tumor-informed MRD is differentiated because it is personalized. By sequencing each patient's tumor first and then hunting only for their specific mutations, Signatera trades a one-size-fits-all panel for a bespoke one - buying the sensitivity to catch recurrence before imaging can. That is a deeper moat than a generic, off-the-shelf <span class="term" data-term="Companion diagnostic">companion diagnostic</span> panel, because the signal it detects is one competitors using fixed panels can miss.</p>
+        </div>
+
+        <h2 id="numbers">The numbers</h2>
+        <p>A great story needs a great income statement behind it, and Natera's has compounded impressively. Revenue climbed from $625.5M in FY2021 to $2,306.1M in FY2025 - more than tripling in four years and still accelerating, not slowing, as it scaled.</p>
+
+        <figure class="figure reveal">
+          <div class="figure__frame">
+            <div class="fig-title">Figure 14.1 - Natera revenue, FY2021 to FY2025</div>
+            <div id="fig-natera-rev"></div>
+          </div>
+          <figcaption>Revenue grew from $625.5M in FY2021 to $2,306.1M in FY2025, up about 36% year over year in FY2025. Source: this repository's Natera profile and FY2025 company results.</figcaption>
+        </figure>
+
+        <div class="stats reveal">
+          <div class="stat"><div class="stat__num">$2,306.1M</div><div class="stat__label">FY2025 revenue (+35.9%)</div></div>
+          <div class="stat"><div class="stat__num">~63-65%</div><div class="stat__label">gross margin, FY2025</div></div>
+          <div class="stat"><div class="stat__num">~$30.4B</div><div class="stat__label">market cap (largest in the comp set)</div></div>
+          <div class="stat"><div class="stat__num">$212</div><div class="stat__label">share price (2026-06-13)</div></div>
+        </div>
+
+        <p>FY2025 revenue of $2,306.1M was up 35.9% over FY2024's $1,696.9M, with the fourth quarter alone bringing in $665.5M, up 39.8%. Gross margin ran around 63-65%, healthy for a clinical lab business that has to run a physical assay for every test. Just as important, EBITDA inflected positive in 2025 - the company turned the corner on profitability rather than burning cash to fund its growth. That combination, fast growth <em>and</em> an emerging bottom line, is rare in diagnostics and is exactly what the market rewards.</p>
+
+        <h2 id="valuation">Valuation and the peer set</h2>
+        <p>At a roughly $30.4B market cap on about $2.31B of FY2025 revenue, Natera trades near 13.2x price-to-sales while growing about 36%. That is a premium multiple, and the natural question is whether it is justified or just hope. The answer is clearer when you place Natera next to its peers.</p>
+
+        <figure class="figure reveal">
+          <div class="figure__frame">
+            <div class="fig-title">Figure 14.3 - You are paying for growth: diagnostics peers</div>
+            <div id="fig-dxcomps"></div>
+          </div>
+          <figcaption>Price-to-sales multiple versus FY2025 revenue growth across the diagnostics comp set (as of 2026-06-13). Natera sits high on both axes; its premium is growth-justified rather than pure optionality. Education, not investment advice.</figcaption>
+        </figure>
+
+        <p>The scatter rewards reading. Guardant Health trades richer still, near 17.9x, but a big slice of that is the market paying for the <em>optionality</em> of Shield, its blood-based colorectal screening test, on top of a slower-growing oncology base. Tempus AI is the fastest grower on the chart at about 83% yet sits at only 6.6x, because much of that growth came from acquiring Ambry rather than organically, so the market discounts it. Exact Sciences, around 6.2x, is the take-out benchmark: a profitable, scaled screening franchise that Abbott agreed to acquire for roughly $21B - the reference point for what a strategic buyer pays for cash-generative diagnostics.</p>
+
+        <p>Against that backdrop Natera's premium looks earned. Unlike Guardant, you are not mostly paying for a screening lottery ticket that may or may not pay off. Unlike Tempus, the growth is real and organic. Natera sits high on both axes of the chart - high growth <em>and</em> a high multiple - and the two move together. The premium is growth-justified, not optionality-driven.</p>
+
+        <div class="callout callout--market">
+          <div class="callout__label">&#9650; The market read</div>
+          <p>A high multiple is not automatically expensive, and a low one is not automatically cheap. Guardant's 17.9x bakes in a screening bet that has not yet scaled; Exact's ~6.2x is what a buyer actually paid for a profitable franchise. Natera's 13.2x sits in between and is anchored to delivered results - 36% growth plus a profitability inflection - rather than to a future that may never arrive. That is why it is described as growth-justified.</p>
+        </div>
+
+        <table class="dtable">
+          <thead><tr><th>Company</th><th>P/S</th><th>FY2025 growth</th><th>What the multiple is paying for</th></tr></thead>
+          <tbody>
+            <tr><td><b>Natera</b> (NTRA)</td><td>13.2x</td><td>+36%</td><td>Signatera MRD engine; growth plus a profitability inflection.</td></tr>
+            <tr><td>Guardant (GH)</td><td>17.9x</td><td>+31%</td><td>Shield screening optionality on top of an oncology base.</td></tr>
+            <tr><td>Tempus AI (TEM)</td><td>6.6x</td><td>+83%</td><td>Fast but Ambry-inflated; growth discounted as inorganic.</td></tr>
+            <tr><td>Exact Sciences (EXAS)</td><td>6.2x</td><td>+18%</td><td>The take-out benchmark - acquired by Abbott (~$21B).</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="why">Why Natera matters</h2>
+        <p>Zoom out and Natera is the bellwether for <span class="term" data-term="MRD">MRD</span>, the most strategically important growth category in all of diagnostics. It is the scaled, profitability-inflecting leader against which the entire liquid-biopsy field is measured. At roughly $30B it is large enough to be a logical consolidation target if a larger player wants to own MRD, and strong enough to be an acquirer itself. Either way, when you want to understand where this part of the industry is heading, you watch Natera.</p>
+
+        <p>But the deeper reason it belongs in this course is that Natera is the whole syllabus made commercial. The germline-versus-somatic distinction from the foundations module is literally the org chart: women's health reads germline, oncology reads somatic. The collapse in <span class="term" data-term="Sequencing">sequencing</span> cost is what makes tumor-informed testing affordable enough to run on millions of samples. And the cell-free DNA biology - fragments of a <span class="term" data-term="Genome">genome</span> floating in blood, waiting to be read - is the raw material for all three franchises. Natera is genetics turned into a business.</p>
+
+        <div class="callout callout--insight">
+          <div class="callout__label">&#9632; The thesis in one line</div>
+          <p>Natera proves that a single molecular competency - reliably reading cell-free DNA from a tube of blood - can be franchised across reproductive health, oncology, and transplant. Master the biology this course teaches, and the business model follows almost automatically. That is why it is the case study.</p>
+        </div>
+
+        <div class="callout callout--note">
+          <div class="callout__label">&#9888; A note on what this is</div>
+          <p>This module is education, not investment advice. The figures are drawn from this repository's profiles as of mid-2026 and are used to teach how the science maps onto a business, not to recommend buying or selling any security. Prices, multiples, and competitive dynamics change; do your own research before making any decision.</p>
+        </div>
+
+        <div class="takeaways reveal">
+          <h3>&#10003; Key takeaways</h3>
+          <ul>
+            <li>Natera has one core skill - analyzing cell-free DNA from blood - and three franchises: women's health (Panorama, Horizon), oncology (Signatera), and organ health (Prospera).</li>
+            <li>Women's health reads inherited <b>germline</b> DNA; Signatera reads acquired <b>somatic</b> tumor DNA. Same molecule, opposite biology.</li>
+            <li>Signatera is <b>tumor-informed</b>: it sequences each patient's tumor, builds a personalized panel of their mutations, and tracks that signal to catch recurrence before imaging.</li>
+            <li>Revenue grew from $625.5M (FY2021) to $2,306.1M (FY2025, +35.9%), with ~63-65% gross margin and EBITDA inflecting positive.</li>
+            <li>At ~13.2x sales on +36% growth, Natera's premium is growth-justified, not optionality-driven like Guardant or Ambry-inflated like Tempus.</li>
+            <li>Natera is the bellwether for MRD, the most important growth category in diagnostics, and a logical consolidation target or acquirer.</li>
+          </ul>
+        </div>
+
+        <div class="quiz">
+          <div class="quiz__head"><span class="pill">Check</span> Knowledge check</div>
+          <p class="quiz__intro">Three quick questions. Pick an answer to see the explanation.</p>
+
+          <div class="q" data-answer="2">
+            <p class="q__stem">1. Which Natera franchise reads acquired, somatic DNA rather than inherited, germline DNA?</p>
+            <div class="q__opts">
+              <button class="opt">Horizon, the carrier screen</button>
+              <button class="opt">Panorama, the prenatal test</button>
+              <button class="opt">Signatera, the oncology MRD test</button>
+              <button class="opt">All three read germline DNA</button>
+            </div>
+            <div class="q__explain">Signatera tracks circulating-tumor DNA, which carries the somatic mutations a cancer acquires during life. Panorama and Horizon both read inherited, germline DNA - the women's health base. Same cell-free-DNA skill, opposite biology.</div>
+          </div>
+
+          <div class="q" data-answer="1">
+            <p class="q__stem">2. What does it mean that Signatera is "tumor-informed"?</p>
+            <div class="q__opts">
+              <button class="opt">It screens everyone for the same fixed list of known cancer mutations</button>
+              <button class="opt">It first sequences the patient's tumor, then tracks that patient's specific mutations in blood</button>
+              <button class="opt">It only works once a tumor is visible on a scan</button>
+              <button class="opt">It analyzes the tumor tissue directly and never uses blood</button>
+            </div>
+            <div class="q__explain">Tumor-informed means personalized: Natera sequences the patient's own tumor, designs a bespoke panel of their specific mutations, then tracks only that signal in the blood over time. That is what lets it catch residual or recurring disease before imaging can.</div>
+          </div>
+
+          <div class="q" data-answer="0">
+            <p class="q__stem">3. Why is Natera's ~13.2x price-to-sales multiple described as "growth-justified"?</p>
+            <div class="q__opts">
+              <button class="opt">It rests on delivered ~36% growth plus a profitability inflection, not on a speculative future product</button>
+              <button class="opt">It is the lowest multiple in the diagnostics comp set</button>
+              <button class="opt">Most of the value comes from a screening test that has not yet launched</button>
+              <button class="opt">Its growth is inflated by a recent acquisition</button>
+            </div>
+            <div class="q__explain">Natera's premium is anchored to real, organic results - about 36% growth and EBITDA turning positive. That contrasts with Guardant, whose richer multiple partly prices unproven Shield screening optionality, and Tempus, whose faster growth is Ambry-inflated and therefore discounted.</div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+    <nav class="module-foot">
+      <a class="pn pn--prev" href="13-clinic.html"><small>&larr; Previous</small><b>Genomics in the Clinic</b></a>
+      <a class="pn pn--next" href="15-ai-revolution.html"><small>Next &rarr;</small><b>The AI Revolution: AlphaFold and Beyond</b></a>
+    </nav>
+  </main>
+
+  <p class="footer-note">Genetics 101 &middot; Module 14 &middot; <a href="../index.html">All modules</a> &middot; <a href="../glossary.html">Glossary</a></p>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/charts.js"></script>
+  <script src="../assets/js/glossary.js"></script>
+  <script src="../assets/js/quiz.js"></script>
+  <script src="../assets/js/nav.js"></script>
+  <script>
+  GChart.bars("fig-natera-rev", {
+    categories: GData.nateraRevenue.years,
+    series:[{name:"Revenue", color:"#283593", data: GData.nateraRevenue.values.map(function(v){return v*1e6;})}],
+    yFormat:"money", valueLabels:true, height:380
+  });
+  GChart.donut("fig-natera-split", { segments: GData.nateraSplit, centerLabel:"3", centerSub:"franchises", height:340 });
+  GChart.scatter("fig-dxcomps", {
+    points: GData.dxComps, xMin:0, xMax:90, yMin:0, yMax:20,
+    xLabel:"FY2025 revenue growth (%)", yLabel:"Price / sales multiple (x)",
+    xFormat:function(v){return v+"%";}, yFormat:function(v){return v+"x";}, height:440
+  });
+  </script>
+</body>
+</html>

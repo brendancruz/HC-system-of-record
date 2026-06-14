@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>01 - Orientation | Genetics 101</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <header class="topbar">
+    <a class="topbar__brand" href="../index.html"><span class="dot"></span> Genetics 101</a>
+    <div class="topbar__spacer"></div>
+    <a class="topbar__link" href="../index.html">Modules</a>
+    <a class="topbar__link" href="../glossary.html">Glossary</a>
+    <button class="menu-btn" aria-label="Sections">&#9776;</button>
+  </header>
+
+  <main class="layout">
+    <div class="hero reveal">
+      <p class="hero__eyebrow">Part I - Foundations - Module 01</p>
+      <h1 class="hero__title">Orientation: The Big Map</h1>
+      <p class="hero__sub">A ten-minute aerial view of the whole field, so the rest of the course has a frame to hang on. What genetics asks, how genomics differs, the arc from Mendel to AI, and how to navigate these fifteen modules.</p>
+      <div class="hero__meta">
+        <span><b>Reading</b> ~10 min</span>
+        <span><b>You will learn</b> the landscape &middot; the key questions &middot; how to use the course</span>
+      </div>
+    </div>
+
+    <div class="module-grid">
+      <aside class="toc" id="toc"></aside>
+      <article class="article">
+
+        <p class="lead">This course is a guided tour, for a smart non-biologist, from the chemistry of <span class="term" data-term="DNA">DNA</span> all the way to the artificial-intelligence systems now reshaping the field. It is built on a simple belief: you do not need a lab coat to understand genetics, you need a good map. Over fifteen short modules we blend the science with the history that produced it and the industry that now runs on it, because the three only make full sense together. This first module is the map itself - the part you keep in your head while every later module fills in a region.</p>
+
+        <h2 id="genetics-vs-genomics">Genetics versus genomics</h2>
+        <p>People use the two words loosely, but the distinction is real and it organizes everything that follows. <b>Genetics</b> is the older discipline: the study of single <span class="term" data-term="Gene">genes</span> and how traits pass from parent to child. It begins with a monk and his garden. In 1865 Gregor Mendel, breeding pea plants and counting their offspring, showed that inheritance follows tidy mathematical rules - one gene, one trait, passed in predictable ratios. For nearly a century that one-gene-at-a-time view was all anyone could manage, and it remains the right lens for <span class="term" data-term="Mendelian">Mendelian</span> conditions like cystic fibrosis or sickle-cell disease.</p>
+        <p><b>Genomics</b> is the modern, wholesale version. Instead of studying one gene, it studies the entire <span class="term" data-term="Genome">genome</span> at once - all of an organism's DNA, read and compared in bulk. This was simply impossible until the cost of <span class="term" data-term="Sequencing">sequencing</span> collapsed around the year 2000. Genomics is what lets researchers ask why most common traits are <span class="term" data-term="Polygenic">polygenic</span>, shaped by thousands of small <span class="term" data-term="Variant">variants</span> rather than one. Genetics gave us the grammar; genomics gave us the whole library and the means to scan it.</p>
+
+        <div class="compare">
+          <div class="compare__col compare__col--a">
+            <h4>Genetics</h4>
+            <p style="font-family:var(--sans);font-size:var(--fs-sm);color:var(--ink-soft)">Single genes and heredity. Born with Mendel's peas (1865). One gene, one trait, predictable ratios. The right lens for inherited, single-gene disorders.</p>
+          </div>
+          <div class="compare__col compare__col--b">
+            <h4>Genomics</h4>
+            <p style="font-family:var(--sans);font-size:var(--fs-sm);color:var(--ink-soft)">The whole genome at once, studied in bulk. Made possible by cheap sequencing (~2000). The lens for variation, complex traits, and population-scale questions.</p>
+          </div>
+        </div>
+
+        <h2 id="five-questions">The five questions the field keeps asking</h2>
+        <p>Strip away the jargon and almost every project in genetics is chasing one of five questions. Keep these in mind and you will always know which region of the map you are standing in.</p>
+        <ol>
+          <li><b>What is in the code?</b> Reading the sequence of letters in a genome. This is sequencing, from <span class="term" data-term="Sanger sequencing">Sanger's</span> first method to today's <span class="term" data-term="NGS">next-generation sequencing</span>.</li>
+          <li><b>What does it do?</b> Working out the function of a gene - what protein it makes and what that protein does in a living cell.</li>
+          <li><b>How do we differ?</b> Cataloguing variation: the variants that make one person's genome differ from the next, studied at scale through methods like the <span class="term" data-term="GWAS">genome-wide association study</span>.</li>
+          <li><b>What goes wrong?</b> Linking variation to disease - which changes in the code cause illness, and through what mechanism, whether inherited (<span class="term" data-term="Germline">germline</span>) or acquired (<span class="term" data-term="Somatic">somatic</span>).</li>
+          <li><b>Can we rewrite it?</b> Editing the code deliberately. The arrival of <span class="term" data-term="CRISPR">CRISPR</span> in 2012 turned this from science fiction into a routine laboratory tool and, increasingly, a medicine.</li>
+        </ol>
+
+        <div class="callout callout--insight">
+          <div class="callout__label">&#9632; Why this framing pays off</div>
+          <p>Each of the five questions has become an industry. Sequencing built the instrument makers; variation and disease built clinical testing; rewriting built gene-therapy biotech. When you read about a genomics company later in the course, ask which of the five it sells, and its strategy snaps into focus.</p>
+        </div>
+
+        <h2 id="the-arc">A 160-year arc on one page</h2>
+        <p>The field moved from counting pea plants to predicting protein shapes with neural networks in about a century and a half. Here is the whole journey compressed into the milestones that actually changed what was possible.</p>
+
+        <table class="dtable">
+          <thead>
+            <tr><th>Year</th><th>Milestone</th><th>Why it mattered</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1865</td><td>Mendel's laws of inheritance</td><td>Showed heredity follows countable rules, founding genetics decades before anyone knew DNA existed.</td></tr>
+            <tr><td>1953</td><td>Watson, Crick and Franklin reveal DNA's double helix</td><td>The structure explained how DNA copies itself and carries information - the molecular basis of heredity.</td></tr>
+            <tr><td>1960s</td><td>The genetic code is cracked</td><td>Researchers learned how three-letter words of DNA specify amino acids, linking sequence to protein.</td></tr>
+            <tr><td>1977</td><td>Sanger sequencing invented</td><td>The first practical way to read DNA letter by letter, the workhorse method for the next 30 years.</td></tr>
+            <tr><td>1990-2003</td><td>The Human Genome Project</td><td>A 13-year, multinational effort delivered the first reference human genome, the field's foundational map.</td></tr>
+            <tr><td>~2007-2014</td><td>Next-generation sequencing and the $1,000 genome</td><td>Massively parallel reading crashed the cost of a genome from billions to about a thousand dollars, making genomics routine.</td></tr>
+            <tr><td>2012</td><td>CRISPR gene editing</td><td>A cheap, programmable way to cut and edit DNA turned genome editing into an everyday tool.</td></tr>
+            <tr><td>2020</td><td>AlphaFold predicts protein structure</td><td>An AI system solved the decades-old problem of predicting a protein's 3D shape from its sequence.</td></tr>
+            <tr><td>2024</td><td>Nobel Prize for AI protein work</td><td>The Chemistry prize recognized computational protein structure and design, marking AI's arrival in the life sciences.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout--note">
+          <div class="callout__label">&#9888; Read the slope, not just the dates</div>
+          <p>Notice how the gaps shrink. It took 88 years to get from Mendel to the double helix, but only a few years to go from cheap sequencing to programmable editing to AI-predicted structures. The pace of the field is accelerating, which is exactly why the last modules of this course look forward, not back.</p>
+        </div>
+
+        <h2 id="how-to-use">How to use this course</h2>
+        <p>Genetics 101 is organized into <b>6 parts</b> and <b>15 modules</b>, about <b>3 hours</b> of reading in total, fully self-paced. You can finish it in an afternoon or spread it across a fortnight. Each module is short, illustrated, and designed to stand close to the others while still making sense on its own.</p>
+        <p>A few interactive features are worth knowing about before you dive in. Any vocabulary word with a dotted underline is a glossary <span class="term" data-term="Genotype">term</span> - hover over it on a computer, or tap it on a phone, and a short definition appears. Every module ends with a short knowledge check so you can confirm an idea landed before moving on. Where a module includes a chart, it is interactive: hover over a bar or point to read the exact value behind it.</p>
+
+        <div class="callout callout--key">
+          <div class="callout__label">&#9733; How to navigate</div>
+          <p>Read the modules in order if you can - each one assumes the vocabulary of the ones before it, and the early foundations make everything later far easier. That said, three modules are written to stand alone if a topic pulls you in: Modules 13 and 14 on clinical diagnostics and the Natera case study, and Module 15 on artificial intelligence in genetics. If you only have twenty minutes and a specific interest, start there. Otherwise, begin at the beginning.</p>
+        </div>
+
+        <p>One last orienting thought. You will meet a great deal of machinery in this course - the molecule of DNA, the message of <span class="term" data-term="RNA">RNA</span>, the distinction between <span class="term" data-term="Genotype">genotype</span> and <span class="term" data-term="Phenotype">phenotype</span>, the statistics of <span class="term" data-term="Heritability">heritability</span>, and the neural networks behind <span class="term" data-term="AlphaFold">AlphaFold</span>. None of it is harder than what you already hold in your head about, say, how a city works. It is just unfamiliar. The map you have just read is enough to keep you from getting lost; the rest of the course simply walks the territory.</p>
+
+        <div class="takeaways reveal">
+          <h3>&#10003; Key takeaways</h3>
+          <ul>
+            <li><b>Genetics</b> studies single genes and heredity (Mendel, 1865); <b>genomics</b> studies the whole genome at once, made possible only by cheap sequencing around 2000.</li>
+            <li>The field keeps asking five questions: what is in the code, what does it do, how do we differ, what goes wrong, and can we rewrite it.</li>
+            <li>A 160-year arc runs from Mendel's peas through the double helix, Sanger sequencing, and the Human Genome Project to CRISPR and AI - and it is accelerating.</li>
+            <li>The course is 6 parts and 15 modules, about 3 hours, self-paced, with hover-to-define glossary terms, end-of-module checks, and interactive charts.</li>
+            <li>Read in order for the smoothest path, but Modules 13-14 (diagnostics, Natera) and 15 (AI) can be read on their own.</li>
+          </ul>
+        </div>
+
+        <div class="quiz">
+          <div class="quiz__head"><span class="pill">Check</span> Knowledge check</div>
+          <p class="quiz__intro">Three quick questions. Pick an answer to see the explanation.</p>
+
+          <div class="q" data-answer="2">
+            <p class="q__stem">1. What best captures the difference between genetics and genomics?</p>
+            <div class="q__opts">
+              <button class="opt">Genetics studies plants; genomics studies humans</button>
+              <button class="opt">They are two words for exactly the same thing</button>
+              <button class="opt">Genetics focuses on single genes and heredity; genomics studies the entire genome at once</button>
+              <button class="opt">Genomics is older; genetics only began around the year 2000</button>
+            </div>
+            <div class="q__explain">Genetics is the older study of single genes and how traits are inherited, dating to Mendel in 1865. Genomics looks at the whole genome in bulk and only became practical once sequencing grew cheap around 2000.</div>
+          </div>
+
+          <div class="q" data-answer="1">
+            <p class="q__stem">2. Which of these milestones came first chronologically?</p>
+            <div class="q__opts">
+              <button class="opt">CRISPR gene editing</button>
+              <button class="opt">Mendel's laws of inheritance</button>
+              <button class="opt">The Human Genome Project</button>
+              <button class="opt">AlphaFold predicts protein structure</button>
+            </div>
+            <div class="q__explain">Mendel published his laws of inheritance in 1865, long before the others: the Human Genome Project ran 1990-2003, CRISPR editing arrived in 2012, and AlphaFold's structure predictions came in 2020.</div>
+          </div>
+
+          <div class="q" data-answer="0">
+            <p class="q__stem">3. What single development made genomics - studying the whole genome at scale - possible?</p>
+            <div class="q__opts">
+              <button class="opt">The dramatic fall in the cost of DNA sequencing</button>
+              <button class="opt">The discovery of Mendel's pea-plant ratios</button>
+              <button class="opt">The invention of the microscope</button>
+              <button class="opt">The 2024 Nobel Prize in Chemistry</button>
+            </div>
+            <div class="q__explain">Genomics needs to read entire genomes affordably. The collapse in sequencing cost - from billions of dollars to roughly a thousand for a genome - is what turned genome-scale study from a one-off feat into a routine tool.</div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+    <nav class="module-foot">
+      <a class="pn pn--prev pn--disabled" href="../index.html"><small>Course home</small><b>Contents</b></a>
+      <a class="pn pn--next" href="02-foundations.html"><small>Next &rarr;</small><b>The Molecule, the Message, and the Machine</b></a>
+    </nav>
+  </main>
+
+  <p class="footer-note">Genetics 101 &middot; Module 01 &middot; <a href="../index.html">All modules</a> &middot; <a href="../glossary.html">Glossary</a></p>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/charts.js"></script>
+  <script src="../assets/js/glossary.js"></script>
+  <script src="../assets/js/quiz.js"></script>
+  <script src="../assets/js/nav.js"></script>
+</body>
+</html>

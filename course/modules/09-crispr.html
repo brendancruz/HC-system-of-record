@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>09 - CRISPR | Genetics 101</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <header class="topbar">
+    <a class="topbar__brand" href="../index.html"><span class="dot"></span> Genetics 101</a>
+    <div class="topbar__spacer"></div>
+    <a class="topbar__link" href="../index.html">Modules</a>
+    <a class="topbar__link" href="../glossary.html">Glossary</a>
+    <button class="menu-btn" aria-label="Sections">&#9776;</button>
+  </header>
+
+  <main class="layout">
+    <div class="hero reveal">
+      <p class="hero__eyebrow">Part IV - Beyond the Sequence - Module 09</p>
+      <h1 class="hero__title">CRISPR and the Age of Gene Editing</h1>
+      <p class="hero__sub">For the first time we can not just read and interpret the genome but rewrite it, cheaply and precisely. CRISPR, a bacterial immune system turned into a word processor for DNA, is biology's most powerful and most fraught new tool.</p>
+      <div class="hero__meta">
+        <span><b>Reading</b> ~14 min</span>
+        <span><b>You will learn</b> how CRISPR works &middot; base and prime editing &middot; the first approved therapy &middot; the ethics flashpoint</span>
+      </div>
+    </div>
+
+    <div class="module-grid">
+      <aside class="toc" id="toc"></aside>
+      <article class="article">
+
+        <p class="lead">Reading <span class="term" data-term="DNA">DNA</span> was the project of the last thirty years: the Human Genome Project, the plunge in sequencing costs, the rise of clinical testing. Writing it is the project of the next thirty. <span class="term" data-term="CRISPR">CRISPR</span> is the reason that shift happened so fast. It made editing the <span class="term" data-term="Genome">genome</span> cheap, fast, and precise enough to move from a curiosity in a microbiology lab to an approved medicine in roughly a decade - a pace almost unheard of in biology.</p>
+
+        <h2 id="bacterial-immune-system">A bacterial immune system, repurposed</h2>
+        <p>CRISPR did not start as a technology. It started as a survival trick. Bacteria are constantly attacked by viruses, and over billions of years they evolved a defense that works like a molecular memory bank. When a virus invades and the bacterium survives, it files away a short snippet of the invader's DNA in a region of its own genome called a CRISPR array (the name is an acronym for the repetitive structure of that region). The next time the same virus shows up, the bacterium transcribes those stored snippets into guide molecules that recognize the matching viral sequence and direct a cutting protein to slice the invader apart.</p>
+        <p>The breakthrough was realizing this system could be reprogrammed to cut <em>any</em> sequence we choose. In 2012, Jennifer Doudna and Emmanuelle Charpentier showed that the cutting protein <span class="term" data-term="Cas9">Cas9</span> could be paired with a single, custom-designed <span class="term" data-term="Guide RNA">guide RNA</span> and aimed at a target DNA sequence of our choosing. Point the guide at a gene, and Cas9 cuts there. It was a deceptively simple insight with enormous reach, and in 2020 the two scientists shared the Nobel Prize in Chemistry for it.</p>
+
+        <p>The mechanism is worth holding in your head, because everything else in this module is a refinement of it. A guide RNA carries a short sequence that matches the target. It leads Cas9 to that exact spot in the genome, where the protein clamps on and makes a double-strand break - it cuts both strands of the DNA. The cell, alarmed by the break, rushes to repair it. If it simply stitches the ends back together, it usually does so sloppily, scrambling a few letters and <b>disabling</b> the gene. But if the lab also supplies a DNA template, the cell can use it to <b>paste in</b> a new sequence. Cut to disable, or cut and supply a template to rewrite.</p>
+
+        <figure class="figure reveal">
+          <div class="figure__frame">
+            <div class="fig-title">Figure 9.1 - How CRISPR-Cas9 finds and cuts DNA</div>
+            <svg class="chart-svg" viewBox="0 0 720 300" role="img" aria-label="A guide RNA directs the Cas9 protein to a matching target site on the DNA double strand, where it makes a cut">
+              <!-- DNA double strand -->
+              <line x1="40" y1="150" x2="680" y2="150" stroke="#6b7384" stroke-width="3"/>
+              <line x1="40" y1="172" x2="680" y2="172" stroke="#6b7384" stroke-width="3"/>
+              <!-- base-pair rungs -->
+              <line x1="80" y1="150" x2="80" y2="172" stroke="#b8bdc9" stroke-width="2"/>
+              <line x1="120" y1="150" x2="120" y2="172" stroke="#b8bdc9" stroke-width="2"/>
+              <line x1="160" y1="150" x2="160" y2="172" stroke="#b8bdc9" stroke-width="2"/>
+              <line x1="200" y1="150" x2="200" y2="172" stroke="#b8bdc9" stroke-width="2"/>
+              <line x1="240" y1="150" x2="240" y2="172" stroke="#b8bdc9" stroke-width="2"/>
+              <line x1="500" y1="150" x2="500" y2="172" stroke="#b8bdc9" stroke-width="2"/>
+              <line x1="540" y1="150" x2="540" y2="172" stroke="#b8bdc9" stroke-width="2"/>
+              <line x1="580" y1="150" x2="580" y2="172" stroke="#b8bdc9" stroke-width="2"/>
+              <line x1="620" y1="150" x2="620" y2="172" stroke="#b8bdc9" stroke-width="2"/>
+              <line x1="660" y1="150" x2="660" y2="172" stroke="#b8bdc9" stroke-width="2"/>
+              <text x="40" y="205" font-size="12" fill="#6b7384">DNA double strand</text>
+              <!-- target site highlight -->
+              <rect x="296" y="142" width="128" height="38" rx="6" fill="#fbe9ef" stroke="#c2456b" stroke-width="2" stroke-dasharray="5 4"/>
+              <text x="360" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#c2456b">matching target site</text>
+              <!-- guide RNA -->
+              <path d="M360,70 C330,96 330,112 348,138" fill="none" stroke="#138a72" stroke-width="3"/>
+              <rect x="300" y="48" width="120" height="26" rx="8" fill="#e2f1ed" stroke="#138a72" stroke-width="2"/>
+              <text x="360" y="65" text-anchor="middle" font-size="12.5" font-weight="800" fill="#138a72">guide RNA</text>
+              <!-- Cas9 blob -->
+              <path d="M360,86 C300,86 268,120 286,156 C300,184 420,184 434,156 C452,120 420,86 360,86 Z" fill="#eaecf7" stroke="#283593" stroke-width="2.5"/>
+              <text x="360" y="124" text-anchor="middle" font-size="18" font-weight="800" fill="#283593">Cas9</text>
+              <text x="360" y="142" text-anchor="middle" font-size="11.5" fill="#3d4554">cutting protein</text>
+              <!-- cut marks -->
+              <line x1="360" y1="138" x2="360" y2="184" stroke="#c2456b" stroke-width="3.5"/>
+              <path d="M352,232 L360,212 L368,232" fill="none" stroke="#c2456b" stroke-width="2.5"/>
+              <text x="360" y="252" text-anchor="middle" font-size="12.5" font-weight="800" fill="#c2456b">cut (double-strand break)</text>
+            </svg>
+          </div>
+          <figcaption>The <b>guide RNA</b> (teal) carries a sequence that matches the chosen target. It steers <b>Cas9</b> (indigo) to that spot, where the protein makes a double-strand <b>cut</b> (rose). The cell's repair machinery then either disables the gene or, with a supplied template, writes in a new sequence.</figcaption>
+        </figure>
+
+        <div class="callout callout--key">
+          <div class="callout__label">&#9733; Key idea</div>
+          <p>CRISPR's power is its <em>programmability</em>. The cutting protein is fixed, but the guide RNA is just a short, easily synthesized sequence. Change the guide and you change the target - which is why a tool that once took years and a fortune to retarget can now be redirected in an afternoon.</p>
+        </div>
+
+        <h2 id="precision-upgrades">Precision upgrades: base and prime editing</h2>
+        <p>The original Cas9 approach has a crude edge to it. A double-strand cut is blunt: you break both strands and then trust the cell's repair machinery to do the rest, which is messy and hard to control. For disabling a gene that is often fine, but for fixing a single wrong letter - the cause of many genetic diseases - it is overkill and error-prone. The next wave of tools traded the scissors for something closer to a pencil.</p>
+        <p>David Liu's lab at the Broad Institute developed two of the most important. <span class="term" data-term="Base editing">Base editing</span> chemically converts one DNA letter directly into another - turning a C into a T, for instance - without ever making a double-strand break. It uses a disarmed Cas9 that holds the DNA open while an attached enzyme rewrites the single base. <span class="term" data-term="Prime editing">Prime editing</span> goes further: it works like a programmable "search and replace" for DNA, able to make a wider range of small edits, including short insertions and deletions, by carrying its own template along with the guide. Both are more precise than a blunt cut, and both avoid the double-strand break that makes classic CRISPR risky.</p>
+
+        <table class="dtable">
+          <thead>
+            <tr><th>Tool</th><th>What it does</th><th>Precision</th><th>Typical use</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>CRISPR-Cas9 cut</b></td>
+              <td>Makes a double-strand break at the target; the cell repairs it, disabling the gene or pasting in a supplied template</td>
+              <td>Blunt - relies on messy cellular repair</td>
+              <td>Knocking out (switching off) a gene</td>
+            </tr>
+            <tr>
+              <td><b>Base editing</b></td>
+              <td>Chemically swaps one DNA letter for another with no double-strand break</td>
+              <td>High - single-letter changes</td>
+              <td>Correcting a single point <span class="term" data-term="Mutation">mutation</span></td>
+            </tr>
+            <tr>
+              <td><b>Prime editing</b></td>
+              <td>"Search and replace" using a template carried with the guide; handles small insertions and deletions too</td>
+              <td>Very high and most versatile</td>
+              <td>A broad range of small, defined edits</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout--insight">
+          <div class="callout__label">&#9632; Why this matters</div>
+          <p>Most disease-causing changes are tiny - a single wrong letter, a short deletion. The progression from cut, to base swap, to search-and-replace is the field learning to match the size of its tool to the size of the error. The smaller and cleaner the edit, the fewer unintended changes elsewhere in the genome, which is the central safety concern for any therapy.</p>
+        </div>
+
+        <h2 id="casgevy">From lab to cure: Casgevy</h2>
+        <p>For a decade CRISPR was a research tool. Then, in late 2023, it became a medicine. <b>Casgevy</b> (the scientific name is exagamglogene autotemcel) became the first approved CRISPR-based therapy, developed by Vertex Pharmaceuticals and CRISPR Therapeutics. The UK's medicines regulator, the MHRA, authorized it in November 2023, and the US Food and Drug Administration followed in December 2023. It treats two inherited blood disorders, sickle cell disease and beta-thalassemia, both caused by germline defects in how the body makes hemoglobin.</p>
+        <p>The clever part is how it sidesteps the hardest problem in <span class="term" data-term="Gene therapy">gene therapy</span>: getting an edit into the right cells inside a living body. Casgevy does the editing <em>outside</em> the body, an approach called <span class="term" data-term="Somatic">ex vivo</span>. Doctors collect a patient's own blood-forming stem cells, edit them in the lab to switch on a backup form of hemoglobin the body normally makes only in the womb, and then infuse the corrected cells back. Because the work happens in a dish, the edit can be checked before the cells go home.</p>
+
+        <div class="stats reveal">
+          <div class="stat"><div class="stat__num">2023</div><div class="stat__label">first CRISPR therapy approved (UK then US)</div></div>
+          <div class="stat"><div class="stat__num">2</div><div class="stat__label">diseases treated: sickle cell &amp; beta-thalassemia</div></div>
+          <div class="stat"><div class="stat__num">~$2.2M</div><div class="stat__label">US list price per patient</div></div>
+          <div class="stat"><div class="stat__num">ex vivo</div><div class="stat__label">cells edited outside the body, then reinfused</div></div>
+        </div>
+
+        <div class="callout callout--market">
+          <div class="callout__label">&#9650; The market reality</div>
+          <p>Casgevy carries a US list price of roughly <b>$2.2M</b> per patient. For a one-time treatment that can functionally cure a lifelong, painful disease, the health-economic case can pencil out against decades of hospitalizations. But the access challenge is enormous: the therapy requires specialized centers and a months-long process, and sickle cell disease disproportionately affects populations in lower-income regions where the price and infrastructure are out of reach. A genuine cure that most patients cannot get is the defining tension of this first generation of gene-editing medicine.</p>
+        </div>
+
+        <h2 id="the-line">The line we should not cross</h2>
+        <p>Everything Casgevy does is <span class="term" data-term="Somatic">somatic</span> editing: it changes the cells of one living patient to treat that person's disease, and the change is not passed to any children. This is the same germline-versus-somatic distinction from the foundations module, and here it carries the entire ethical weight of the field. <span class="term" data-term="Germline">Germline</span> editing means changing the DNA of embryos, eggs, or sperm - alterations that would be inherited by every future descendant, permanently, with the original patient never able to consent.</p>
+        <p>In 2018, a scientist named He Jiankui crossed that line. He edited human embryos, targeting a gene called CCR5 in an attempt to confer HIV resistance, and the work resulted in the birth of twin girls. The reaction from the global scientific community was swift and near-unanimous condemnation: the experiment was scientifically reckless, medically unjustified, and ethically indefensible. He was convicted in China and served a prison sentence. Heritable germline editing in humans remains broadly prohibited around the world, and the episode hardened that consensus rather than weakening it.</p>
+
+        <div class="callout callout--note">
+          <div class="callout__label">&#9888; Get this distinction right</div>
+          <p><b>Somatic editing</b> treats one patient. The edit lives only in that person's body, affects no one else, and dies with them - this is what Casgevy and every approved therapy does, and it raises the ordinary safety questions of any medicine. <b>Germline editing</b> alters embryos or reproductive cells, so the change is <span class="term" data-term="Mutation">heritable</span> by all future generations. That permanence, and the impossibility of consent from people not yet born, is why somatic editing is being approved as therapy while germline editing remains broadly banned.</p>
+        </div>
+
+        <p>It helps to keep the vocabulary straight here. An edited letter that disables or corrects a gene creates a new <span class="term" data-term="Variant">variant</span> or <span class="term" data-term="Allele">allele</span> at that spot. In somatic therapy that change is confined to the treated tissue; in germline editing it would enter the inherited blueprint passed on through families. Same molecular act, profoundly different consequences. The technology is morally neutral; where we aim it is not.</p>
+
+        <div class="takeaways reveal">
+          <h3>&#10003; Key takeaways</h3>
+          <ul>
+            <li>CRISPR is a bacterial antivirus system repurposed as a programmable DNA editor; Doudna and Charpentier won the 2020 Nobel for showing Cas9 could be aimed by a custom guide RNA.</li>
+            <li>The guide RNA finds the target by matching its sequence; Cas9 makes a double-strand cut, and the cell's repair either disables the gene or pastes in a supplied template.</li>
+            <li>Base editing swaps a single letter and prime editing does a "search and replace" - both more precise than a blunt Cas9 cut, and both avoid the double-strand break.</li>
+            <li>Casgevy (2023) is the first approved CRISPR therapy, an ex vivo treatment for sickle cell and beta-thalassemia priced around $2.2M, with a serious access gap.</li>
+            <li><b>Somatic</b> editing treats one patient and is not inherited; <b>germline</b> editing changes embryos and is heritable - which is why germline editing remains broadly prohibited.</li>
+          </ul>
+        </div>
+
+        <div class="quiz">
+          <div class="quiz__head"><span class="pill">Check</span> Knowledge check</div>
+          <p class="quiz__intro">Three quick questions. Pick an answer to see the explanation.</p>
+
+          <div class="q" data-answer="2">
+            <p class="q__stem">1. In CRISPR-Cas9, what is the job of the guide RNA?</p>
+            <div class="q__opts">
+              <button class="opt">It cuts both strands of the DNA</button>
+              <button class="opt">It supplies the new sequence to be pasted in</button>
+              <button class="opt">It matches the target sequence and directs Cas9 to the right spot</button>
+              <button class="opt">It repairs the break after the cut is made</button>
+            </div>
+            <div class="q__explain">The guide RNA carries a sequence that matches the chosen target and steers Cas9 there. Cas9 does the cutting; the cell's own machinery does the repair. Change the guide and you change the target.</div>
+          </div>
+
+          <div class="q" data-answer="1">
+            <p class="q__stem">2. How do base editing and prime editing differ from a classic Cas9 cut?</p>
+            <div class="q__opts">
+              <button class="opt">They work only in bacteria, not human cells</button>
+              <button class="opt">They make precise edits without a double-strand break</button>
+              <button class="opt">They edit RNA instead of DNA</button>
+              <button class="opt">They are less precise but much faster</button>
+            </div>
+            <div class="q__explain">Base editing chemically swaps one letter, and prime editing does a programmable "search and replace." Both avoid the blunt double-strand break of a Cas9 cut, making them more precise and better suited to fixing small mutations.</div>
+          </div>
+
+          <div class="q" data-answer="0">
+            <p class="q__stem">3. What is the key difference between somatic and germline editing?</p>
+            <div class="q__opts">
+              <button class="opt">Somatic editing affects only the treated patient; germline editing is heritable by descendants</button>
+              <button class="opt">Somatic editing is heritable; germline editing affects only one patient</button>
+              <button class="opt">There is no difference; the terms are interchangeable</button>
+              <button class="opt">Somatic editing only works on embryos; germline editing works on adults</button>
+            </div>
+            <div class="q__explain">Somatic editing changes one patient's cells and is not passed on - this is what Casgevy does. Germline editing alters embryos or reproductive cells, so the change is inherited by all future generations, which is why it remains broadly prohibited.</div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+    <nav class="module-foot">
+      <a class="pn pn--prev" href="08-applied-genomics.html"><small>&larr; Previous</small><b>Applied Genomics</b></a>
+      <a class="pn pn--next" href="10-pharmacogenomics.html"><small>Next &rarr;</small><b>Pharmacogenomics &amp; Precision Medicine</b></a>
+    </nav>
+  </main>
+
+  <p class="footer-note">Genetics 101 &middot; Module 09 &middot; <a href="../index.html">All modules</a> &middot; <a href="../glossary.html">Glossary</a></p>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/charts.js"></script>
+  <script src="../assets/js/glossary.js"></script>
+  <script src="../assets/js/quiz.js"></script>
+  <script src="../assets/js/nav.js"></script>
+</body>
+</html>

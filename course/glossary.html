@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glossary | Genetics 101</title>
+  <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <header class="topbar">
+    <a class="topbar__brand" href="index.html"><span class="dot"></span> Genetics 101</a>
+    <div class="topbar__spacer"></div>
+    <a class="topbar__link" href="index.html">Modules</a>
+    <a class="topbar__link" href="glossary.html">Glossary</a>
+  </header>
+
+  <main class="layout">
+    <section class="hero">
+      <p class="hero__eyebrow">Reference</p>
+      <h1 class="hero__title">The Genetics 101 Glossary</h1>
+      <p class="hero__sub">Every key term in the course, defined in plain language. Throughout the modules, <span class="term" data-term="DNA">dotted terms</span> like this one reveal their definition on hover or tap. Search below to jump to any concept.</p>
+    </section>
+
+    <div class="article" style="max-width:760px">
+      <input id="glossary-search" class="gloss-search" type="search" placeholder="Search terms and definitions..." aria-label="Search glossary">
+      <p id="glossary-empty" style="display:none;color:var(--ink-faint);font-family:var(--sans)">No terms match your search.</p>
+      <dl id="glossary-list"></dl>
+    </div>
+  </main>
+
+  <p class="footer-note">Genetics 101 - Glossary. <a href="index.html">Back to all modules</a>.</p>
+
+  <script src="assets/js/glossary.js"></script>
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genetics 101 - An Interactive Course</title>
+  <meta name="description" content="A self-paced, interactive course on genetics and genomics: from DNA to the Human Genome Project, the genomics bubble, epigenetics, the diagnostics industry, and the AI revolution in biology.">
+  <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <header class="topbar">
+    <a class="topbar__brand" href="index.html"><span class="dot"></span> Genetics 101</a>
+    <div class="topbar__spacer"></div>
+    <a class="topbar__link" href="glossary.html">Glossary</a>
+    <a class="topbar__link" href="#modules">Modules</a>
+  </header>
+
+  <main class="layout">
+
+    <section class="cover">
+      <svg class="cover__bg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#283593"/><stop offset="1" stop-color="#138a72"/>
+          </linearGradient>
+        </defs>
+        <g stroke="url(#g1)" stroke-width="2.5" fill="none" opacity="0.5">
+          <!-- a stylized double helix -->
+          <path d="M120 20 C 320 120, 320 300, 120 400" />
+          <path d="M260 20 C 60 120, 60 300, 260 400" />
+          <path d="M820 20 C 1020 120, 1020 300, 820 400" />
+          <path d="M960 20 C 760 120, 760 300, 960 400" />
+        </g>
+        <g stroke="url(#g1)" stroke-width="2" opacity="0.35">
+          <line x1="150" y1="70" x2="232" y2="70"/><line x1="170" y1="130" x2="212" y2="130"/>
+          <line x1="120" y1="200" x2="260" y2="200"/><line x1="170" y1="270" x2="212" y2="270"/>
+          <line x1="150" y1="330" x2="232" y2="330"/>
+          <line x1="850" y1="70" x2="932" y2="70"/><line x1="870" y1="130" x2="912" y2="130"/>
+          <line x1="820" y1="200" x2="960" y2="200"/><line x1="870" y1="270" x2="912" y2="270"/>
+          <line x1="850" y1="330" x2="932" y2="330"/>
+        </g>
+      </svg>
+      <div class="cover__inner">
+        <p class="cover__kicker">A weekend course - self-paced - interactive</p>
+        <h1 class="cover__title">Genetics 101:<br><em>From the Double Helix to the Age of AI</em></h1>
+        <p class="cover__sub">A guided tour of how we learned to read, interpret, and now design the code of life - and how that science became one of the most consequential industries of our time. Built for the smart generalist: the biology from first principles, then the money, the history, and the frontier.</p>
+        <a class="cover__cta" href="modules/01-orientation.html">Start the course &rarr;</a>
+      </div>
+    </section>
+
+    <section class="stats reveal">
+      <div class="stat"><div class="stat__num">15</div><div class="stat__label">modules across 6 parts</div></div>
+      <div class="stat"><div class="stat__num">~3 hrs</div><div class="stat__label">total reading, self-paced</div></div>
+      <div class="stat"><div class="stat__num">70+</div><div class="stat__label">key terms in the glossary</div></div>
+      <div class="stat"><div class="stat__num">1 case</div><div class="stat__label">study: Natera, end to end</div></div>
+    </section>
+
+    <section id="modules">
+
+      <div class="part-head"><span class="pnum">Part I</span><h2>Foundations</h2><span class="rule"></span></div>
+      <div class="cards">
+        <a class="mcard reveal" href="modules/01-orientation.html"><span class="mcard__corner"></span>
+          <span class="mcard__num">Module 01</span>
+          <h3 class="mcard__title">Orientation: The Big Map</h3>
+          <p class="mcard__desc">What "genetics" and "genomics" actually mean, the questions this field tries to answer, and how to use this course.</p>
+          <div class="mcard__tags"><span class="tag">overview</span><span class="tag">how to use</span></div>
+        </a>
+        <a class="mcard reveal" href="modules/02-foundations.html"><span class="mcard__corner"></span>
+          <span class="mcard__num">Module 02</span>
+          <h3 class="mcard__title">The Molecule, the Message, the Machine</h3>
+          <p class="mcard__desc">DNA, genes, and chromosomes; the central dogma; genome vs exome; and the all-important germline vs somatic distinction.</p>
+          <div class="mcard__tags"><span class="tag">DNA</span><span class="tag">central dogma</span><span class="tag">germline/somatic</span></div>
+        </a>
+        <a class="mcard reveal" href="modules/03-lexicon.html"><span class="mcard__corner"></span>
+          <span class="mcard__num">Module 03</span>
+          <h3 class="mcard__title">Speaking Genomics: The Lexicon</h3>
+          <p class="mcard__desc">A fluency module. SNPs, indels, alleles, haplotypes, penetrance, cfDNA, and the rest of the vocabulary you need to follow the field.</p>
+          <div class="mcard__tags"><span class="tag">terminology</span><span class="tag">jargon</span></div>
+        </a>
+      </div>
+
+      <div class="part-head"><span class="pnum">Part II</span><h2>Reading &amp; Mapping the Genome</h2><span class="rule"></span></div>
+      <div class="cards">
+        <a class="mcard reveal" href="modules/04-sequencing.html"><span class="mcard__corner"></span>
+          <span class="mcard__num">Module 04</span>
+          <h3 class="mcard__title">Reading the Code</h3>
+          <p class="mcard__desc">Sanger to next-generation to long-read sequencing, and the cost collapse that fell faster than Moore's Law.</p>
+          <div class="mcard__tags"><span class="tag">sequencing</span><span class="tag">$1,000 genome</span></div>
+        </a>
+        <a class="mcard reveal" href="modules/05-hgp.html"><span class="mcard__corner"></span>
+          <span class="mcard__num">Module 05</span>
+          <h3 class="mcard__title">The Human Genome Project</h3>
+          <p class="mcard__desc">The 13-year, $3B race to read a human genome: public consortium vs Craig Venter's Celera, and what "complete" really meant.</p>
+          <div class="mcard__tags"><span class="tag">history</span><span class="tag">HGP</span></div>
+        </a>
+      </div>
+
+      <div class="part-head"><span class="pnum">Part III</span><h2>Hype, Reality &amp; the Market</h2><span class="rule"></span></div>
+      <div class="cards">
+        <a class="mcard reveal" href="modules/06-bubble.html"><span class="mcard__corner"></span>
+          <span class="mcard__num">Module 06</span>
+          <h3 class="mcard__title">Hype, Reality, and the Genomics Bubble</h3>
+          <p class="mcard__desc">The promise of personalized medicine, the 2000 genomics stock bubble, "missing heritability," and who actually won.</p>
+          <div class="mcard__tags"><span class="tag">markets</span><span class="tag">bubble</span><span class="tag">Illumina</span></div>
+        </a>
+      </div>
+
+      <div class="part-head"><span class="pnum">Part IV</span><h2>Beyond the Sequence</h2><span class="rule"></span></div>
+      <div class="cards">
+        <a class="mcard reveal" href="modules/07-epigenetics.html"><span class="mcard__corner"></span>
+          <span class="mcard__num">Module 07</span>
+          <h3 class="mcard__title">Epigenetics: Beyond the Sequence</h3>
+          <p class="mcard__desc">How the same DNA yields different cells. Methylation, histones, imprinting, the epigenetic clock, and the end of pure genetic determinism.</p>
+          <div class="mcard__tags"><span class="tag">methylation</span><span class="tag">epigenetics</span></div>
+        </a>
+        <a class="mcard reveal" href="modules/08-applied-genomics.html"><span class="mcard__corner"></span>
+          <span class="mcard__num">Module 08</span>
+          <h3 class="mcard__title">Applied Genomics</h3>
+          <p class="mcard__desc">GWAS, polygenic risk scores, and the menu of genetic tests: carrier screening, prenatal, liquid biopsy, and MRD.</p>
+          <div class="mcard__tags"><span class="tag">GWAS</span><span class="tag">risk scores</span></div>
+        </a>
+        <a class="mcard reveal" href="modules/09-crispr.html"><span class="mcard__corner"></span>
+          <span class="mcard__num">Module 09</span>
+          <h3 class="mcard__title">CRISPR and the Age of Gene Editing</h3>
+          <p class="mcard__desc">How CRISPR works, base and prime editing, the first approved CRISPR therapy, and the "CRISPR babies" scandal.</p>
+          <div class="mcard__tags"><span class="tag">CRISPR</span><span class="tag">gene editing</span></div>
+        </a>
+        <a class="mcard reveal" href="modules/10-pharmacogenomics.html"><span class="mcard__corner"></span>
+          <span class="mcard__num">Module 10</span>
+          <h3 class="mcard__title">Pharmacogenomics &amp; Precision Medicine</h3>
+          <p class="mcard__desc">Why the same drug helps one patient and harms another, companion diagnostics, and the targeted-therapy revolution.</p>
+          <div class="mcard__tags"><span class="tag">drug response</span><span class="tag">precision med</span></div>
+        </a>
+      </div>
+
+      <div class="part-head"><span class="pnum">Part V</span><h2>Genomics in Society &amp; the Clinic</h2><span class="rule"></span></div>
+      <div class="cards">
+        <a class="mcard reveal" href="modules/11-consumer.html"><span class="mcard__corner"></span>
+          <span class="mcard__num">Module 11</span>
+          <h3 class="mcard__title">Consumer &amp; Ancestry Genomics</h3>
+          <p class="mcard__desc">23andMe and Ancestry, the spit-kit business model and its unraveling, privacy, and forensic genealogy.</p>
+          <div class="mcard__tags"><span class="tag">23andMe</span><span class="tag">DTC</span></div>
+        </a>
+        <a class="mcard reveal" href="modules/12-ethics.html"><span class="mcard__corner"></span>
+          <span class="mcard__num">Module 12</span>
+          <h3 class="mcard__title">Ethics, Society &amp; the Shadow of Eugenics</h3>
+          <p class="mcard__desc">The dark history of eugenics, genetic anti-discrimination law (GINA), designer-baby debates, and equity in genomic medicine.</p>
+          <div class="mcard__tags"><span class="tag">ethics</span><span class="tag">policy</span></div>
+        </a>
+        <a class="mcard reveal" href="modules/13-clinic.html"><span class="mcard__corner"></span>
+          <span class="mcard__num">Module 13</span>
+          <h3 class="mcard__title">Genomics in the Clinic</h3>
+          <p class="mcard__desc">The modern diagnostics industry: liquid biopsy, ctDNA, molecular residual disease, multi-cancer early detection, and the competitive map.</p>
+          <div class="mcard__tags"><span class="tag">diagnostics</span><span class="tag">liquid biopsy</span></div>
+        </a>
+        <a class="mcard reveal" href="modules/14-natera.html"><span class="mcard__corner"></span>
+          <span class="mcard__num">Module 14</span>
+          <h3 class="mcard__title">Case Study: Natera</h3>
+          <p class="mcard__desc">How one company turned cell-free DNA into a multi-billion-dollar franchise across reproductive health, oncology, and transplant.</p>
+          <div class="mcard__tags"><span class="tag">case study</span><span class="tag">Signatera</span></div>
+        </a>
+      </div>
+
+      <div class="part-head"><span class="pnum">Part VI</span><h2>The AI Frontier</h2><span class="rule"></span></div>
+      <div class="cards">
+        <a class="mcard reveal" href="modules/15-ai-revolution.html"><span class="mcard__corner"></span>
+          <span class="mcard__num">Module 15</span>
+          <h3 class="mcard__title">The AI Revolution: AlphaFold and Beyond</h3>
+          <p class="mcard__desc">The protein-folding problem, AlphaFold, the transformer models reshaping biology, and the new companies (Isomorphic, Chai) betting on AI-designed medicine.</p>
+          <div class="mcard__tags"><span class="tag">AlphaFold</span><span class="tag">Isomorphic</span><span class="tag">Chai</span></div>
+        </a>
+      </div>
+
+    </section>
+  </main>
+
+  <p class="footer-note">
+    Genetics 101 - a self-paced, self-contained course. For learning purposes; not medical advice.<br>
+    Company figures draw on this repository's diagnostics knowledge base; scientific and historical claims reflect the public record as of mid-2026.
+  </p>
+
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>

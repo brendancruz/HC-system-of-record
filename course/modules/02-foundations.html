@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>02 - Foundations | Genetics 101</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <header class="topbar">
+    <a class="topbar__brand" href="../index.html"><span class="dot"></span> Genetics 101</a>
+    <div class="topbar__spacer"></div>
+    <a class="topbar__link" href="../index.html">Modules</a>
+    <a class="topbar__link" href="../glossary.html">Glossary</a>
+    <button class="menu-btn" aria-label="Sections">&#9776;</button>
+  </header>
+
+  <main class="layout">
+    <div class="hero reveal">
+      <p class="hero__eyebrow">Part I - Foundations - Module 02</p>
+      <h1 class="hero__title">The Molecule, the Message, and the Machine</h1>
+      <p class="hero__sub">Before any of the history or the industry makes sense, you need four ideas: what DNA is, how a gene becomes a working part of you, the difference between the whole genome and the slice we usually read, and the single most important distinction in all of clinical genetics - germline versus somatic.</p>
+      <div class="hero__meta">
+        <span><b>Reading</b> ~14 min</span>
+        <span><b>You will learn</b> DNA &middot; the central dogma &middot; genome vs exome &middot; germline vs somatic</span>
+      </div>
+    </div>
+
+    <div class="module-grid">
+      <aside class="toc" id="toc"></aside>
+      <article class="article">
+
+        <p class="lead">Think of one of your cells as a library. The building is the cell; the books are <span class="term" data-term="chromosome">chromosomes</span>; the text printed on the pages is <span class="term" data-term="DNA">DNA</span>. Almost every one of your roughly 37 trillion cells holds the same complete library, yet a neuron and a skin cell read wildly different passages. Genetics is the study of that text. Genomics is the study of the whole library at once. This module gives you the four foundations everything else in the course is built on.</p>
+
+        <h2 id="dna">DNA: a four-letter code</h2>
+        <p>DNA is a long molecule built from just four chemical letters, called <span class="term" data-term="Nucleotide">bases</span>: adenine (A), cytosine (C), guanine (G), and thymine (T). Two strands wind around each other in the famous double helix, and the letters pair across the gap by a strict rule: <b>A always pairs with T, and C always pairs with G</b>. Each rung of the ladder is a <span class="term" data-term="Base pair">base pair</span>.</p>
+        <p>That pairing rule is the quiet genius of the molecule. Because each strand specifies the other, a cell can unzip the helix and rebuild two perfect copies before it divides. It is also why we can read DNA at all: the chemistry of complementary pairing is what every sequencing machine exploits.</p>
+
+        <div class="stats reveal">
+          <div class="stat"><div class="stat__num">3.1B</div><div class="stat__label">base pairs in a human genome</div></div>
+          <div class="stat"><div class="stat__num">~20k</div><div class="stat__label">protein-coding genes</div></div>
+          <div class="stat"><div class="stat__num">23</div><div class="stat__label">pairs of chromosomes (46 total)</div></div>
+          <div class="stat"><div class="stat__num">~2m</div><div class="stat__label">of DNA packed into each cell</div></div>
+        </div>
+
+        <p>A <span class="term" data-term="Gene">gene</span> is a stretch of that code with a job, most often the recipe for a protein. Your full set of DNA is your <span class="term" data-term="Genome">genome</span>. It is bundled into 23 pairs of chromosomes - you inherit one of each pair from each parent, which is why humans are described as <span class="term" data-term="Ploidy">diploid</span>. Stretched end to end, the DNA in a single cell would be about two meters long, yet it folds into a nucleus a few thousandths of a millimeter across.</p>
+
+        <h2 id="central-dogma">The central dogma: from code to function</h2>
+        <p>DNA does not do the work of life directly. It is an archive. To act, its instructions flow through two steps that biologists call the <span class="term" data-term="Central dogma">central dogma</span>.</p>
+
+        <figure class="figure reveal">
+          <div class="figure__frame">
+            <div class="fig-title">Figure 2.1 - The central dogma of molecular biology</div>
+            <svg class="chart-svg" viewBox="0 0 720 210" role="img" aria-label="DNA is transcribed into RNA, which is translated into protein">
+              <!-- DNA node -->
+              <rect x="20" y="70" width="150" height="70" rx="12" fill="#eaecf7" stroke="#283593" stroke-width="2"/>
+              <text x="95" y="100" text-anchor="middle" font-size="17" font-weight="800" fill="#283593">DNA</text>
+              <text x="95" y="122" text-anchor="middle" font-size="12" fill="#3d4554">the archive</text>
+              <!-- arrow 1 -->
+              <line x1="178" y1="105" x2="270" y2="105" stroke="#6b7384" stroke-width="2.5" marker-end="url(#ah)"/>
+              <text x="224" y="92" text-anchor="middle" font-size="12.5" font-weight="700" fill="#138a72">transcription</text>
+              <!-- RNA node -->
+              <rect x="282" y="70" width="150" height="70" rx="12" fill="#e2f1ed" stroke="#138a72" stroke-width="2"/>
+              <text x="357" y="100" text-anchor="middle" font-size="17" font-weight="800" fill="#138a72">mRNA</text>
+              <text x="357" y="122" text-anchor="middle" font-size="12" fill="#3d4554">the message</text>
+              <!-- arrow 2 -->
+              <line x1="440" y1="105" x2="532" y2="105" stroke="#6b7384" stroke-width="2.5" marker-end="url(#ah)"/>
+              <text x="486" y="92" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c2456b">translation</text>
+              <!-- Protein node -->
+              <rect x="544" y="70" width="156" height="70" rx="12" fill="#fbe9ef" stroke="#c2456b" stroke-width="2"/>
+              <text x="622" y="100" text-anchor="middle" font-size="17" font-weight="800" fill="#c2456b">Protein</text>
+              <text x="622" y="122" text-anchor="middle" font-size="12" fill="#3d4554">the machine</text>
+              <defs>
+                <marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#6b7384"/></marker>
+              </defs>
+            </svg>
+          </div>
+          <figcaption><b>Transcription</b> copies a gene into a portable messenger molecule, <span class="term" data-term="RNA">RNA</span>. <b>Translation</b> reads that message three letters at a time and assembles a protein. Proteins are the machines that build tissue, run metabolism, and carry signals.</figcaption>
+        </figure>
+
+        <p>In <span class="term" data-term="Transcription">transcription</span>, the cell copies a gene into <span class="term" data-term="RNA">messenger RNA</span>, a single-stranded working copy. In <span class="term" data-term="Translation">translation</span>, molecular machinery reads that message in three-letter words called <span class="term" data-term="Codon">codons</span>, each specifying one amino acid, and strings the amino acids into a <span class="term" data-term="Protein folding">protein</span>. The protein then folds into a precise three-dimensional shape that determines what it can do. Hold onto that last idea: the leap from sequence to folded shape is exactly the problem that AlphaFold cracked, and we return to it in the final module.</p>
+
+        <div class="callout callout--key">
+          <div class="callout__label">&#9733; Key idea</div>
+          <p>DNA is information; proteins are function. Genetics is largely the story of how a one-dimensional string of letters becomes a three-dimensional, living machine - and what happens when the letters change.</p>
+        </div>
+
+        <h2 id="genome-exome">Genome versus exome</h2>
+        <p>Here is a fact that surprised almost everyone when the genome was first read: only about <b>1 to 2 percent</b> of your DNA actually codes for proteins. That small coding fraction - all the protein-coding pieces of genes added together - is called the <span class="term" data-term="Exome">exome</span>. The other 98 percent was once dismissed as "junk DNA," but much of it turns out to regulate when and where genes switch on. It is not junk; it is the control panel.</p>
+        <p>This split creates a practical choice. You can sequence the whole library (<span class="term" data-term="WGS">whole-genome sequencing</span>) or just the coding pages (<span class="term" data-term="WES">whole-exome sequencing</span>). The exome is cheaper and concentrates on the regions where disease-causing changes are easiest to interpret, which is why it became the workhorse of clinical genetics. The trade-off is that you miss regulatory and structural variation living in the other 98 percent.</p>
+
+        <div class="compare">
+          <div class="compare__col compare__col--a">
+            <h4>Whole genome</h4>
+            <p style="font-family:var(--sans);font-size:var(--fs-sm);color:var(--ink-soft)">All 3.1 billion base pairs. Captures coding, regulatory, and structural variation. More data, more cost, more interpretation burden.</p>
+          </div>
+          <div class="compare__col compare__col--b">
+            <h4>Whole exome</h4>
+            <p style="font-family:var(--sans);font-size:var(--fs-sm);color:var(--ink-soft)">Only the ~1-2% protein-coding exome. Cheaper, easier to interpret, and where most known disease variants sit. Misses non-coding signal.</p>
+          </div>
+        </div>
+
+        <div class="callout callout--note">
+          <div class="callout__label">&#9888; Don't confuse these</div>
+          <p><b>Exome</b> and <b>exosome</b> sound alike but are unrelated. The <span class="term" data-term="Exome">exome</span> is the coding part of your genome. An <span class="term" data-term="Exosome">exosome</span> is a tiny bubble that cells release into the bloodstream carrying molecular cargo. Exosomes matter to diagnostics as one of several things a blood test can analyze, but they are a physical particle, not a stretch of code.</p>
+        </div>
+
+        <h2 id="germline-somatic">Germline versus somatic</h2>
+        <p>If you remember one distinction from this entire course, make it this one. Every variant in your DNA is either <span class="term" data-term="Germline">germline</span> or <span class="term" data-term="Somatic">somatic</span>, and the difference reorganizes the whole field.</p>
+        <p><b>Germline</b> DNA is what you inherited. It is present in every cell, including the eggs or sperm you might pass on, so germline variants run in families. A <span class="term" data-term="Carrier screening">carrier screen</span> for cystic fibrosis, a <span class="term" data-term="NIPT">prenatal test</span>, or a BRCA hereditary-cancer test all read germline DNA.</p>
+        <p><b>Somatic</b> DNA changes are acquired during your life, in one tissue, and are not inherited. Cancer is the defining example: a tumor is a population of cells that accumulated somatic <span class="term" data-term="Mutation">mutations</span> letting them grow without restraint. When a tumor sheds DNA into the blood as <span class="term" data-term="ctDNA">circulating tumor DNA</span>, a <span class="term" data-term="Liquid biopsy">liquid biopsy</span> can detect those somatic changes to find, profile, or monitor the cancer.</p>
+
+        <div class="compare">
+          <div class="compare__col compare__col--a">
+            <h4>Germline</h4>
+            <p style="font-family:var(--sans);font-size:var(--fs-sm);color:var(--ink-soft)">Inherited &middot; in every cell &middot; heritable. Drives carrier screening, prenatal testing, and hereditary-risk tests. "What did I inherit, and what might I pass on?"</p>
+          </div>
+          <div class="compare__col compare__col--b">
+            <h4>Somatic</h4>
+            <p style="font-family:var(--sans);font-size:var(--fs-sm);color:var(--ink-soft)">Acquired &middot; tissue-specific &middot; not heritable. Drives tumor profiling, liquid biopsy, and <span class="term" data-term="MRD">residual-disease</span> monitoring. "What went wrong in this tissue, now?"</p>
+          </div>
+        </div>
+
+        <div class="callout callout--insight">
+          <div class="callout__label">&#9632; Why this matters commercially</div>
+          <p>The germline-versus-somatic split maps almost perfectly onto two huge testing markets. Reproductive and hereditary testing reads germline DNA; oncology testing reads somatic DNA. As you will see in the Natera case study, one company can build franchises on <em>both</em> by being expert at pulling tiny amounts of either kind of DNA out of a tube of blood.</p>
+        </div>
+
+        <h2 id="genotype-phenotype">Genotype, phenotype, and why DNA is not destiny</h2>
+        <p>Your <span class="term" data-term="Genotype">genotype</span> is the specific set of DNA letters you carry; your <span class="term" data-term="Phenotype">phenotype</span> is the observable result - height, blood type, disease status. The link between them is rarely simple. A few conditions are <span class="term" data-term="Mendelian">Mendelian</span>, driven by a single gene. Most common traits are <span class="term" data-term="Polygenic">polygenic</span>, shaped by thousands of variants each nudging the odds, plus a large dose of environment.</p>
+        <p>Two more ideas temper any fantasy of reading destiny off a sequence. <span class="term" data-term="Penetrance">Penetrance</span> is the chance that someone carrying a risk variant actually develops the trait - often well below 100 percent. And the same DNA can be read differently in different cells and different lives, which is the door into <span class="term" data-term="Epigenetics">epigenetics</span>, the subject of Module 7. DNA loads the gun; a great deal else decides whether the trigger is pulled.</p>
+
+        <div class="takeaways reveal">
+          <h3>&#10003; Key takeaways</h3>
+          <ul>
+            <li>DNA stores information in four bases that pair A-T and C-G; a gene is a coding stretch, and your full set is the genome.</li>
+            <li>The central dogma is DNA &rarr; RNA &rarr; protein: information becomes a folded, functional machine.</li>
+            <li>The exome is the ~1-2% that codes for proteins; sequencing it is cheaper but blind to the regulatory 98%. (An exosome is something else entirely.)</li>
+            <li><b>Germline</b> = inherited, in every cell, heritable (reproductive and hereditary testing). <b>Somatic</b> = acquired, tissue-specific (cancer and liquid biopsy).</li>
+            <li>Genotype shapes but does not dictate phenotype; penetrance, polygenicity, and environment all loosen the link.</li>
+          </ul>
+        </div>
+
+        <div class="quiz">
+          <div class="quiz__head"><span class="pill">Check</span> Knowledge check</div>
+          <p class="quiz__intro">Three quick questions. Pick an answer to see the explanation.</p>
+
+          <div class="q" data-answer="1">
+            <p class="q__stem">1. In the central dogma, what is the correct order of information flow?</p>
+            <div class="q__opts">
+              <button class="opt">Protein &rarr; RNA &rarr; DNA</button>
+              <button class="opt">DNA &rarr; RNA &rarr; protein</button>
+              <button class="opt">RNA &rarr; DNA &rarr; protein</button>
+              <button class="opt">DNA &rarr; protein &rarr; RNA</button>
+            </div>
+            <div class="q__explain">DNA is transcribed into RNA, which is translated into protein. The archive becomes a message becomes a machine.</div>
+          </div>
+
+          <div class="q" data-answer="2">
+            <p class="q__stem">2. A tumor's DNA changes that let it grow uncontrollably are an example of which kind of variation?</p>
+            <div class="q__opts">
+              <button class="opt">Germline, because all cancer is inherited</button>
+              <button class="opt">Exomic, because tumors only affect coding genes</button>
+              <button class="opt">Somatic, because they are acquired in one tissue and not inherited</button>
+              <button class="opt">Epigenetic, because no DNA letters change</button>
+            </div>
+            <div class="q__explain">Tumor-driving mutations are somatic: acquired during life in a specific tissue, not present in the germline, and not passed to children. This is why oncology testing reads somatic DNA.</div>
+          </div>
+
+          <div class="q" data-answer="0">
+            <p class="q__stem">3. Roughly what fraction of the human genome is protein-coding (the exome)?</p>
+            <div class="q__opts">
+              <button class="opt">About 1-2%</button>
+              <button class="opt">About 25%</button>
+              <button class="opt">About 50%</button>
+              <button class="opt">Nearly 100%</button>
+            </div>
+            <div class="q__explain">Only ~1-2% of the genome codes for proteins. Most of the rest is regulatory or structural - not "junk," but not exome either. This is why cheaper whole-exome sequencing exists as an option.</div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+    <nav class="module-foot">
+      <a class="pn pn--prev" href="01-orientation.html"><small>&larr; Previous</small><b>Orientation: The Big Map</b></a>
+      <a class="pn pn--next" href="03-lexicon.html"><small>Next &rarr;</small><b>Speaking Genomics: The Lexicon</b></a>
+    </nav>
+  </main>
+
+  <p class="footer-note">Genetics 101 &middot; Module 02 &middot; <a href="../index.html">All modules</a> &middot; <a href="../glossary.html">Glossary</a></p>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/charts.js"></script>
+  <script src="../assets/js/glossary.js"></script>
+  <script src="../assets/js/quiz.js"></script>
+  <script src="../assets/js/nav.js"></script>
+</body>
+</html>

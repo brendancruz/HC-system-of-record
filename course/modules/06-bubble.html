@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>06 - Hype, Reality, and the Genomics Bubble | Genetics 101</title>
+  <link rel="stylesheet" href="../assets/css/theme.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <header class="topbar">
+    <a class="topbar__brand" href="../index.html"><span class="dot"></span> Genetics 101</a>
+    <div class="topbar__spacer"></div>
+    <a class="topbar__link" href="../index.html">Modules</a>
+    <a class="topbar__link" href="../glossary.html">Glossary</a>
+    <button class="menu-btn" aria-label="Sections">&#9776;</button>
+  </header>
+
+  <main class="layout">
+    <div class="hero reveal">
+      <p class="hero__eyebrow">Part III - Hype, Reality &amp; the Market - Module 06</p>
+      <h1 class="hero__title">Hype, Reality, and the Genomics Bubble</h1>
+      <p class="hero__sub">The genome was supposed to deliver personalized cures within a few years. Instead it delivered a stock-market mania, a crash, the humbling puzzle of "missing heritability," and a slower, realer revolution, plus one quiet and enormous winner.</p>
+      <div class="hero__meta">
+        <span><b>Reading</b> ~15 min</span>
+        <span><b>You will learn</b> the hype cycle &middot; the 2000 stock bubble &middot; missing heritability &middot; who actually won</span>
+      </div>
+    </div>
+
+    <div class="module-grid">
+      <aside class="toc" id="toc"></aside>
+      <article class="article">
+
+        <p class="lead">When the draft human <span class="term" data-term="Genome">genome</span> was announced in 2000, the promise was breathtaking and specific: a gene for every disease, a flood of new drug targets, and personalized cures within a decade. What arrived on that timeline was something else entirely - a stock-market mania, a brutal crash, and a scientific puzzle that humbled the whole field. The gap between what the genome promised and what it delivered, on the schedule people expected, is one of the most instructive stories in modern science and finance. It teaches you how to read hype, where value actually accrues, and why biology almost never moves as fast as a press release.</p>
+
+        <h2 id="the-promise">The promise</h2>
+        <p>In the late 1990s the mood around genomics was close to utopian. If a <span class="term" data-term="Gene">gene</span> is the recipe for a protein, and proteins are the machines of the body, then reading every gene seemed to hand us a complete parts list for human biology. From there the logic felt unstoppable: find the gene that breaks in each disease, design a drug against it, and repeat. The dominant mental model was "one gene, one disease" - the idea that most illnesses trace back to a single faulty gene that a sufficiently good map would reveal.</p>
+        <p>That framing was not crazy. It worked beautifully for a class of conditions we now call <span class="term" data-term="Mendelian">Mendelian</span> disorders - cystic fibrosis, Huntington's disease, sickle cell - where a single gene really does drive the <span class="term" data-term="Phenotype">phenotype</span>. The leap of faith was assuming common diseases like diabetes, heart disease, and schizophrenia would yield to the same approach. Optimists projected that whole-genome <span class="term" data-term="Sequencing">sequencing</span> would soon be routine, that the list of drug targets would multiply many times over, and that medicine would become genuinely individualized within a few short years. The genome was not just science; it was an investment thesis.</p>
+
+        <div class="callout callout--key">
+          <div class="callout__label">&#9733; Key idea</div>
+          <p>The original genomics dream rested on a simple assumption - one gene, one disease - that held for rare inherited disorders but quietly failed for the common diseases that drive most of human suffering and most of the market.</p>
+        </div>
+
+        <h2 id="the-bubble">The bubble</h2>
+        <p>Markets do not wait for biology. As the race to sequence the genome accelerated through 1999 and into 2000, the public companies attached to it - Celera Genomics, Human Genome Sciences, Incyte, and Millennium Pharmaceuticals - became some of the hottest stocks on the market. Investors were not buying current earnings, which were thin or nonexistent. They were buying a story: that whoever owned the genome, or the genes within it, would own the future of medicine. Gene patents were central to the thesis. If you could patent the genes you discovered, you could charge a toll on every drug and test built on them.</p>
+
+        <figure class="figure reveal">
+          <div class="figure__frame">
+            <div class="fig-title">Figure 6.1 - The genomics stock mania and crash (stylized)</div>
+            <div id="fig-bubble"></div>
+          </div>
+          <figcaption>A stylized index capturing the shape of the genomics-stock run-up and collapse around 2000 (Celera, Human Genome Sciences, Incyte, Millennium). The shape and the events, not the exact values, are the point.</figcaption>
+        </figure>
+
+        <p>Then came a single sentence that detonated the whole sector. On 14 March 2000, US President Bill Clinton and UK Prime Minister Tony Blair issued a joint statement declaring that the raw human genome data should be made freely available to researchers around the world. The science community cheered. Investors panicked. They read "freely available" as a direct threat to gene patents - and therefore to the entire valuation logic of the genomics names. The selloff was immediate and severe: tens of billions of dollars of market value were erased within days. Celera alone shed a large fraction of its worth almost overnight, and its peers followed.</p>
+        <p>The timing made it worse. The broader dot-com bubble was cresting at exactly the same moment, and when it burst weeks later, it pulled the wounded genomics stocks down with it. Many of these companies never regained their highs. Some were acquired, some pivoted away from pure genomics, and a few simply faded. The science behind them was real and important. The valuations were a fantasy about how fast that science would turn into profit.</p>
+
+        <div class="callout callout--market">
+          <div class="callout__label">&#9650; The market angle</div>
+          <p>The March 2000 crash is a clean lesson in narrative risk. The genomics stocks were not priced on revenue; they were priced on a story about owning patentable genes. A single government statement reframed that story - and roughly $40B+ of market value evaporated in days, before a single fact about the underlying biology had changed. When a valuation rests entirely on a narrative, the narrative is the risk.</p>
+        </div>
+
+        <h2 id="missing-heritability">Missing heritability</h2>
+        <p>While the markets sorted themselves out, the science delivered its own humbling surprise. As cheaper genotyping arrived, researchers launched the first wave of <span class="term" data-term="GWAS">genome-wide association studies</span> (GWAS), scanning the genomes of thousands of people to find which common DNA spelling differences - each one a <span class="term" data-term="SNP">single-nucleotide polymorphism</span>, or SNP - were associated with a trait or disease. The expectation, rooted in "one gene, one disease," was that a handful of variants with large effects would jump out. That is not what happened.</p>
+
+        <figure class="figure reveal">
+          <div class="figure__frame">
+            <div class="fig-title">Figure 6.2 - Missing heritability: the height example</div>
+            <div id="fig-heritability"></div>
+          </div>
+          <figcaption>Twin studies imply human height is about 80% heritable, yet the first wave of GWAS hits explained only a few percent. Larger studies and whole-genome common variation later closed much of the gap. Approximate, illustrative.</figcaption>
+        </figure>
+
+        <p>The canonical example is human height. <span class="term" data-term="Heritability">Heritability</span> measures how much of the variation in a trait across a population can be attributed to genetic differences. Decades of twin studies put the heritability of height at roughly 80 percent - height clearly runs in families. Yet when the first GWAS hits for height came in around 2010, the variants they found, added together, explained only a few percent of that variation. The genetic signal that twins so plainly demonstrated was almost nowhere to be found in the actual genes the studies turned up. Researchers named the gap <span class="term" data-term="Missing heritability">missing heritability</span>: the difference between the heritability that family and twin studies imply and the much smaller fraction that identified genetic <span class="term" data-term="Variant">variants</span> can account for.</p>
+        <p>The resolution turned the original dream on its head. Common traits and common diseases are overwhelmingly <span class="term" data-term="Polygenic">polygenic</span> - shaped not by one gene but by thousands or even tens of thousands of variants, each nudging the outcome by a vanishingly small amount. The early studies were simply too small to detect such tiny individual effects, and rare variants plus subtle gene interactions hid more of the signal. As sample sizes grew into the hundreds of thousands and then millions, and as researchers learned to sum up the contribution of all common variation at once, much of the gap closed. But the lesson stuck: "one gene, one disease" was flatly wrong for the diseases that matter most at scale, and the fantasy of reading destiny off a simple gene list was dead. This was the moment genetic determinism met its limits.</p>
+
+        <div class="stats reveal">
+          <div class="stat"><div class="stat__num">~80%</div><div class="stat__label">heritability of height (twin studies)</div></div>
+          <div class="stat"><div class="stat__num">~5%</div><div class="stat__label">explained by first GWAS hits (2010)</div></div>
+          <div class="stat"><div class="stat__num">1000s</div><div class="stat__label">variants behind a typical common trait</div></div>
+          <div class="stat"><div class="stat__num">2000</div><div class="stat__label">year the patent-threat selloff hit</div></div>
+        </div>
+
+        <h2 id="who-won">Who actually won</h2>
+        <p>If the gene-patent companies were the losers, who won? Not, mostly, the firms chasing the next blockbuster gene. The durable winners were the ones selling what every researcher and every company needed regardless of which biological bet paid off - the "picks and shovels" of the gold rush. In a gold rush, the reliable fortune is rarely made by the prospectors; it is made by whoever sells the picks, the shovels, and the jeans.</p>
+        <p>In genomics, that company was Illumina. Rather than betting on any single disease gene, Illumina built and sold the sequencing machines and the consumables that ran on them - the instruments, reagents, and flow cells that everyone needed to read DNA at all. As sequencing demand exploded, Illumina compounded into the dominant platform of the entire field, capturing value from every experiment, every clinical test, and every competitor's discovery program. Value accrued to the infrastructure layer first, and only much later to the applied diagnostics built on top of it.</p>
+
+        <table class="dtable">
+          <thead>
+            <tr><th>Archetype</th><th>What they bet on</th><th>How it aged</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>2000 genomics name</b><br><small>(e.g. Celera-style)</small></td>
+              <td>Owning and patenting genes, then licensing them as drug targets and tests.</td>
+              <td>Crashed in 2000, never regained the highs; the patent moat largely evaporated.</td>
+            </tr>
+            <tr>
+              <td><b>Platform / "picks and shovels"</b><br><small>(Illumina)</small></td>
+              <td>Selling the sequencing machines and consumables everyone needs, disease-agnostic.</td>
+              <td>Compounded into the dominant platform; captured value from the whole field.</td>
+            </tr>
+            <tr>
+              <td><b>Applied diagnostics</b><br><small>(later wave)</small></td>
+              <td>Building specific clinical tests on top of cheap, mature sequencing.</td>
+              <td>Arrived 15-20 years later, once sequencing was a commodity; the real payoff phase.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>The ordering matters. The infrastructure had to become cheap and reliable before the applications on top of it could become viable businesses. That is exactly why the diagnostics companies you will study later - the ones reading tumor DNA from a tube of blood - could not have existed at scale in 2003. They were waiting for the picks-and-shovels layer to do its work.</p>
+
+        <h2 id="the-lesson">The lesson</h2>
+        <p>Three durable lessons fall out of this story, and they generalize well beyond genomics. First, biology runs on long timelines. A discovery that looks revolutionary in a press release typically needs a decade or two of unglamorous engineering, cost reduction, and validation before it changes clinical practice. The science was largely right; the schedule was wildly optimistic. Second, platforms and infrastructure tend to beat hype. When a field is uncertain and many specific bets will fail, the surest position is often to sell the tools that every bet depends on. Third, the absence of an early payoff is not evidence the technology failed - it may simply mean you are early.</p>
+        <p>And the payoff did come. It arrived roughly 15 to 20 years after the bubble, not as a gene-by-gene cure but as sequencing-enabled diagnostics: cheap, fast reading of DNA applied to real clinical questions in reproductive health and oncology. That is the thread we pick up in the diagnostics case studies of Modules 13 and 14, where the slow, real revolution finally shows up on income statements. The genome did deliver - just not on the timeline, and not in the form, the year-2000 market had priced in.</p>
+
+        <div class="callout callout--insight">
+          <div class="callout__label">&#9632; The investor's takeaway</div>
+          <p>Being right about the technology and right about the timing are two different skills, and the second is far harder. The genomics bubble punished people who were right about the science but wrong about the clock. The quiet winner, Illumina, did not need to know which disease bet would pay off - it only needed sequencing to keep growing. When you cannot pick the winning application, owning the layer underneath all of them is often the better trade.</p>
+        </div>
+
+        <div class="takeaways reveal">
+          <h3>&#10003; Key takeaways</h3>
+          <ul>
+            <li>The original dream assumed "one gene, one disease" - true for rare Mendelian disorders, but wrong for the common, polygenic diseases that dominate the market.</li>
+            <li>On 14 March 2000, a Clinton-Blair statement that genome data should be free was read as a threat to gene patents, triggering a selloff that erased tens of billions and was compounded by the dot-com crash.</li>
+            <li>Missing heritability is the gap between heritability implied by twin studies (height ~80%) and the few percent explained by early GWAS hits; the resolution was that traits are massively polygenic.</li>
+            <li>The durable winner was the picks-and-shovels platform, Illumina, selling the sequencing machines and consumables everyone needed - value accrued to infrastructure first.</li>
+            <li>Biology runs on long timelines; the real payoff arrived 15-20 years later in sequencing-enabled diagnostics (Modules 13-14), not in a flood of gene-based cures.</li>
+          </ul>
+        </div>
+
+        <div class="quiz">
+          <div class="quiz__head"><span class="pill">Check</span> Knowledge check</div>
+          <p class="quiz__intro">Three quick questions. Pick an answer to see the explanation.</p>
+
+          <div class="q" data-answer="2">
+            <p class="q__stem">1. What triggered the sharp genomics-stock selloff in March 2000?</p>
+            <div class="q__opts">
+              <button class="opt">A failed clinical trial at Celera</button>
+              <button class="opt">The discovery that the genome had far fewer genes than expected</button>
+              <button class="opt">A Clinton-Blair statement that genome data should be freely available, read as a threat to gene patents</button>
+              <button class="opt">A new tax on biotech companies</button>
+            </div>
+            <div class="q__explain">On 14 March 2000, Clinton and Blair said the raw genome data should be free to researchers. Investors read it as a threat to gene patents - the core of the valuation thesis - and the genomics names plunged, a fall later compounded by the bursting dot-com bubble.</div>
+          </div>
+
+          <div class="q" data-answer="1">
+            <p class="q__stem">2. What does "missing heritability" refer to?</p>
+            <div class="q__opts">
+              <button class="opt">Genes that were deleted from the reference genome</button>
+              <button class="opt">The gap between heritability implied by twin studies and the small fraction explained by early identified variants</button>
+              <button class="opt">Traits that turned out not to be heritable at all</button>
+              <button class="opt">DNA lost during the sequencing process</button>
+            </div>
+            <div class="q__explain">Twin studies put height's heritability near 80%, yet the first GWAS hits explained only a few percent. That gap is missing heritability. The resolution: common traits are highly polygenic, driven by thousands of tiny-effect variants that early, small studies could not detect.</div>
+          </div>
+
+          <div class="q" data-answer="0">
+            <p class="q__stem">3. Who was the durable winner of the genomics era, and why?</p>
+            <div class="q__opts">
+              <button class="opt">Illumina, by selling the "picks and shovels" - sequencing machines and consumables everyone needed</button>
+              <button class="opt">The first company to patent the most genes</button>
+              <button class="opt">Celera, because it sequenced the genome fastest</button>
+              <button class="opt">Whoever found the single gene for diabetes</button>
+            </div>
+            <div class="q__explain">The disease-agnostic infrastructure layer won. Illumina sold the sequencing machines and consumables that every researcher and company needed regardless of which biological bet paid off, compounding into the dominant platform. Value accrued to infrastructure first, applied diagnostics later.</div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+    <nav class="module-foot">
+      <a class="pn pn--prev" href="05-hgp.html"><small>&larr; Previous</small><b>The Human Genome Project</b></a>
+      <a class="pn pn--next" href="07-epigenetics.html"><small>Next &rarr;</small><b>Epigenetics: Beyond the Sequence</b></a>
+    </nav>
+  </main>
+
+  <p class="footer-note">Genetics 101 &middot; Module 06 &middot; <a href="../index.html">All modules</a> &middot; <a href="../glossary.html">Glossary</a></p>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/charts.js"></script>
+  <script src="../assets/js/glossary.js"></script>
+  <script src="../assets/js/quiz.js"></script>
+  <script src="../assets/js/nav.js"></script>
+  <script>
+GChart.line("fig-bubble", {
+  series:[{name:"Genomics index (stylized)", color:"#c2456b", data: GData.bubble.points}],
+  annotations: GData.bubble.annotations,
+  xMin:1998, xMax:2003.4, yMin:0, yMax:1050,
+  xTicks:[1998,1999,2000,2001,2002,2003], xFormat:function(v){return Math.round(v);},
+  yLabel:"Indexed valuation", legend:false, height:380
+});
+GChart.bars("fig-heritability", {
+  categories: GData.heritability.categories,
+  series:[{name:"Share of variance", colors: GData.heritability.colors, data: GData.heritability.values}],
+  yMax:100, yFormat:"pct", valueLabels:true, height:360
+});
+  </script>
+</body>
+</html>
