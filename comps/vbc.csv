@@ -1,0 +1,7 @@
+company,ticker,price_usd,market_cap_usd_b,fy2025_revenue_usd_b,fy2025_adj_ebitda_usd_m,adj_ebitda_margin_pct,ev_ebitda_x,risk_model,notes
+Privia Health,PRVA,23.43,2.95,2.12,125.5,5.9,19.7,Capital-light (upside shared-savings),"GAAP profitable, ~$480M net cash -> EV ~$2.47B. +39% EBITDA growth. The premium-but-profitable enabler."
+Astrana Health,ASTH,38.62,1.91,3.18,205.4,6.5,9.3,Delegated risk + owned delivery + tech,"Mkt-cap/EBITDA shown; true EV/EBITDA ~11x (Prospect acquisition debt). FY2025 rev +56%. 2026E EBITDA $250-280M. Cheapest profitable VBC."
+agilon health,AGL,n/a,1.9,5.93,-296,-5.0,n/m,Full-risk Medicare Advantage,"EBITDA negative; revenue is pass-through MA premium so EV/Sales meaningless. 625k members. Turnaround. Price/share-count data flagged unreliable."
+P3 Health Partners,PIII,12.23,0.04,1.46,-161.3,-11.0,n/m,Full-risk Medicare Advantage,"Distressed: going-concern flagged, post 1-for-50 reverse split, delisting risk. ~116k at-risk members. 2026E EBITDA ~$10M (turnaround)."
+Aledade,Private,n/a,3.5,0.75,n/a,n/a,n/m,Capital-light ACO / shared-savings,"Private; ~$3.5B (Series F, June 2023, est./stale). ~$750M rev 2024 (est.). Largest independent-PCP ACO network. IPO candidate."
+Innovaccer,Private,n/a,3.5,0.252,n/a,n/a,n/m,Enabling data/AI software (not risk-bearing),"Private; ~$3.45-3.5B (Series F, Jan 2025). ~$252M ARR (est.) -> ~14x ARR software multiple. Data infrastructure layer for VBC."

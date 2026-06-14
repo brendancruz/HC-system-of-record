@@ -1,0 +1,5 @@
+company,ticker,price_usd,market_cap_usd_b,fy2025_revenue_usd_b,fy2025_adj_eps_usd,pe_x,fwd_2026e_pe_x,medical_loss_ratio_pct,notes
+UnitedHealth Group,UNH,408.52,371,450,16.35,25.0,23.0,89.1,"Largest US healthcare co. Optum (services) drives premium multiple. 2025 MA cost shock: MCR +340bps, EPS down, Hemsley back as CEO, DOJ overhang. 2026E EPS >$17.75. Rev est. (segment sum)."
+Elevance Health,ELV,404.07,87.7,197.6,30.0,13.5,n/a,90.0,"Cheapest big payor. Diversified (commercial BCBS + Medicaid + Carelon services). Benefit ratio +150bps on medical trend. 2026 guide >=$22.30 GAAP EPS (adj higher)."
+Humana,HUM,379.22,45.5,128,17.0,22.3,n/a,90.3,"MA pure-play (most MA-levered). ~-425k MA members in 2025; suing CMS over 2025 Star Ratings (hits 2026 bonuses). CenterWell = owned care delivery. Benefit ratio midpoint."
+Alignment Healthcare,ALHC,19.75,4.08,3.9,n/m,n/m,n/m,87.5,"MA insurtech. Growth + improving MBR: rev +46%, members 236.3k (+25%), MBR -130bps, adj EBITDA $110M (+positive). EV/EBITDA ~37x (mkt-cap/EBITDA); valued on growth not P/E. 2026E rev ~$5.15B."

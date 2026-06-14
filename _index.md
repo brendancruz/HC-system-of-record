@@ -28,18 +28,18 @@ conversations (BofA HC group).
 |---|---|---|---|
 | Privia Health | PRVA | [profile](./companies/privia-health.md) | 2026-06-13 |
 | agilon health | AGL | [profile](./companies/agilon-health.md) | 2026-06-13 |
-| Astrana Health | ASTH | _queued_ | - |
-| P3 Health Partners | PIII | _queued_ | - |
-| Aledade | Private | _queued_ | - |
-| Innovaccer | Private | _queued_ | - |
+| Astrana Health | ASTH | [profile](./companies/astrana-health.md) | 2026-06-14 |
+| P3 Health Partners | PIII | [profile](./companies/p3-health-partners.md) | 2026-06-14 |
+| Aledade | Private | [profile](./companies/aledade.md) | 2026-06-14 |
+| Innovaccer | Private | [profile](./companies/innovaccer.md) | 2026-06-14 |
 
 ### Payor-provider / managed care
 | Company | Ticker | Profile | Updated |
 |---|---|---|---|
-| UnitedHealth (Optum) | UNH | _queued_ | - |
-| Humana | HUM | _queued_ | - |
-| Elevance Health | ELV | _queued_ | - |
-| Alignment Healthcare | ALHC | _queued_ | - |
+| UnitedHealth (Optum) | UNH | [profile](./companies/unitedhealth-group.md) | 2026-06-14 |
+| Humana | HUM | [profile](./companies/humana.md) | 2026-06-14 |
+| Elevance Health | ELV | [profile](./companies/elevance-health.md) | 2026-06-14 |
+| Alignment Healthcare | ALHC | [profile](./companies/alignment-healthcare.md) | 2026-06-14 |
 
 ---
 
@@ -47,14 +47,17 @@ conversations (BofA HC group).
 | Sub-sector | Table | Updated |
 |---|---|---|
 | Diagnostics | [csv](./comps/diagnostics.csv) / [rendered](./comps/diagnostics.md) | 2026-06-13 |
-| VBC | _queued_ | - |
-| Payor-provider / managed care | _queued_ | - |
+| VBC | [csv](./comps/vbc.csv) / [rendered](./comps/vbc.md) | 2026-06-14 |
+| Payor-provider / managed care | [csv](./comps/managed-care.csv) / [rendered](./comps/managed-care.md) | 2026-06-14 |
 
 ---
 
 ## People
-_None yet._ Queue: BofA HC bankers, key sponsors (e.g. VBC-focused PE), notable
-operators (Conroy/EXAS, Eltoukhy/GH, Lefkofsky/TEM, Mehrotra/PRVA).
+| File | Contents | Updated |
+|---|---|---|
+| [operators.md](./people/operators.md) | CEOs across all 17 profiled companies | 2026-06-14 |
+
+Queue: BofA HC coverage bankers and key sponsors (VBC-focused PE / strategics).
 
 ## Deals
 | Deal | Value | Date | Entry |
@@ -64,7 +67,7 @@ operators (Conroy/EXAS, Eltoukhy/GH, Lefkofsky/TEM, Mehrotra/PRVA).
 
 ---
 
-## Status (as of 2026-06-13)
+## Status (as of 2026-06-14)
 
 **Done (run 1):**
 - Scaffolded repo structure; wrote `_schema.md` (template + conventions) and this index.
@@ -77,6 +80,14 @@ operators (Conroy/EXAS, Eltoukhy/GH, Lefkofsky/TEM, Mehrotra/PRVA).
 - Promoted flagship deals to dated `/deals/` entries (Abbott-Exact Sciences; Tempus-Ambry + tuck-ins).
 - Refreshed diagnostics comps with reported FY2025 actuals (notably NEO $727.3M) and added forward 2026E P/S.
 
+**Done (run 3 - "finish"):**
+- Built the **VBC sub-sector**: profiles for Astrana, P3, Aledade (private), Innovaccer (private),
+  plus a VBC comps table framed on EV/EBITDA + risk model (not EV/Sales).
+- Built the **payor-provider / managed care** sub-sector: UnitedHealth, Humana, Elevance,
+  Alignment, plus a managed-care comps table framed on P/E + MLR.
+- Seeded `/people/operators.md` (CEOs across all 17 profiled companies).
+- **All seed-universe names are now profiled (17 companies, 3 comps tables, 2 deals, 1 people file).**
+
 **Key data note:** the connected FMP plan tier only returns company *profiles*
 (price, market cap, beta). Statements/ratios/analyst/TTM/batch endpoints are gated
 (ACCESS DENIED). So prices + market caps are from FMP; revenue/growth/margins/guidance
@@ -87,15 +98,18 @@ pull EV/EBITDA and balance-sheet data directly.
 
 ## Next up (queue for future runs)
 
-1. **Build the VBC sub-sector:** profiles for Astrana, P3, plus private Aledade & Innovaccer
-   (round/valuation, labeled est.); then a VBC comps table (frame on EV/EBITDA + per-member
-   economics + medical margin, not EV/Sales). _(Privia + agilon already profiled.)_
-2. **Build payor-provider / managed care:** UnitedHealth/Optum, Humana, Elevance,
-   Alignment Healthcare; comps on P/E and EV/EBITDA + MLR trends.
-3. **Start `/people/`:** BofA HC coverage bankers and key operators/sponsors
-   (Conroy/EXAS, Eltoukhy/GH, Lefkofsky/TEM, Mehrotra/PRVA, Chapman/NTRA, Stueland/WGS).
-4. **Refresh data:** replace guidance-based FY2025 revenue with reported actual (WGS);
-   verify agilon share count / CEO title; confirm Fabric Genomics (WGS) close/contribution;
-   re-pull prices.
-5. **If FMP tier is upgraded:** backfill true EV/Sales and EV/EBITDA across comps.
+The full seed universe is now built out. Next runs should deepen and maintain:
+
+1. **Add `/people/` bankers & sponsors:** BofA HC coverage team and recent BofA-led HC deals;
+   key PE/growth sponsors and strategics active in the space.
+2. **Expand the universe (beyond seed):** e.g. Caris Life Sciences (dx/data), Devoted/Clover
+   (MA insurtech), CVS/Aetna & Cigna (managed care), Health Catalyst/Arcadia (VBC data),
+   Quest/Labcorp (reference labs).
+3. **Refresh data (the maintenance loop):** replace guidance-based revenue with reported actuals
+   (WGS); verify agilon share count / CEO title and P3 share count; confirm Fabric Genomics (WGS);
+   refresh stale private marks (Aledade June 2023); confirm UNH consolidated revenue and ELV
+   adjusted 2026 EPS; re-pull all prices.
+4. **Deepen the comps:** add net debt to convert P/S -> true EV/Sales (dx) and firm up EV/EBITDA
+   (VBC); add per-member/PMPM + Star-Ratings columns for MA names.
+5. **If FMP tier is upgraded:** backfill statements-based metrics (EV/EBITDA, balance sheet) across all comps.
 6. **Add new 2026 HC M&A** to `/deals/` as it happens.
