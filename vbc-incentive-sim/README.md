@@ -13,7 +13,27 @@ distort effort. This model operationalizes that argument numerically.
 - **Spec and assumptions:** [`MODEL.md`](./MODEL.md) - read this first.
 - **Baseline read:** [`FINDINGS.md`](./FINDINGS.md) - one-page, thesis-framed.
 
-## Quick start
+## Run it interactively (Colab - no install)
+
+The easiest front door: an interactive notebook with parameter sliders. Open it
+in Google Colab, drag sliders, click **Run simulation**, and the summary table +
+plots (and optionally the GIF) render inline. Nothing to install locally.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/brendancruz/hc-system-of-record/blob/main/vbc-incentive-sim/notebooks/vbc_explorer.ipynb)
+
+Notebook: [`notebooks/vbc_explorer.ipynb`](./notebooks/vbc_explorer.ipynb)
+
+- The badge above works once this is merged to `main`. **Before merge** (or any
+  time the badge misbehaves on a slashed branch name), open it via Colab directly:
+  `colab.research.google.com` -> **File -> Open notebook -> GitHub** -> enter
+  `brendancruz/hc-system-of-record` -> pick the branch -> choose
+  `vbc-incentive-sim/notebooks/vbc_explorer.ipynb`.
+- **Private repo:** the first Setup cell clones the repo. If it is private, add a
+  GitHub token once via Colab **Secrets** (key icon) named `GH_TOKEN`; the cell
+  picks it up automatically. Public repo needs no token.
+- Run the Setup cell once per session, then the Explorer cell to get the sliders.
+
+## Quick start (local)
 
 ```bash
 pip install -r requirements.txt
