@@ -22,6 +22,7 @@ Every session adds or refreshes entries.
 ```
 /companies/   one markdown profile per company (filename: kebab-case, e.g. exact-sciences.md)
 /comps/       comps tables by sub-sector (a .csv source + a rendered .md view)
+/sectors/     sector / sub-sector overviews (size, structure, drivers, why-now); filename: sub-sector kebab-case
 /people/      bankers, sponsors, operators worth knowing
 /deals/       notable recent M&A / financings, dated (filename: YYYY-MM-acquirer-target.md)
 /_index.md    master index, links to everything, last-updated dates, "next up" queue

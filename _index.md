@@ -43,6 +43,13 @@ conversations (BofA HC group).
 
 ---
 
+## Sector overviews
+| Sub-sector | Overview | Updated |
+|---|---|---|
+| Diagnostics | [overview](./sectors/diagnostics.md) | 2026-06-14 |
+
+---
+
 ## Comps tables
 | Sub-sector | Table | Updated |
 |---|---|---|
@@ -68,6 +75,13 @@ Queue: BofA HC coverage bankers and key sponsors (VBC-focused PE / strategics).
 ---
 
 ## Status (as of 2026-06-14)
+
+**Done (run 4 - sector overview):**
+- Added a new `/sectors/` artifact type and wrote the **Diagnostics sector overview**
+  (market size bottom-up from the profiled universe, structure/value chain, drivers,
+  why-now, and the one-screen name sort). Wired into this index.
+
+
 
 **Done (run 1):**
 - Scaffolded repo structure; wrote `_schema.md` (template + conventions) and this index.
