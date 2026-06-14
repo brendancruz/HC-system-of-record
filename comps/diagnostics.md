@@ -16,8 +16,8 @@ net-cash/net-debt distortions are flagged in Notes (most important: FLGT).
 | Guardant Health | GH | $131.62 | ~$17.45B | ~$0.97B | +31% | ~64-65% | 17.9x | 13.3x |
 | Tempus AI | TEM | $47.82 | ~$8.35B | $1.27B | +83% | ~52% (est) | 6.6x | 5.3x |
 | GeneDx | WGS | $59.92 | ~$1.78B | ~$0.43B | ~+40% | ~74% (adj) | 4.2x | n/a |
-| NeoGenomics | NEO | $11.15 | ~$1.43B | ~$0.74B | +11% | ~47% | 1.9x | n/a |
-| Fulgent Genetics | FLGT | $18.68 | ~$0.53B | $0.32B | +14% | ~38% (est) | 1.6x | n/a |
+| NeoGenomics | NEO | $11.15 | ~$1.43B | $0.73B | +10% | ~47% | 2.0x | 1.8x |
+| Fulgent Genetics | FLGT | $18.68 | ~$0.53B | $0.32B | +14% | ~38% (est) | 1.6x | 1.5x |
 
 \* **Exact Sciences is no longer freely traded** - acquired by Abbott (~$21B equity,
 $105/share, closed 2026-03-23). Price is pinned near the deal price; multiple shown is
@@ -50,8 +50,8 @@ effectively the take-out multiple (~6.2-6.5x sales).
   modestly; large net cash (FLGT) cuts it sharply.
 - NEO market cap is computed from price x shares because the FMP market-cap field looked
   internally inconsistent on 2026-06-13.
-- WGS and NEO FY2025 revenue use the latest company guidance midpoints; refresh to
-  reported actuals next run.
+- NEO FY2025 revenue is now the reported actual ($727.3M, +10.1%). WGS FY2025 revenue
+  still uses the company guidance midpoint (~$425-428M); refresh to reported actual next run.
 - Gross margins mix GAAP and adjusted/non-GAAP across companies (labeled where adj.).
 
 ## Next-run TODO
