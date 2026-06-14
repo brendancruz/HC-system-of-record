@@ -1,0 +1,55 @@
+name,ticker,segment,subsegment,ownership,hq_address,city,state,zip,lat,lng,market_cap_usd_b,headcount,founded,website,notes,as_of
+Moderna,MRNA,Biopharma,mRNA vaccines & therapeutics,Public,325 Binney St,Cambridge,MA,02142,42.3661,-71.0846,20,5800,2010,modernatx.com,"Market cap ~$20B (est., web, May 2026). Kendall Square flagship.",2026-06-14
+Vertex Pharmaceuticals,VRTX,Biopharma,Cystic fibrosis & genetic disease,Public,50 Northern Ave,Boston,MA,02210,42.3526,-71.0466,114,5500,1989,vrtx.com,"Market cap ~$114B (est., web, May 2026). Seaport / Fan Pier HQ.",2026-06-14
+Biogen,BIIB,Biopharma,Neuroscience,Public,225 Binney St,Cambridge,MA,02142,42.3666,-71.0875,28,7000,1978,biogen.com,"Market cap ~$28B (est., web, May 2026).",2026-06-14
+Alnylam Pharmaceuticals,ALNY,Biopharma,RNAi therapeutics,Public,675 West Kendall St,Cambridge,MA,02142,42.3640,-71.0810,43,2000,2002,alnylam.com,"Market cap ~$43B (est., web, May 2026).",2026-06-14
+Takeda (US hub),TAK,Biopharma,Diversified pharma,Subsidiary,500 Kendall St,Cambridge,MA,02142,42.3658,-71.0835,,3000,1781,takeda.com,"Japanese parent (TSE/NYSE: TAK); Cambridge is the US/global oncology hub.",2026-06-14
+Sanofi (US R&D hub),SNY,Biopharma,Diversified pharma,Subsidiary,450 Water St,Cambridge,MA,02141,42.3712,-71.0768,,2500,1973,sanofi.com,"French parent (SNY); ~915k sq ft Cambridge Crossing campus (Genzyme legacy). Acquired Blueprint Medicines (closed Jul 2025).",2026-06-14
+Foundation Medicine,Private,Biopharma,Cancer genomic profiling,Subsidiary,400 Summer St,Boston,MA,02210,42.3478,-71.0438,,1500,2010,foundationmedicine.com,"Roche subsidiary. Consolidated ~1,100 MA staff into new Seaport HQ (2024).",2026-06-14
+Sarepta Therapeutics,SRPT,Biopharma,Gene therapy (DMD),Public,215 First St,Cambridge,MA,02142,42.3655,-71.0858,,1500,1980,sarepta.com,"Precision genetic medicine; Duchenne franchise.",2026-06-14
+Beam Therapeutics,BEAM,Biopharma,Base editing,Public,238 Main St,Cambridge,MA,02142,42.3626,-71.0875,,700,2017,beamtx.com,"Base-editing gene therapy.",2026-06-14
+Intellia Therapeutics,NTLA,Biopharma,CRISPR gene editing,Public,40 Erie St,Cambridge,MA,02139,42.3567,-71.1009,,600,2014,intelliatx.com,"In vivo CRISPR.",2026-06-14
+Editas Medicine,EDIT,Biopharma,CRISPR gene editing,Public,11 Hurley St,Cambridge,MA,02141,42.3695,-71.0905,,250,2013,editasmedicine.com,"CRISPR gene editing.",2026-06-14
+Agios Pharmaceuticals,AGIO,Biopharma,Cellular metabolism / rare disease,Public,88 Sidney St,Cambridge,MA,02139,42.3625,-71.0985,,500,2007,agios.com,"PK deficiency franchise (Pyrukynd).",2026-06-14
+Relay Therapeutics,RLAY,Biopharma,Precision oncology,Public,399 Binney St,Cambridge,MA,02142,42.3648,-71.0892,,400,2016,relaytx.com,"Motion-based drug discovery.",2026-06-14
+Kymera Therapeutics,KYMR,Biopharma,Targeted protein degradation,Public,500 North Beacon St,Watertown,MA,02472,42.3636,-71.1668,,350,2016,kymeratx.com,"Protein degraders.",2026-06-14
+Scholar Rock,SRRK,Biopharma,TGF-beta / neuromuscular,Public,301 Binney St,Cambridge,MA,02142,42.3643,-71.0884,,250,2012,scholarrock.com,"Apitegromab (SMA).",2026-06-14
+Wave Life Sciences,WVE,Biopharma,Oligonucleotides / RNA editing,Public,733 Concord Ave,Cambridge,MA,02138,42.3872,-71.1417,,250,2012,wavelifesciences.com,"RNA editing platform.",2026-06-14
+Akebia Therapeutics,AKBA,Biopharma,Renal / anemia,Public,245 First St,Cambridge,MA,02142,42.3652,-71.0848,,200,2007,akebia.com,"Vafseo (vadadustat).",2026-06-14
+Seres Therapeutics,MCRB,Biopharma,Microbiome therapeutics,Public,200 Sidney St,Cambridge,MA,02139,42.3618,-71.0998,,150,2011,serestherapeutics.com,"Live biotherapeutics.",2026-06-14
+Ironwood Pharmaceuticals,IRWD,Biopharma,GI / commercial,Public,100 Summer St,Boston,MA,02110,42.3554,-71.0593,,300,1998,ironwoodpharma.com,"Linzess (linaclotide) GI franchise.",2026-06-14
+Rhythm Pharmaceuticals,RYTM,Biopharma,Rare endocrine disease,Public,222 Berkeley St,Boston,MA,02116,42.3502,-71.0745,,300,2008,rhythmtx.com,"Imcivree (obesity / MC4R).",2026-06-14
+Disc Medicine,IRON,Biopharma,Hematology,Public,321 Arsenal St,Watertown,MA,02472,42.3628,-71.1705,,150,2017,discmedicine.com,"Hematologic disease pipeline.",2026-06-14
+Voyager Therapeutics,VYGR,Biopharma,Gene therapy (CNS),Public,75 Sidney St,Cambridge,MA,02139,42.3622,-71.0992,,250,2014,voyagertherapeutics.com,"AAV gene therapy + TRACER capsids.",2026-06-14
+Ginkgo Bioworks,DNA,Biopharma,Synthetic biology platform,Public,27 Drydock Ave,Boston,MA,02210,42.3448,-71.0408,,1000,2008,ginkgobioworks.com,"Cell-programming / biofoundry platform; Seaport HQ.",2026-06-14
+Generate Biomedicines,Private,Biopharma,Generative-AI protein design,Private,101 South St,Somerville,MA,02143,42.3792,-71.0985,,400,2018,generatebiomedicines.com,"Flagship Pioneering company; raised >$1B total (est.).",2026-06-14
+bluebird bio,Private,Biopharma,Gene therapy,Private,455 Grand Union Blvd,Somerville,MA,02145,42.3925,-71.0782,,400,1992,bluebirdbio.com,"Taken private by Carlyle / SK Capital (closed Jun 2025). Assembly Row HQ.",2026-06-14
+Vericel,VCEL,Biopharma,Cell therapy (advanced),Public,64 Sidney St,Cambridge,MA,02139,42.3628,-71.0982,,300,1989,vcel.com,"MACI / Epicel cell therapies (burns, cartilage).",2026-06-14
+Boston Scientific,BSX,Medtech/Dx/Tools,Medical devices,Public,300 Boston Scientific Way,Marlborough,MA,01752,42.3375,-71.5290,71,50000,1979,bostonscientific.com,"Market cap ~$71B (est., web, Jun 2026). Cardio / interventional devices.",2026-06-14
+Thermo Fisher Scientific,TMO,Medtech/Dx/Tools,Life-science tools / CRO-CDMO,Public,168 Third Ave,Waltham,MA,02451,42.3957,-71.2360,177,125000,2006,thermofisher.com,"Market cap ~$177B (est., web, Jun 2026). Tools + PPD + Patheon.",2026-06-14
+Hologic,HOLX,Medtech/Dx/Tools,Diagnostics / women's health,Public,250 Campus Dr,Marlborough,MA,01752,42.3516,-71.5366,17,6500,1985,hologic.com,"Market cap ~$17B (est., web, Apr 2026). Panther dx, breast health.",2026-06-14
+Revvity,RVTY,Medtech/Dx/Tools,Diagnostics / life-science,Public,940 Winter St,Waltham,MA,02451,42.4040,-71.2470,,11000,1937,revvity.com,"Rebranded from PerkinElmer (2023).",2026-06-14
+Charles River Laboratories,CRL,Medtech/Dx/Tools,Preclinical CRO,Public,251 Ballardvale St,Wilmington,MA,01887,42.5527,-71.1740,,20000,1947,criver.com,"Preclinical CRO; discovery & safety.",2026-06-14
+Bruker,BRKR,Medtech/Dx/Tools,Scientific instruments,Public,40 Manning Rd,Billerica,MA,01821,42.5540,-71.2730,,10000,1960,bruker.com,"Mass spec / NMR / spatial biology.",2026-06-14
+Repligen,RGEN,Medtech/Dx/Tools,Bioprocessing,Public,41 Seyon St,Waltham,MA,02453,42.3840,-71.2560,,2500,1981,repligen.com,"Bioprocessing consumables.",2026-06-14
+Azenta Life Sciences,AZTA,Medtech/Dx/Tools,Sample management / genomics,Public,200 Summit Dr,Burlington,MA,01803,42.4885,-71.2160,,3000,1978,azenta.com,"Formerly Brooks Automation.",2026-06-14
+Insulet,PODD,Medtech/Dx/Tools,Diabetes devices,Public,100 Nagog Park,Acton,MA,01720,42.4870,-71.4360,,3500,2000,insulet.com,"Omnipod insulin patch pump.",2026-06-14
+Haemonetics,HAE,Medtech/Dx/Tools,Blood management,Public,125 Summer St,Boston,MA,02110,42.3542,-71.0575,,3000,1971,haemonetics.com,"Blood / plasma management.",2026-06-14
+Quanterix,QTRX,Medtech/Dx/Tools,Ultra-sensitive immunoassay,Public,900 Middlesex Tpke,Billerica,MA,01821,42.5340,-71.2640,,600,2007,quanterix.com,"Simoa single-molecule detection (Alzheimer's biomarkers).",2026-06-14
+Akoya Biosciences,AKYA,Medtech/Dx/Tools,Spatial biology,Public,100 Campus Dr,Marlborough,MA,01752,42.3505,-71.5330,,350,2015,akoyabio.com,"Spatial phenotyping (PhenoCycler / PhenoImager).",2026-06-14
+908 Devices,MASS,Medtech/Dx/Tools,Analytical devices,Public,645 Summer St,Boston,MA,02210,42.3458,-71.0425,,250,2012,908devices.com,"Handheld mass spec; bioprocessing analytics.",2026-06-14
+Anika Therapeutics,ANIK,Medtech/Dx/Tools,Orthopedics / regenerative,Public,32 Wiggins Ave,Bedford,MA,01730,42.4905,-71.2760,,300,1992,anika.com,"Hyaluronic-acid joint / regenerative products.",2026-06-14
+LeMaitre Vascular,LMAT,Medtech/Dx/Tools,Vascular devices,Public,63 Second Ave,Burlington,MA,01803,42.4835,-71.2010,,700,1983,lemaitre.com,"Niche peripheral-vascular devices.",2026-06-14
+Abiomed,Private,Medtech/Dx/Tools,Cardiac support devices,Subsidiary,22 Cherry Hill Dr,Danvers,MA,01923,42.5670,-70.9300,,3000,1981,abiomed.com,"J&J MedTech subsidiary (acq. 2022). Impella heart pumps.",2026-06-14
+athenahealth,Private,Digital Health,EHR / revenue cycle,Private,80 Guest St,Boston,MA,02135,42.3575,-71.1410,17,8000,1997,athenahealth.com,"~$17B take-private (Bain/Hellman & Friedman, 2022) (est.). Moved HQ from Watertown to Boston Landing.",2026-06-14
+Nuance Communications,Private,Digital Health,Clinical documentation / speech AI,Subsidiary,1 Wayside Rd,Burlington,MA,01803,42.5010,-71.2120,,7000,1992,nuance.com,"Microsoft subsidiary (acq. ~$19.7B, 2022). Dragon / DAX ambient AI.",2026-06-14
+Definitive Healthcare,DH,Digital Health,Healthcare commercial intelligence,Public,492 Old Connecticut Path,Framingham,MA,01701,42.3000,-71.4250,,800,2011,definitivehc.com,"Healthcare data / analytics SaaS.",2026-06-14
+Amwell,AMWL,Digital Health,Telehealth,Public,75 State St,Boston,MA,02109,42.3585,-71.0555,,1000,2006,amwell.com,"Telehealth platform (American Well).",2026-06-14
+HealthEdge,Private,Digital Health,Payer core admin software,Private,30 Corporate Dr,Burlington,MA,01803,42.4845,-71.2200,,1500,2004,healthedge.com,"Payer software suite (HealthRules, Wellframe, GuidingCare). Blackstone-backed.",2026-06-14
+PathAI,Private,Digital Health,AI pathology,Private,1325 Boylston St,Boston,MA,02215,42.3447,-71.0995,,300,2016,pathai.com,"AI-powered pathology; raised ~$255M total (est.).",2026-06-14
+Cohere Health,Private,Digital Health,Utilization management / prior auth,Private,226 Causeway St,Boston,MA,02114,42.3662,-71.0615,,400,2019,coherehealth.com,"Prior-authorization automation; raised ~$100M+ (est.).",2026-06-14
+Buoy Health,Private,Digital Health,AI symptom checker / navigation,Private,580 Harrison Ave,Boston,MA,02118,42.3420,-71.0725,,100,2014,buoyhealth.com,"Consumer symptom checker / care navigation.",2026-06-14
+Firefly Health,Private,Digital Health,Virtual primary care,Private,101 Walnut St,Watertown,MA,02472,42.3705,-71.1775,,150,2016,fireflyhealth.com,"Virtual-first primary care + health plan. Watertown HQ (Arsenal area).",2026-06-14
+Kyruus Health,Private,Digital Health,Provider search / care access,Private,100 Franklin St,Boston,MA,02110,42.3550,-71.0585,,400,2010,kyruushealth.com,"Provider data / patient access (merged with HealthSparq).",2026-06-14
+OM1,Private,Digital Health,Real-world data / outcomes,Private,31 St James Ave,Boston,MA,02116,42.3498,-71.0720,,200,2015,om1.com,"Real-world clinical data & predictive analytics.",2026-06-14
+Biobot Analytics,Private,Digital Health,Wastewater epidemiology,Private,501 Massachusetts Ave,Cambridge,MA,02139,42.3637,-71.1015,,80,2017,biobot.io,"Population health analytics from wastewater.",2026-06-14

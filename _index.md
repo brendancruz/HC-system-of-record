@@ -67,6 +67,20 @@ Queue: BofA HC coverage bankers and key sponsors (VBC-focused PE / strategics).
 
 ---
 
+## Geography - Boston map
+A local, geographic lens: notable Greater Boston healthcare companies plotted on
+an interactive map, with personal reference pins for work and home.
+
+| Artifact | What it is | Updated |
+|---|---|---|
+| [boston/companies.csv](./boston/companies.csv) | Database - 54 companies (biopharma, medtech/dx/tools, digital health) | 2026-06-14 |
+| [boston/map.html](./boston/map.html) | Self-contained interactive Leaflet map (open in a browser) | 2026-06-14 |
+| [boston/README.md](./boston/README.md) | Overview, clusters, method, how to regenerate | 2026-06-14 |
+
+Regenerate the map after editing the CSV: `python3 boston/build_map.py`.
+
+---
+
 ## Status (as of 2026-06-14)
 
 **Done (run 1):**
@@ -87,6 +101,17 @@ Queue: BofA HC coverage bankers and key sponsors (VBC-focused PE / strategics).
   Alignment, plus a managed-care comps table framed on P/E + MLR.
 - Seeded `/people/operators.md` (CEOs across all 17 profiled companies).
 - **All seed-universe names are now profiled (17 companies, 3 comps tables, 2 deals, 1 people file).**
+
+**Done (run 4 - "Boston map"):**
+- Added a geographic lens in `/boston/`: a curated database of 54 Greater Boston
+  healthcare companies (biopharma, medtech/dx/tools, digital health) with HQ addresses
+  and coordinates, plus a self-contained interactive Leaflet map (`map.html`) and a
+  stdlib generator (`build_map.py`). Includes personal pins for work (184 High St,
+  Boston) and home (25 Portsmouth St, Cambridge).
+- Note: this run's data was gathered via web search; the FMP / Apollo connectors and
+  geocoding APIs were unreachable from the environment, so market caps are dated web
+  estimates (captured for the largest names only) and coordinates were assigned from
+  verified HQ addresses (building/block precision).
 
 **Key data note:** the connected FMP plan tier only returns company *profiles*
 (price, market cap, beta). Statements/ratios/analyst/TTM/batch endpoints are gated
