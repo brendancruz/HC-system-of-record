@@ -1,6 +1,6 @@
 /* ============================================================================
    Glossary: a shared dictionary that powers (1) inline hover tooltips on
-   <span class="term" data-term="..."> and (2) the searchable glossary page.
+   span.term elements (via their data-term attribute) and (2) the glossary page.
    ========================================================================== */
 window.GLOSSARY = [
   ["DNA", "Deoxyribonucleic acid: the double-helix molecule that stores genetic information as a sequence of four bases (A, C, G, T)."],
