@@ -47,6 +47,8 @@ conversations (BofA HC group).
 | Sub-sector | Overview | Updated |
 |---|---|---|
 | Diagnostics | [overview](./sectors/diagnostics.md) | 2026-06-14 |
+| Diagnostics | [competitive landscape](./sectors/diagnostics-landscape.md) | 2026-06-14 |
+| Diagnostics | [ideas shortlist](./sectors/diagnostics-ideas.md) | 2026-06-14 |
 
 ---
 
@@ -76,10 +78,14 @@ Queue: BofA HC coverage bankers and key sponsors (VBC-focused PE / strategics).
 
 ## Status (as of 2026-06-14)
 
-**Done (run 4 - sector overview):**
+**Done (run 4 - diagnostics market-research package):**
 - Added a new `/sectors/` artifact type and wrote the **Diagnostics sector overview**
   (market size bottom-up from the profiled universe, structure/value chain, drivers,
-  why-now, and the one-screen name sort). Wired into this index.
+  why-now, and the one-screen name sort).
+- Added the **Diagnostics competitive landscape** (battlegrounds, positioning map,
+  adjacent players, recent moves) and the **Diagnostics ideas shortlist** (4 thesis
+  hooks + 1 watch). All three wired into this index. The full market-researcher package
+  for diagnostics (overview + landscape + comps + ideas) is now in place.
 
 
 
