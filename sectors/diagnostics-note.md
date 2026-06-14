@@ -131,8 +131,9 @@ targets than standalone re-rates.
 
 ## Status, gaps & next steps
 
-- **Slides:** optional `pptx-author` deck not built - no firm template/tooling in this
-  environment. Can be produced on request once a template is provided.
+- **Slides:** 7-slide deck built - [`diagnostics-deck.pptx`](./diagnostics-deck.pptx),
+  regenerated from [`build_diagnostics_deck.py`](./build_diagnostics_deck.py) (generic template;
+  swap to a firm template when one is provided). Re-run the script after any data refresh.
 - **Data refresh queued** (from comps TODO): replace guided revenue with reported FY2025
   actuals (WGS); add net debt/cash to convert P/S -> true EV/Sales; add EV/EBITDA for the
   EBITDA-positive names.

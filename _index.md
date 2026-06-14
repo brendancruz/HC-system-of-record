@@ -50,6 +50,7 @@ conversations (BofA HC group).
 | Diagnostics | [overview](./sectors/diagnostics.md) | 2026-06-14 |
 | Diagnostics | [competitive landscape](./sectors/diagnostics-landscape.md) | 2026-06-14 |
 | Diagnostics | [ideas shortlist](./sectors/diagnostics-ideas.md) | 2026-06-14 |
+| Diagnostics | [slide pack (.pptx)](./sectors/diagnostics-deck.pptx) ([generator](./sectors/build_diagnostics_deck.py)) | 2026-06-14 |
 
 ---
 
@@ -88,8 +89,10 @@ Queue: BofA HC coverage bankers and key sponsors (VBC-focused PE / strategics).
   hooks + 1 watch).
 - Assembled the **Diagnostics research note** - the finished, standalone deliverable
   with an executive summary that consolidates overview + landscape + comps + ideas.
-  The full market-researcher package for diagnostics is now complete (slides optional,
-  pending a template). All artifacts wired into this index.
+  The full market-researcher package for diagnostics is now complete.
+- Built a 7-slide **Diagnostics deck** (`sectors/diagnostics-deck.pptx`) from a reproducible
+  generator script (`sectors/build_diagnostics_deck.py`, python-pptx; generic template).
+  All artifacts wired into this index.
 
 
 
