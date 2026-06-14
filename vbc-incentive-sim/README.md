@@ -25,6 +25,19 @@ Outputs land in `outputs/`: `baseline_summary.csv`, the resolved
 `baseline_config.yaml`, and four plots (welfare, income mean/SD, intensity vs
 `e*`, selection by severity).
 
+## Watch it run
+
+```bash
+python watch.py                 # renders outputs/simulation.gif (play in any viewer)
+python watch.py --live          # streams running metrics in the terminal
+python watch.py --frames 80 --fps 15 --out outputs/simulation.gif
+```
+
+The GIF replays the Monte Carlo converging: effort clouds forming against the
+social optimum `e*`, with running efficiency, provider income mean/SD, and
+over/under-treatment counters as patients accumulate. `--live` is a console view
+for watching over SSH.
+
 ## Layout
 
 ```

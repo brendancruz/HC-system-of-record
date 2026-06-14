@@ -10,6 +10,7 @@ from .model import Patients, social_optimum_effort, health_value, care_cost
 from .contracts import CONTRACTS, build_contract
 from .simulation import run_contract, run_all
 from .sweep import sweep
+from .animation import animate_simulation, watch_live
 
 __all__ = [
     "SimConfig",
@@ -23,4 +24,6 @@ __all__ = [
     "run_contract",
     "run_all",
     "sweep",
+    "animate_simulation",
+    "watch_live",
 ]
